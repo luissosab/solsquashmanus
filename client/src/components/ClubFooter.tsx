@@ -9,7 +9,7 @@ const logoSrc = "/manus-storage/sol-squash-logo_dd364204.png";
 export function ClubFooter() {
   return (
     <footer className="club-footer">
-      <div className="club-footer__sun" aria-hidden="true">SOL<br />SUN</div>
+      <div className="club-footer__mural-mark" aria-hidden="true" />
       <div className="club-footer__main">
         <img src={logoSrc} alt="Sol Squash" className="club-footer__logo" />
         <p>Come for the squash. Stay for everything around it.</p>

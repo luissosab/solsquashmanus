@@ -59,7 +59,7 @@ export default function NewToSquash() {
       </section>
       <WaveDivider destination="navy" />
       <section className="beginner-note">
-        <div className="beginner-note__circle"><span>NO<br />RACKET?<br />NO<br />PROBLEM.</span></div>
+        <div className="beginner-note__mural-shape" aria-hidden="true" />
         <div>
           <p className="eyebrow eyebrow--cyan">WE'VE GOT YOU</p>
           <h2>SHOW UP.<br />WE HANDLE<br /><em>THE REST.</em></h2>

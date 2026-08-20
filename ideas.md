@@ -76,3 +76,9 @@ Use the **user-provided Sol Squash logo asset only**. The surrounding brand syst
 - **Logo:** the supplied `Sol Squash logo.png` is a large square navy asset with an emphatic lime-green “SOL SQUASH” wordmark and a friendly yellow sun-face device. It will be used as the only logo artwork in the global header, navigation drawer, footer, and favicon handling.
 - **Reference social art:** the reviewed club graphic uses a mustard field, a condensed uppercase navy headline, oversized type, and a small logo lockup. The redesign will carry forward that hot-sun color contrast and poster-scale typography while moving the information architecture into a more fluid, complete web experience.
 - **Current public site review:** preserve the useful club hierarchy—new-to-squash entry point, ways to play, membership comparisons, schedule, founders, and FAQ—but replace the fragmented, white-first layout with an integrated five-route clubhouse journey built from large color rooms and responsive progressive disclosure.
+
+## Mural-Led Revision Notes
+
+- The actual club mural is **contemporary, hand-painted, and welcoming** rather than nostalgic sports-costume styling. Its strongest cues are dense navy painted walls, tactile stucco texture, large imperfect circles and cropped geometric shapes, coral-red sun rays, lime and teal forms, small warm-yellow dots, and hand-set cream lettering.
+- The visual system should use mural-like crop, texture, and color confidence as a framing device for real club photography. It should avoid gimmicky sticker badges, sparkle medallions, dashed circles, novelty stamps, and oversized decorative date discs.
+- Type should reduce to a modern condensed athletic headline face paired with one exceptionally readable warm body face. Generous leading belongs wherever multi-line display text, long card titles, or dense descriptive material becomes tight.

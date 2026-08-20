@@ -2,7 +2,7 @@
  * Sun-bleached Court Club design: the homepage is a sequence of saturated courtside rooms, never a centered SaaS panel.
  */
 import { motion } from "framer-motion";
-import { ArrowDownRight, Sparkles } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
 import { Link } from "wouter";
 import { MagneticButton } from "@/components/MagneticButton";
 import { RetroImage } from "@/components/RetroImage";
@@ -11,6 +11,7 @@ import { WaveDivider } from "@/components/WaveDivider";
 const heroImage = "/manus-storage/sol-hero-courts_2addd508.jpg";
 const loungeImage = "/manus-storage/sol-club-lounge_aa75a6f6.jpg";
 const founderImage = "/manus-storage/sol-founders-dusk_9d9585d2.jpg";
+const muralImage = "/manus-storage/sol-mural-reference_7499ceaf.png";
 
 const heroWords = ["MIAMI'S", "SQUASH", "HOME."];
 const clubFeatures = [
@@ -47,7 +48,9 @@ export default function Home() {
           <h2>A CLUB<br /><em>YOU ACTUALLY</em><br />STAY IN.</h2>
         </div>
         <div className="club-intro__copy">
-          <span className="sun-sticker">GOOD<br />SWEAT</span>
+          <figure className="mural-glimpse">
+            <img src={muralImage} alt="Sol Squash mural at the Little River club" />
+          </figure>
           <p>Come for the squash. Stay for everything around it.</p>
         </div>
         <div className="club-feature-grid">
@@ -94,7 +97,6 @@ export default function Home() {
           <MagneticButton href="/our-story" className="button--navy">MEET THE TEAM</MagneticButton>
         </div>
         <RetroImage src={founderImage} alt="Sol Squash co-founders near a glass court" label="[IMAGE: Bruna & Vini at the court]" className="home-story-callout__image" tint="green" />
-        <div className="home-story-callout__spark"><Sparkles size={31} /></div>
       </section>
     </>
   );

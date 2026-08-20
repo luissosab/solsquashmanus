@@ -86,7 +86,7 @@ export default function PlayAndPricing() {
       </section>
       <WaveDivider destination="mango" />
       <section className="junior-section">
-        <div className="junior-section__badge">SOL<br />JUNIOR</div>
+        <div className="junior-section__painted-label">SOL<br />JUNIOR</div>
         <div><p className="eyebrow">FOR THE NEXT GENERATION</p><h2>SOL JUNIOR<br /><em>($179/MO)</em></h2><p>Ages 7 to 16. A membership for juniors. 7 group sessions included per month. Extra session $40. Drop In: $50.</p></div>
         <RetroImage label="[IMAGE: junior player laughing after a rally]" alt="Junior squash player at Sol" className="junior-section__image" tint="navy" />
       </section>
