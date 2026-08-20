@@ -1,9 +1,10 @@
-# Sol Squash Revision Checklist
+# Sol Squash Next-Iteration Checklist
 
-- [x] Identify the actual club mural references and extract their usable color, shape, and material cues.
-- [x] Replace the selected sticker, sparkle, sun-badge, and circular-date motifs with mural-derived details.
-- [x] Make the primary navigation sticky with a warm, readable solid state.
-- [x] Consolidate the visual typography into a calmer contemporary display/body pairing.
-- [x] Increase line-height and breathing room in the tightest hero, card, and functional-content areas.
-- [x] Rebalance the site toward a welcoming, contemporary family-and-community club atmosphere.
-- [x] Validate desktop and mobile views and save the revision checkpoint.
+- [x] Stage the selected real club, mural, and mandatory profile imagery for deployment-safe use.
+- [x] Extract every FAQ question and answer from the six supplied PDF categories without altering the source text.
+- [x] Replace synthetic visual sections with selected authentic club and founder photographs.
+- [x] Remove white surfaces and repair all color-field, wave, and footer transitions.
+- [x] Replace invented motifs with mural-faithful squash balls, official sun-face use, court outlines, palms, and waves.
+- [x] Rebuild the Our Story section around the mandatory profile images and a small, considered credential narrative.
+- [x] Implement a six-topic in-page FAQ guide with progressive disclosure and complete verbatim source content.
+- [x] Validate desktop and mobile compositions, interaction behavior, and production build before checkpointing.

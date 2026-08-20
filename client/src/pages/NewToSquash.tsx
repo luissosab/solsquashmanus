@@ -7,7 +7,8 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { RetroImage } from "@/components/RetroImage";
 import { WaveDivider } from "@/components/WaveDivider";
 
-const newPlayerImage = "/manus-storage/sol-new-player_805a121f.jpg";
+const glassCourtImage = "/manus-storage/sol-facility-glass-court_bc711772.png";
+const muralImage = "/manus-storage/sol-mural-feature_9dd29c1b.png";
 
 const offers = [
   {
@@ -39,9 +40,9 @@ export default function NewToSquash() {
           </motion.h1>
           <p>Squash is a dynamic indoor racket sport with great cardio, quick reactions and nonstop action.</p>
         </div>
-        <RetroImage src={newPlayerImage} alt="A coach introducing a beginner to squash" label="[IMAGE: a first swing under Miami sun]" className="entry-hero__image" tint="mango" />
+        <RetroImage src={glassCourtImage} alt="A full-glass squash court at Sol" label="[IMAGE: Sol's full-glass court, ready for your first rally]" className="entry-hero__image" tint="mango" />
       </section>
-      <WaveDivider destination="chalk" />
+      <WaveDivider destination="green" />
       <section className="first-steps">
         <div className="section-rail"><span>YOUR FIRST RALLY</span><i /></div>
         <div className="first-steps__heading"><p className="eyebrow">COME AS YOU ARE</p><h2>WE'LL GET<br />YOU <em>PLAYING.</em></h2></div>
@@ -59,7 +60,7 @@ export default function NewToSquash() {
       </section>
       <WaveDivider destination="navy" />
       <section className="beginner-note">
-        <div className="beginner-note__mural-shape" aria-hidden="true" />
+        <span className="squash-ball squash-ball--beginner" aria-hidden="true"><i /><i /></span>
         <div>
           <p className="eyebrow eyebrow--cyan">WE'VE GOT YOU</p>
           <h2>SHOW UP.<br />WE HANDLE<br /><em>THE REST.</em></h2>
@@ -69,7 +70,7 @@ export default function NewToSquash() {
             <li><Check size={19} />Come ready to move.</li>
           </ul>
         </div>
-        <RetroImage label="[IMAGE: colorful racquets against a mural wall]" alt="Colorful racquets against a Miami mural" className="beginner-note__image" tint="green" />
+        <RetroImage src={muralImage} label="[IMAGE: Sol's front mural — squash balls, sun-face and court marks]" alt="Sol Squash front mural" className="beginner-note__image" tint="green" />
       </section>
     </>
   );
