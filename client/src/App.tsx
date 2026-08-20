@@ -1,42 +1,34 @@
-import { Toaster } from "@/components/ui/sonner";
+/**
+ * Sun-bleached Court Club design: the full five-page route map lives within a warm, continuous clubhouse frame.
+ */
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
+import { Toaster } from "@/components/ui/sonner";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { LenisProvider } from "./components/LenisProvider";
+import { PageShell } from "./components/PageShell";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-
+import NewToSquash from "./pages/NewToSquash";
+import PlayAndPricing from "./pages/PlayAndPricing";
+import Schedule from "./pages/Schedule";
+import OurStory from "./pages/OurStory";
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <PageShell>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/new-to-squash" component={NewToSquash} />
+        <Route path="/play-and-pricing" component={PlayAndPricing} />
+        <Route path="/schedule" component={Schedule} />
+        <Route path="/our-story" component={OurStory} />
+        <Route component={Home} />
+      </Switch>
+    </PageShell>
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
-function App() {
-  return (
-    <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  );
+export default function App() {
+  return <ErrorBoundary><ThemeProvider defaultTheme="light"><TooltipProvider><LenisProvider><Router /></LenisProvider><Toaster /></TooltipProvider></ThemeProvider></ErrorBoundary>;
 }
-
-export default App;

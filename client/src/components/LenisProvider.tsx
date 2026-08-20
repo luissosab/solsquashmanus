@@ -1,0 +1,23 @@
+/**
+ * Sun-bleached Court Club design: a smooth, friction-rich scroll rhythm replaces sterile page movement.
+ */
+import Lenis from "lenis";
+import { ReactNode, useEffect } from "react";
+
+export function LenisProvider({ children }: { children: ReactNode }) {
+  useEffect(() => {
+    const lenis = new Lenis({ lerp: 0.085, wheelMultiplier: 0.9, touchMultiplier: 1.15, smoothWheel: true });
+    let frame = 0;
+    const raf = (time: number) => {
+      lenis.raf(time);
+      frame = requestAnimationFrame(raf);
+    };
+    frame = requestAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(frame);
+      lenis.destroy();
+    };
+  }, []);
+
+  return <>{children}</>;
+}

@@ -1,0 +1,21 @@
+{
+  "userTier": "guest",
+  "pricing": {
+    "dropIn": { "openPlay": 55, "clinic": 55, "lesson": 145, "court": 60 },
+    "solClub": { "monthly": 239, "openPlay": 25, "clinic": 40, "lesson": 125, "court": 0, "extraCourt": 20 },
+    "solJunior": { "monthly": 179, "extraSession": 40 }
+  },
+  "upsells": [
+    { "id": "pack_5_open", "title": "5 Open Play Sessions", "price": 250, "savings": 25 }
+  ],
+  "schedule": [
+    {
+      "date": "2026-08-18",
+      "day": "Tuesday",
+      "sessions": [
+        { "time": "12:00 PM", "endTime": "01:00 PM", "title": "Lunch Club", "type": "GROUP SESSIONS", "spots": 4 },
+        { "time": "06:30 PM", "endTime": "07:00 PM", "title": "First Session with the Pros", "type": "FIRST TIMERS", "spots": 2 }
+      ]
+    }
+  ]
+}
