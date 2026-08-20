@@ -19,16 +19,20 @@ const navigation = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [location] = useLocation();
+  const returnToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    setOpen(false);
+  };
 
   return (
     <>
       <header className="site-header">
-        <Link href="/" className="site-logo" aria-label="Sol Squash home">
+        <Link href="/" className="site-logo" aria-label="Sol Squash home" onClick={returnToTop}>
           <img src={logoSrc} alt="Sol Squash" />
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} className={location === item.href ? "is-active" : ""}>
+            <Link key={item.href} href={item.href} className={location === item.href ? "is-active" : ""} onClick={returnToTop}>
               {item.label}
             </Link>
           ))}
@@ -51,7 +55,7 @@ export function SiteHeader() {
               <nav aria-label="Mobile navigation">
                 {navigation.map((item, index) => (
                   <motion.div key={item.href} initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.08 + index * 0.05 }}>
-                    <Link href={item.href} onClick={() => setOpen(false)}>{item.label}<span>↗</span></Link>
+                    <Link href={item.href} onClick={returnToTop}>{item.label}<span>↗</span></Link>
                   </motion.div>
                 ))}
               </nav>

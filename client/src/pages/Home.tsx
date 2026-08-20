@@ -50,14 +50,14 @@ export default function Home() {
 
       <WaveDivider destination="navy" />
       <section className="mural-feature">
-        <div className="mural-feature__copy"><p className="eyebrow eyebrow--cyan">THE WALLS KNOW THE WAY</p><h2>PLAY<br />IN <em>FULL</em><br />COLOR.</h2><p>Miami's squash home is built for a good rally, a proper reset, and the people you meet between both.</p><Link href="/play-and-pricing" className="text-link">PICK YOUR WAY IN <span>↗</span></Link></div>
+        <div className="mural-feature__copy"><p className="eyebrow eyebrow--cyan">MORE THAN A GAME, A WAY OF LIFE.</p><h2>MIAMI'S<br />SQUASH<br /><em>HOME.</em></h2><p>Come for the squash. Stay for everything around it.</p><Link href="/play-and-pricing" className="text-link">PICK YOUR WAY IN <span>↗</span></Link></div>
         <figure className="mural-feature__image"><img src={assets.mural} alt="The Sol Squash front mural with squash-ball graphics and the club sun-face" /><figcaption>THE SOL MURAL · LITTLE RIVER</figcaption></figure>
       </section>
 
       <WaveDivider destination="green" />
       <section className="home-rhythm home-rhythm--real">
         <figure className="real-photo-frame"><img src={assets.lounge} alt="The Sol Squash lounge and mural interior" /><figcaption>[IMAGE: Sol lounge, mural and post-match space]</figcaption></figure>
-        <div className="home-rhythm__copy"><p className="eyebrow eyebrow--cyan">FIND YOUR RHYTHM</p><h2>COURT.<br />SAUNA.<br /><em>CAFÉ.</em></h2><p>A good session is only part of a good day.</p><MagneticButton href="/new-to-squash" className="button--mango">NEW HERE?</MagneticButton></div>
+        <div className="home-rhythm__copy"><p className="eyebrow eyebrow--cyan">RECOVER & TRAIN</p><h2>SAUNA, COLD<br />PLUNGE,<br /><em>SHOWERS AND</em><br />GYM.</h2><p>Get your sweat in, reset and leave feeling better than you came.</p><MagneticButton href="/new-to-squash" className="button--mango">TRY SQUASH</MagneticButton></div>
       </section>
 
       <WaveDivider destination="navy" />

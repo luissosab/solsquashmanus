@@ -2,13 +2,16 @@
  * Sun-bleached Court Club design: pages arrive as a unified moving promenade with a permanent clubhouse frame.
  */
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { useLocation } from "wouter";
 import { ClubFooter } from "./ClubFooter";
 import { SiteHeader } from "./SiteHeader";
 
 export function PageShell({ children }: { children: ReactNode }) {
   const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location]);
   return (
     <div className="site-frame">
       <SiteHeader />

@@ -7,6 +7,7 @@ import { MagneticButton } from "./MagneticButton";
 const logoSrc = "/manus-storage/sol-squash-logo_dd364204.png";
 
 export function ClubFooter() {
+  const returnToTop = () => window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   return (
     <footer className="club-footer">
       <div className="club-footer__mural-mark" aria-hidden="true" />
@@ -23,10 +24,10 @@ export function ClubFooter() {
         </div>
         <div>
           <span className="eyebrow eyebrow--cyan">KEEP PLAYING</span>
-          <Link href="/new-to-squash">New to Squash</Link>
-          <Link href="/play-and-pricing">Play & Pricing</Link>
-          <Link href="/schedule">Upcoming Sessions</Link>
-          <Link href="/our-story">Our Story</Link>
+          <Link href="/new-to-squash" onClick={returnToTop}>New to Squash</Link>
+          <Link href="/play-and-pricing" onClick={returnToTop}>Play & Pricing</Link>
+          <Link href="/schedule" onClick={returnToTop}>Upcoming Sessions</Link>
+          <Link href="/our-story" onClick={returnToTop}>Our Story</Link>
         </div>
       </div>
       <div className="club-footer__bottom">© Sol Squash · <a href="https://www.instagram.com/solsquash/" target="_blank" rel="noreferrer">@solsquash</a></div>
