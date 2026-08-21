@@ -1,7 +1,10 @@
-# Sol Squash Correction Checklist
+# Sol Squash Visual Polish Checklist
 
-- [x] Compare current page copy against approved source text and remove unapproved copy rewrites.
-- [x] Audit global header, footer, primary CTA, and in-page navigation destinations.
-- [x] Ensure Home returns to the top of the Home route and Our Story reliably opens its route.
-- [x] Update all squash-ball marks to use mural-faithful off-center dot placement.
-- [x] Validate navigation, copy restoration, responsive rendering, and production build before checkpointing.
+- [x] Fix every cyan wave transition to create a clean direct handoff between its adjacent color fields.
+- [x] Remove all visible image credit, label, and alt-text-style overlays from photo frames.
+- [x] Make every decorative circle a mural-style squash ball with off-center dots and varied orientation and color contrast.
+- [x] Remove repeated imagery and ensure every photo fills its frame cleanly.
+- [x] Remove parenthesized prices throughout the experience.
+- [x] Recompose the Our Story hero with its founders image framed left of text and a dark screen treatment.
+- [x] Remove any profile-drawer visual element that obstructs the copy.
+- [x] Validate desktop and mobile pages, interactions, and production build before checkpointing.

@@ -14,7 +14,6 @@ export function RetroImage({ src, label, alt, className = "", tint = "navy" }: R
     <figure className={`retro-image retro-image--${tint} ${className}`}>
       {src ? <img src={src} alt={alt} /> : <div className="retro-image__blank" role="img" aria-label={alt} />}
       <div className="retro-image__texture" aria-hidden="true" />
-      <figcaption>{label}</figcaption>
       <span className="retro-image__court-line" aria-hidden="true" />
     </figure>
   );

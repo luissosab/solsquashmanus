@@ -7,13 +7,13 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { RetroImage } from "@/components/RetroImage";
 import { WaveDivider } from "@/components/WaveDivider";
 
-const glassCourtImage = "/manus-storage/sol-facility-glass-court_bc711772.png";
-const muralImage = "/manus-storage/sol-mural-feature_9dd29c1b.png";
+const muralReferenceImage = "/manus-storage/sol-mural-reference_10136907.png";
+const clubWideImage = "/manus-storage/sol-club-wide_b4871337.png";
 
 const offers = [
   {
     marker: "01",
-    title: "First Lesson with the Pros ($39)",
+    title: "First Lesson with the Pros — $39",
     metadata: "30 MINUTES • ONE-ON-ONE.",
     copy: "Try it for the first time in a private session with Sol founders and coaches Bruna or Vini. We'll provide the racket, show you the basics and get you playing from the start. Then stay for the sauna, cold plunge and showers. One per person.",
     action: "TRY SQUASH",
@@ -21,7 +21,7 @@ const offers = [
   },
   {
     marker: "02",
-    title: "Beginner Squash Clinic ($55)",
+    title: "Beginner Squash Clinic — $55",
     metadata: "1 HOUR • NO EXPERIENCE NEEDED.",
     copy: "For people new to the game and anyone still developing their squash fundamentals. Small group, coached on court. Rackets provided. Dynamic, full-body, seriously fun.",
     action: "SEE SESSIONS",
@@ -40,9 +40,9 @@ export default function NewToSquash() {
           </motion.h1>
           <p>Squash is a dynamic indoor racket sport with great cardio, quick reactions and nonstop action.</p>
         </div>
-        <RetroImage src={glassCourtImage} alt="A full-glass squash court at Sol" label="[IMAGE: Sol's full-glass court, ready for your first rally]" className="entry-hero__image" tint="mango" />
+        <RetroImage src={muralReferenceImage} alt="Sol Squash mural details" label="" className="entry-hero__image" tint="mango" />
       </section>
-      <WaveDivider destination="green" />
+      <WaveDivider source="navy" destination="green" />
       <section className="first-steps">
         <div className="section-rail"><span>YOUR FIRST RALLY</span><i /></div>
         <div className="first-steps__heading"><p className="eyebrow">COME AS YOU ARE</p><h2>WE'LL GET<br />YOU <em>PLAYING.</em></h2></div>
@@ -58,7 +58,7 @@ export default function NewToSquash() {
           ))}
         </div>
       </section>
-      <WaveDivider destination="navy" />
+      <WaveDivider source="green" destination="navy" />
       <section className="beginner-note">
         <span className="squash-ball squash-ball--beginner" aria-hidden="true"><i /><i /></span>
         <div>
@@ -70,7 +70,7 @@ export default function NewToSquash() {
             <li><Check size={19} />Come ready to move.</li>
           </ul>
         </div>
-        <RetroImage src={muralImage} label="[IMAGE: Sol's front mural — squash balls, sun-face and court marks]" alt="Sol Squash front mural" className="beginner-note__image" tint="green" />
+        <RetroImage src={clubWideImage} label="" alt="The Sol Squash club interior" className="beginner-note__image" tint="green" />
       </section>
     </>
   );
