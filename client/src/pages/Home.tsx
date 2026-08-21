@@ -8,7 +8,8 @@ import { WaveDivider } from "@/components/WaveDivider";
 
 const assets = {
   court: "/manus-storage/sol-facility-glass-court_bc711772.png",
-  lounge: "/manus-storage/sol-facility-lounge_e8255e6a.png",
+  sauna: "/manus-storage/sol-sauna_23e752ac.png",
+  coldPlunge: "/manus-storage/sol-cold-plunge_baaf4cf6.png",
   mural: "/manus-storage/sol-mural-feature_9dd29c1b.png",
   founders: "/manus-storage/sol-founders-on-court_fbc8dbe3.png",
 };
@@ -48,7 +49,7 @@ export default function Home() {
       </section>
       <WaveDivider source="navy" destination="green" />
       <section className="home-rhythm home-rhythm--real">
-        <figure className="real-photo-frame"><img src={assets.lounge} alt="The Sol Squash lounge and mural interior" /></figure>
+        <figure className="recovery-collage" aria-label="Sol's sauna and cold plunge"><div className="recovery-collage__tile recovery-collage__tile--sauna"><img src={assets.sauna} alt="The sauna at Sol Squash" /></div><div className="recovery-collage__tile recovery-collage__tile--plunge"><img src={assets.coldPlunge} alt="The cold plunge at Sol Squash" /></div></figure>
         <div className="home-rhythm__copy"><p className="eyebrow eyebrow--cyan">RECOVER & TRAIN</p><h2>SAUNA, COLD<br />PLUNGE,<br /><em>SHOWERS AND</em><br />GYM.</h2><p>Get your sweat in, reset and leave feeling better than you came.</p><MagneticButton href="/new-to-squash" className="button--mango">TRY SQUASH</MagneticButton></div>
       </section>
       <WaveDivider source="green" destination="navy" />
