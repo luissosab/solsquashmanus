@@ -1,6 +1,6 @@
-# Sol Squash Home Recovery Refinement Checklist
+# Sol Squash Our Story Content Refinement Checklist
 
-- [x] Stage the supplied sauna and cold-plunge facility images for deployment-safe use.
-- [x] Remove the unsuccessful Home court-line mark entirely.
-- [x] Replace the recovery image with a polished sauna-and-cold-plunge collage.
-- [x] Validate the Home composition and production build before checkpointing.
+- [x] Retain the hero positioning statement only once.
+- [x] Replace the repeated intro headline and supporting paragraph with distinct approved founder journey copy.
+- [x] Use the existing professional-playing and coaching content to make the next narrative beat more specific.
+- [x] Verify the revised Our Story flow and production build before checkpointing.
