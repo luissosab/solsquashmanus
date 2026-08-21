@@ -1,8 +1,5 @@
-# Sol Squash Targeted Visual Corrections Checklist
+# Sol Squash Home Motif Refinement Checklist
 
-- [x] Restore the intended mural-style court line beneath the Home feature squash ball.
-- [x] Replace the New to Squash hero image and rebalance its desktop composition.
-- [x] Remove every unrelated cyan lasso or loop line while preserving actual court-line motifs.
-- [x] Repair the remaining Hero, Play & Pricing, Our Story, and Junior-to-FAQ wave handoffs.
-- [x] Make all profile cards clickable without removing their Read Bio controls.
-- [x] Validate desktop/mobile layouts, card behavior, and production build before checkpointing.
+- [x] Replace the rounded Home court mark with the approved subtle diagonal court-line gesture.
+- [x] Change the Home hero squash ball to a non-mustard mural-derived color with sufficient contrast.
+- [x] Validate the Home composition and production build before checkpointing.
