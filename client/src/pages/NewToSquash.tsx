@@ -7,8 +7,8 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { RetroImage } from "@/components/RetroImage";
 import { WaveDivider } from "@/components/WaveDivider";
 
-const muralReferenceImage = "/manus-storage/sol-mural-reference_10136907.png";
 const clubWideImage = "/manus-storage/sol-club-wide_b4871337.png";
+const muralReferenceImage = "/manus-storage/sol-mural-reference_10136907.png";
 
 const offers = [
   {
@@ -40,7 +40,7 @@ export default function NewToSquash() {
           </motion.h1>
           <p>Squash is a dynamic indoor racket sport with great cardio, quick reactions and nonstop action.</p>
         </div>
-        <RetroImage src={muralReferenceImage} alt="Sol Squash mural details" label="" className="entry-hero__image" tint="mango" />
+        <RetroImage src={clubWideImage} alt="The social space at Sol Squash" label="" className="entry-hero__image" tint="mango" />
       </section>
       <WaveDivider source="navy" destination="green" />
       <section className="first-steps">
@@ -70,7 +70,7 @@ export default function NewToSquash() {
             <li><Check size={19} />Come ready to move.</li>
           </ul>
         </div>
-        <RetroImage src={clubWideImage} label="" alt="The Sol Squash club interior" className="beginner-note__image" tint="green" />
+        <RetroImage src={muralReferenceImage} label="" alt="Sol Squash mural details" className="beginner-note__image" tint="green" />
       </section>
     </>
   );
