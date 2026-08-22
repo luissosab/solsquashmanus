@@ -8,6 +8,7 @@ import { WaveDivider } from "@/components/WaveDivider";
 
 const assets = {
   court: "/manus-storage/sol-facility-glass-court_bc711772.png",
+  introVideo: "/manus-storage/sol-squash-intro_5d0ba482.mp4",
   sauna: "/manus-storage/sol-sauna_23e752ac.png",
   coldPlunge: "/manus-storage/sol-cold-plunge_baaf4cf6.png",
   mural: "/manus-storage/sol-mural-feature_9dd29c1b.png",
@@ -24,7 +25,7 @@ export default function Home() {
   return (
     <>
       <section className="home-hero home-hero--real">
-        <img className="home-hero__photo" src={assets.court} alt="A full-glass squash court at Sol Squash" />
+        <div className="home-hero__video-frame" aria-hidden="true"><video className="home-hero__video" autoPlay loop muted playsInline poster={assets.court}><source src={assets.introVideo} type="video/mp4" /></video></div>
         <div className="home-hero__veil" />
         <span className="squash-ball squash-ball--hero" aria-hidden="true"><i /><i /></span>
         <div className="home-hero__copy">

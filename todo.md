@@ -1,6 +1,7 @@
-# Sol Squash Our Story Content Refinement Checklist
+# Sol Squash Video Hero Checklist
 
-- [x] Retain the hero positioning statement only once.
-- [x] Replace the repeated intro headline and supporting paragraph with distinct approved founder journey copy.
-- [x] Use the existing professional-playing and coaching content to make the next narrative beat more specific.
-- [x] Verify the revised Our Story flow and production build before checkpointing.
+- [x] Stage the supplied vertical intro video for deployment-safe use and inspect its key composition.
+- [x] Replace the Home hero background image with a muted looping video and accessible fallback treatment.
+- [x] Build a centered square desktop video composition with a dark readability overlay.
+- [x] Make the video hero fill the mobile viewport vertically while retaining readable copy and CTA contrast.
+- [x] Verify desktop/mobile rendering and the production build before checkpointing.
