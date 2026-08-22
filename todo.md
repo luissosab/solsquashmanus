@@ -1,7 +1,7 @@
-# Sol Squash Near-Square Video Hero Checklist
+# Sol Squash Mural Ball Color Checklist
 
-- [x] Replace the literal square desktop hero with a taller near-square hero composition.
-- [x] Keep the video full-bleed under the overlay without an internal frame, border, or inset field.
-- [x] Center the vertical video framing inside the wider desktop hero composition.
-- [x] Preserve the full-height vertical mobile video hero.
-- [x] Verify corrected desktop/mobile presentation and production build before checkpointing.
+- [x] Identify every rendered squash-ball variant and its surrounding background color.
+- [x] Reserve cyan for wave and signal accents, not squash-ball fills.
+- [x] Convert cyan squash balls to either mural lush green or lime neon green for correct contrast.
+- [x] Remove the dark holder behind the Junior ball while retaining the ball itself.
+- [x] Verify the refined mural-ball system and production build before checkpointing.

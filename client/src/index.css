@@ -156,6 +156,10 @@ body { background:#0C254A; color:#FAFAFA; }.site-frame { background:#0C254A; ove
 
 /* Mural-correct squash balls carry two offset identification dots, never centered decorative marks. */
 .squash-ball { position:relative; display:block; }.squash-ball i { position:absolute; width:12%; height:12%; left:34%; top:39%; transform:none; }.squash-ball i:nth-child(2) { left:52%; top:53%; }
+
+/* Mural ball palette: cyan remains a wave/signal accent; balls use lush or lime greens for mural-faithful contrast. */
+:root { --sol-lime: #C8FF3D; }
+.squash-ball { background:#1B4332; border-color:#F4A911; }.squash-ball--mango { background:#1B4332; border-color:#F4A911; }.squash-ball--junior { background:#1B4332; border:0; box-shadow:none; }.squash-ball--faq { background:var(--sol-lime); border-color:#0C254A; }.junior-section__painted-label { width:auto; height:auto; padding:0; display:block; background:transparent; border:0; box-shadow:none; }
 .wave-divider { height:72px; z-index:6; margin:0; overflow:hidden; }.wave-divider svg { height:72px; }
 .retro-image figcaption, .mural-feature__image figcaption, .real-photo-frame figcaption, .credentials-grid figcaption, .schedule-hero__facility figcaption, .schedule-coda__image figcaption { display:none !important; }
 .club-feature::before, .first-step-card::before, .way-card::before, .pricing-card::before, .profile-card::before, .session-card::before { display:none; }
