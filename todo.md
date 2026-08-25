@@ -9,3 +9,6 @@
 - [x] Define and document the complete old-to-new equivalent color replacement map, retaining the established mustard exception.
 - [x] Replace legacy color values across all shared and page styles with the mapped palette values.
 - [x] Confirm no unintended legacy palette colors remain in rendered surfaces, accents, or squash balls.
+- [x] Inspect all wave-divider source and destination handoffs against the reported yellow-band failures.
+- [x] Remove unintended bright-yellow divider fills while retaining intentional mustard content accents.
+- [x] Validate every cyan wave as a single seamless section boundary on desktop and mobile.

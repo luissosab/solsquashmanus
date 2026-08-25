@@ -10,7 +10,9 @@ type WaveDividerProps = {
 };
 
 const fills = {
-  mango: "#f5c518",
+  // The retained Sol mustard is the actual destination surface for every "mango" room.
+  // Matching this fill prevents a lighter yellow wedge from appearing beneath the cyan seam.
+  mango: "#F4A911",
   navy: "#1a2f6b",
   green: "#1a3a3a",
   chalk: "#ffffff",
