@@ -24,10 +24,10 @@ export function ClubFooter() {
         </div>
         <div>
           <span className="eyebrow eyebrow--cyan">KEEP PLAYING</span>
-          <Link href="/new-to-squash" onClick={returnToTop}>New to Squash</Link>
-          <Link href="/play-and-pricing" onClick={returnToTop}>Play & Pricing</Link>
-          <Link href="/schedule" onClick={returnToTop}>Upcoming Sessions</Link>
+          <Link href="/play" onClick={returnToTop}>Play</Link>
+          <Link href="/join" onClick={returnToTop}>Join</Link>
           <Link href="/our-story" onClick={returnToTop}>Our Story</Link>
+          <Link href="/faq" onClick={returnToTop}>FAQ</Link>
         </div>
       </div>
       <div className="club-footer__bottom">© Sol Squash · <a href="https://www.instagram.com/solsquash/" target="_blank" rel="noreferrer">@solsquash</a></div>

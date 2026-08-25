@@ -10,10 +10,10 @@ import { MagneticButton } from "./MagneticButton";
 const logoSrc = "/manus-storage/sol-squash-logo_dd364204.png";
 const navigation = [
   { label: "HOME", href: "/" },
-  { label: "NEW TO SQUASH", href: "/new-to-squash" },
-  { label: "PLAY & PRICING", href: "/play-and-pricing" },
-  { label: "SCHEDULE", href: "/schedule" },
+  { label: "PLAY", href: "/play" },
+  { label: "JOIN", href: "/join" },
   { label: "OUR STORY", href: "/our-story" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export function SiteHeader() {
