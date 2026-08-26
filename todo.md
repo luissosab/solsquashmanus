@@ -12,3 +12,11 @@
 - [x] Inspect all wave-divider source and destination handoffs against the reported yellow-band failures.
 - [x] Remove unintended bright-yellow divider fills while retaining intentional mustard content accents.
 - [x] Validate every cyan wave as a single seamless section boundary on desktop and mobile.
+- [x] Extract the supplied HTML file’s navigation and route-level section-order specification only.
+- [x] Compare each Sol route and content group to that specification without evaluating design details.
+- [x] Report structural alignment and any specific placement mismatch without making visual modifications.
+- [ ] Move the existing beginner and Taste of Sol content into the Play route in the required order without visual redesign.
+- [ ] Move existing packages, all-prices, and first-lesson content into the Join route in the required order without visual redesign.
+- [ ] Place the existing Home endcap and Our Story sections in the required structural positions without changing their visual treatment.
+- [ ] Rename only the FAQ category label needed for structural alignment and repair contextual legacy links.
+- [ ] Validate the full route sequence, desktop/mobile rendering, and production build before saving a reversible revision.
