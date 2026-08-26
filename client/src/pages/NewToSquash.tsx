@@ -29,20 +29,10 @@ const offers = [
   },
 ];
 
-export default function NewToSquash() {
+export function FirstTimerContent({ includeLeadingWave = true }: { includeLeadingWave?: boolean }) {
   return (
     <>
-      <section className="entry-hero">
-        <div className="entry-hero__copy">
-          <motion.p className="eyebrow eyebrow--cyan" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>THE RACKET IS WAITING</motion.p>
-          <motion.h1 initial="hidden" animate="show" variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}>
-            {["START", "HERE.", "NEVER", "PLAYED?", "PERFECT."].map((line) => <motion.span key={line} variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}>{line}</motion.span>)}
-          </motion.h1>
-          <p>Squash is a dynamic indoor racket sport with great cardio, quick reactions and nonstop action.</p>
-        </div>
-        <RetroImage src={clubWideImage} alt="The social space at Sol Squash" label="" className="entry-hero__image" tint="mango" />
-      </section>
-      <WaveDivider source="navy" destination="green" />
+      {includeLeadingWave && <WaveDivider source="navy" destination="green" />}
       <section className="first-steps">
         <div className="section-rail"><span>YOUR FIRST RALLY</span><i /></div>
         <div className="first-steps__heading"><p className="eyebrow">COME AS YOU ARE</p><h2>WE'LL GET<br />YOU <em>PLAYING.</em></h2></div>
@@ -72,6 +62,24 @@ export default function NewToSquash() {
         </div>
         <RetroImage src={muralReferenceImage} label="" alt="Sol Squash mural details" className="beginner-note__image" tint="green" />
       </section>
+    </>
+  );
+}
+
+export default function NewToSquash() {
+  return (
+    <>
+      <section className="entry-hero">
+        <div className="entry-hero__copy">
+          <motion.p className="eyebrow eyebrow--cyan" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>THE RACKET IS WAITING</motion.p>
+          <motion.h1 initial="hidden" animate="show" variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}>
+            {["START", "HERE.", "NEVER", "PLAYED?", "PERFECT."].map((line) => <motion.span key={line} variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}>{line}</motion.span>)}
+          </motion.h1>
+          <p>Squash is a dynamic indoor racket sport with great cardio, quick reactions and nonstop action.</p>
+        </div>
+        <RetroImage src={clubWideImage} alt="The social space at Sol Squash" label="" className="entry-hero__image" tint="mango" />
+      </section>
+      <FirstTimerContent />
     </>
   );
 }

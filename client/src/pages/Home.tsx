@@ -43,17 +43,17 @@ export default function Home() {
         <div className="club-intro__copy"><p>Come for the squash. Stay for everything around it.</p><span className="squash-ball squash-ball--mango" aria-hidden="true"><i /><i /></span></div>
         <div className="club-feature-grid">{features.map((feature, index) => <motion.article key={feature.title} className={`club-feature club-feature--${feature.tone}`} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: index * 0.08 }}><span className="club-feature__number">{feature.number}</span><h3>{feature.title}</h3><p className="club-feature__lead">{feature.lead}</p><p>{feature.text}</p><span className="club-feature__mark" aria-hidden="true">↗</span></motion.article>)}</div>
       </section>
-      <WaveDivider source="mango" destination="navy" />
+      <WaveDivider source="mango" destination="green" />
+      <section className="home-rhythm home-rhythm--real">
+        <figure className="recovery-collage" aria-label="Sol's sauna and cold plunge"><div className="recovery-collage__tile recovery-collage__tile--sauna"><img src={assets.sauna} alt="The sauna at Sol Squash" /></div><div className="recovery-collage__tile recovery-collage__tile--plunge"><img src={assets.coldPlunge} alt="The cold plunge at Sol Squash" /></div></figure>
+        <div className="home-rhythm__copy"><p className="eyebrow eyebrow--cyan">RECOVER & TRAIN</p><h2>SAUNA, COLD<br />PLUNGE,<br /><em>SHOWERS AND</em><br />GYM.</h2><p>Get your sweat in, reset and leave feeling better than you came.</p><MagneticButton href="/play" className="button--mango">TRY SQUASH</MagneticButton></div>
+      </section>
+      <WaveDivider source="green" destination="navy" />
       <section className="home-story-callout home-story-callout--real">
         <div className="home-story-callout__copy"><span className="eyebrow eyebrow--cyan">BUILT FROM THE LOVE OF THE GAME</span><h2>BUILT BY<br />PLAYERS.<br /><em>MADE FOR</em><br />EVERYONE.</h2><p>MIAMI'S SQUASH HOME.</p><MagneticButton href="/our-story" className="button--mango">MEET THE TEAM</MagneticButton></div>
         <figure className="real-photo-frame real-photo-frame--team"><img src={assets.founders} alt="Bruna and Vini playing squash at Sol" /></figure>
       </section>
-      <WaveDivider source="navy" destination="green" />
-      <section className="home-rhythm home-rhythm--real">
-        <figure className="recovery-collage" aria-label="Sol's sauna and cold plunge"><div className="recovery-collage__tile recovery-collage__tile--sauna"><img src={assets.sauna} alt="The sauna at Sol Squash" /></div><div className="recovery-collage__tile recovery-collage__tile--plunge"><img src={assets.coldPlunge} alt="The cold plunge at Sol Squash" /></div></figure>
-        <div className="home-rhythm__copy"><p className="eyebrow eyebrow--cyan">RECOVER & TRAIN</p><h2>SAUNA, COLD<br />PLUNGE,<br /><em>SHOWERS AND</em><br />GYM.</h2><p>Get your sweat in, reset and leave feeling better than you came.</p><MagneticButton href="/new-to-squash" className="button--mango">TRY SQUASH</MagneticButton></div>
-      </section>
-      <WaveDivider source="green" destination="navy" />
+      <WaveDivider source="navy" destination="navy" />
       <section className="mural-feature">
         <div className="mural-feature__copy"><p className="eyebrow eyebrow--cyan">MORE THAN A GAME, A WAY OF LIFE.</p><h2>MIAMI'S<br />SQUASH<br /><em>HOME.</em></h2><p>Come for the squash. Stay for everything around it.</p><Link href="/play" className="text-link">PICK YOUR WAY IN <span>↗</span></Link></div>
         <figure className="mural-feature__image"><img src={assets.mural} alt="The Sol Squash front mural with squash-ball graphics and the club sun-face" /></figure>

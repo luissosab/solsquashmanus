@@ -29,7 +29,7 @@ export default function Schedule() {
         <div className="schedule-side-note"><MapPin size={20} /><span>645 NW 72nd Street, Miami, FL 33150</span></div>
       </section>
       <WaveDivider source="green" destination="navy" />
-      <section className="schedule-coda"><figure className="schedule-coda__image"><img src="/manus-storage/sol-founders-lounge_1745d40e.webp" alt="Bruna and Vini at Sol" /></figure><div><p className="eyebrow eyebrow--cyan">BETWEEN MATCHES</p><h2>COME FOR A<br />SESSION.<br /><em>STAY FOR</em><br />THE CLUB.</h2><MagneticButton href="/play-and-pricing" className="button--mango">SEE PRICES</MagneticButton></div></section>
+      <section className="schedule-coda"><figure className="schedule-coda__image"><img src="/manus-storage/sol-founders-lounge_1745d40e.webp" alt="Bruna and Vini at Sol" /></figure><div><p className="eyebrow eyebrow--cyan">BETWEEN MATCHES</p><h2>COME FOR A<br />SESSION.<br /><em>STAY FOR</em><br />THE CLUB.</h2><MagneticButton href="/play" className="button--mango">SEE PRICES</MagneticButton></div></section>
     </>
   );
 }
