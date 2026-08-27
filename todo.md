@@ -37,3 +37,6 @@
 - [x] Define the complete one-solid-color-per-file sun-icon set from the approved Sol palette.
 - [x] Create transparent monochrome sun PNGs that preserve the official face-and-rays silhouette.
 - [x] Verify all transparent palette-color icon files and make them available for later decorative use.
+- [x] Define the full official sun-mask negative-space requirements for every single-color icon.
+- [x] Replace the flat silhouettes with true-transparent one-color sun masks that retain rays and facial details.
+- [x] Apply and validate the corrected full-mask icon in the Junior section before saving the repair.
