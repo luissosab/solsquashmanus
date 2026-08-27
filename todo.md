@@ -34,3 +34,6 @@
 - [x] Create a transparent PNG sun icon that retains the official face and ray geometry.
 - [x] Integrate the new sun icon as a decorative Sol element without replacing functional logo assets.
 - [x] Verify the icon at desktop and mobile sizes, then save a reversible version.
+- [x] Define the complete one-solid-color-per-file sun-icon set from the approved Sol palette.
+- [x] Create transparent monochrome sun PNGs that preserve the official face-and-rays silhouette.
+- [x] Verify all transparent palette-color icon files and make them available for later decorative use.
