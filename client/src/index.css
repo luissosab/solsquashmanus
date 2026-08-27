@@ -218,3 +218,6 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 .home-hero--real h1 { font-size:clamp(2.8rem,6.3vw,5.6rem); }
 @media (max-width:767px) { .home-hero--real h1 { font-size:clamp(2.66rem,13.3vw,4.2rem); } }
 @media (max-width:560px) { .faq-guide__intro h2 { font-size:clamp(2.205rem,10.5vw,2.8rem); } }
+
+/* Official Sol sun mark: a transparent palette-colored icon replaces the invalid undotted circle, while the remaining lower circle stays a two-dot squash ball. */
+.junior-section--real { background-image:linear-gradient(110deg,transparent 0 73%,rgba(232,71,26,.72) 73.3% 75%,transparent 75.4%) !important; }.junior-section__painted-label { width:clamp(108px,12vw,142px); height:clamp(108px,12vw,142px); display:grid; place-items:center; background:transparent; border:0; box-shadow:none; transform:rotate(-8deg); }.junior-section__painted-label img { display:block; width:100%; height:100%; object-fit:contain; filter:drop-shadow(5px 6px 0 rgba(26,47,107,.22)); }

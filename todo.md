@@ -30,3 +30,7 @@
 - [x] Inventory primary section-heading and responsive type-scale rules.
 - [x] Reduce all primary section-heading scales by 30% without changing their typeface or hierarchy.
 - [x] Verify the revised desktop/mobile typography hierarchy and production build before saving a reversible version.
+- [x] Define the official Sol sun extraction and palette treatment from the supplied logo.
+- [x] Create a transparent PNG sun icon that retains the official face and ray geometry.
+- [x] Integrate the new sun icon as a decorative Sol element without replacing functional logo assets.
+- [x] Verify the icon at desktop and mobile sizes, then save a reversible version.
