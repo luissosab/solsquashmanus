@@ -16,6 +16,7 @@ import OurStory from "./pages/OurStory";
 import Play from "./pages/Play";
 import Join from "./pages/Join";
 import FAQ from "./pages/FAQ";
+import MembershipsAndPrices from "./pages/MembershipsAndPrices";
 
 function Router() {
   return (
@@ -25,6 +26,7 @@ function Router() {
         <Route path="/new-to-squash" component={NewToSquash} />
         <Route path="/play-and-pricing" component={() => <PlayAndPricing />} />
         <Route path="/play" component={Play} />
+        <Route path="/memberships-and-prices" component={MembershipsAndPrices} />
         <Route path="/join" component={Join} />
         <Route path="/faq" component={FAQ} />
         <Route path="/schedule" component={Schedule} />

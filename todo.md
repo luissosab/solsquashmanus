@@ -22,8 +22,8 @@
 - [x] Validate the full route sequence, desktop/mobile rendering, and production build before saving a reversible revision.
 - [x] Consolidate the Founders’ Version baseline, immutable visual system, approved copy, and link-preservation requirements.
 - [x] Write and deliver the self-contained alternative-version handoff prompt for the next project chat.
-- [ ] Reconfirm the Founders’ Version baseline and load the alternative-version requirements.
-- [ ] Rebuild the primary navigation around Play, New to Squash, Memberships & Prices, Our Story, FAQ, and the persistent Book action.
-- [ ] Reorganize existing Home, Play, and New to Squash content around the visitor’s intent without changing approved copy or visuals.
-- [ ] Consolidate existing membership, pricing, schedule, story, and FAQ content into clear non-duplicative destinations.
-- [ ] Verify all approved copy and link destinations, responsive behavior, visual rules, waves, and production build before checkpointing.
+- [x] Reconfirm the Founders’ Version baseline and load the alternative-version requirements.
+- [x] Rebuild the primary navigation around Play, New to Squash, Memberships & Prices, Our Story, FAQ, and the persistent Book action.
+- [x] Reorganize existing Home, Play, and New to Squash content around the visitor’s intent without changing approved copy or visuals.
+- [x] Consolidate existing membership, pricing, schedule, story, and FAQ content into clear non-duplicative destinations.
+- [x] Verify all approved copy and link destinations, responsive behavior, visual rules, waves, and production build before checkpointing.

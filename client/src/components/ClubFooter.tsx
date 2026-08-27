@@ -25,7 +25,8 @@ export function ClubFooter() {
         <div>
           <span className="eyebrow eyebrow--cyan">KEEP PLAYING</span>
           <Link href="/play" onClick={returnToTop}>Play</Link>
-          <Link href="/join" onClick={returnToTop}>Join</Link>
+          <Link href="/new-to-squash" onClick={returnToTop}>New to Squash</Link>
+          <Link href="/memberships-and-prices" onClick={returnToTop}>Memberships &amp; Prices</Link>
           <Link href="/our-story" onClick={returnToTop}>Our Story</Link>
           <Link href="/faq" onClick={returnToTop}>FAQ</Link>
         </div>

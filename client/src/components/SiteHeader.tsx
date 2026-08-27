@@ -11,7 +11,8 @@ const logoSrc = "/manus-storage/sol-squash-logo_dd364204.png";
 const navigation = [
   { label: "HOME", href: "/" },
   { label: "PLAY", href: "/play" },
-  { label: "JOIN", href: "/join" },
+  { label: "NEW TO SQUASH", href: "/new-to-squash" },
+  { label: "MEMBERSHIPS & PRICES", href: "/memberships-and-prices" },
   { label: "OUR STORY", href: "/our-story" },
   { label: "FAQ", href: "/faq" },
 ];
@@ -38,7 +39,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="header-action">
-          <MagneticButton href="/schedule" className="button--mango">BOOK</MagneticButton>
+          <MagneticButton href="/schedule" className="button--mango">BOOK A SESSION</MagneticButton>
         </div>
         <button className="menu-trigger" onClick={() => setOpen(true)} aria-label="Open navigation menu">
           <Menu size={27} />
@@ -59,7 +60,7 @@ export function SiteHeader() {
                   </motion.div>
                 ))}
               </nav>
-              <MagneticButton href="/schedule" className="button--cyan" onClick={() => setOpen(false)}>SEE SESSIONS</MagneticButton>
+              <MagneticButton href="/schedule" className="button--cyan" onClick={() => setOpen(false)}>BOOK A SESSION</MagneticButton>
               <p>645 NW 72nd Street<br />Miami, FL 33150</p>
             </motion.div>
           </motion.div>
