@@ -27,3 +27,6 @@
 - [x] Reorganize existing Home, Play, and New to Squash content around the visitor’s intent without changing approved copy or visuals.
 - [x] Consolidate existing membership, pricing, schedule, story, and FAQ content into clear non-duplicative destinations.
 - [x] Verify all approved copy and link destinations, responsive behavior, visual rules, waves, and production build before checkpointing.
+- [x] Inventory primary section-heading and responsive type-scale rules.
+- [x] Reduce all primary section-heading scales by 30% without changing their typeface or hierarchy.
+- [x] Verify the revised desktop/mobile typography hierarchy and production build before saving a reversible version.
