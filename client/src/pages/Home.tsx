@@ -48,7 +48,7 @@ export default function Home() {
       <WaveDivider source="navy" destination="mango" />
       <section className="club-intro club-intro--real">
         <div className="section-rail"><span>THE CLUB</span><i /></div>
-        <div className="club-intro__heading"><p className="eyebrow">THE CLUB</p><h2>Come for the squash. Stay for everything around it.</h2></div>
+        <div className="club-intro__heading"><p className="eyebrow">SQUASH, THEN EVERYTHING ELSE</p><h2>A CLUB<br /><em>YOU ACTUALLY</em><br />STAY IN.</h2></div>
         <div className="club-intro__copy"><p>Come for the squash. Stay for everything around it.</p><span className="squash-ball squash-ball--mango" aria-hidden="true"><i /><i /></span></div>
         <div className="club-feature-grid">{features.map((feature, index) => <motion.article key={feature.title} className={`club-feature club-feature--${feature.tone}`} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: index * 0.08 }}><span className="club-feature__number">{feature.number}</span><h3>{feature.title}</h3><p className="club-feature__lead">{feature.lead}</p><p>{feature.text}</p></motion.article>)}</div>
       </section>
