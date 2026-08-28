@@ -43,3 +43,15 @@
 - [x] Reconstruct the sun’s missing left-side rays and circular edge from the official mark’s radial symmetry.
 - [x] Produce a complete transparent official sun master with no lettering, cutouts, or detached fragments.
 - [x] Regenerate, verify, and deploy the full one-color-per-file icon set from the repaired master.
+- [x] Preserve the current alternative version as the research baseline and define the UX audit criteria.
+- [x] Research racquet-club visitor behavior, booking and payment flow best practices, and Playbypoint capabilities and limitations.
+- [x] Audit the existing Sol routes, content density, CTA paths, and progressive-disclosure pattern against the research.
+- [x] Produce a copy-preserving recommended site map, booking funnel, and interaction model with an implementation priority plan.
+- [x] Reframe the Sol website as the definitive marketing, knowledge, and conversion source, with Playbypoint as the final transaction endpoint only.
+- [x] Revise the UX blueprint, site map, booking model, and priorities to reflect the website-first visitor experience.
+- [x] Deliver the corrected website-first UX recommendation for approval before implementation.
+- [ ] Save the approved website-first baseline and translate each UX principle into concrete route and CTA requirements.
+- [ ] Remove false affordances and ensure every booking or membership CTA represents the selected final transaction path.
+- [ ] Reorganize Home, Play, and New to Squash so the website completes each visitor decision before handoff.
+- [ ] Reorganize Memberships, Sessions, FAQ, and support as clear website-owned information destinations.
+- [ ] Validate copy preservation, route links, task paths, responsive usability, visual continuity, and production build before saving the website-first revision.
