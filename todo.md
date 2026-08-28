@@ -60,3 +60,6 @@
 - [x] Rebuild the Home club-intro as an uppercase facility-led collage with the original concise message and no added marketing copy.
 - [x] Restore the supplied Home club structure: THE CLUB plus the SQUASH, RECOVER & TRAIN, and STAY & CONNECT cards, using non-court lifestyle imagery and no invented replacement composition.
 - [x] Safe Home Club restoration: removed the founders-on-court image and the unapproved Home Our Story block, and kept the three facility images as separate foreground tiles above the Club cards.
+- [x] Keep the general facilities image, remove the two-players-on-court image, and redesign the Home Club section so the text, three images, and three cards have a stronger non-overlapping composition.
+- [x] Restore the approved general-facilities image in the Home Club three-image composition while excluding the two-players-on-court image, then revalidate separation and balance.
+- [x] Restore the exact approved general-facilities image in the Home Club composition, not a court-only replacement, and revalidate the section at desktop and mobile sizes.

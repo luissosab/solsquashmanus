@@ -311,3 +311,20 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .club-intro--lifestyle .club-intro__lifestyle-images figure:last-child { width:100%; }
   .club-intro--lifestyle .club-intro__club-cards { grid-column:1; grid-row:3; }
 }
+
+/* Corrected Club composition: one primary facility image, two supporting facility images, then a separate card row. */
+.club-intro--lifestyle { grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr); grid-template-rows:auto auto; min-height:clamp(42rem,58vw,58rem); }
+.club-intro--lifestyle .club-intro__heading { grid-column:1; grid-row:1; max-width:25rem; }
+.club-intro--lifestyle .club-intro__lifestyle-images { align-items:start; grid-column:2; grid-row:1; grid-template-columns:1.28fr .92fr; grid-template-rows:auto auto; }
+.club-intro--lifestyle .club-intro__lifestyle-images figure { aspect-ratio:1.15; }
+.club-intro--lifestyle .club-intro__lifestyle-images figure:first-child { aspect-ratio:1.32; grid-row:1 / span 2; }
+.club-intro--lifestyle .club-intro__lifestyle-images figure:last-child { grid-column:2; width:100%; }
+.club-intro--lifestyle .club-intro__club-cards { grid-column:1 / -1; grid-row:2; }
+@media (max-width:767px) {
+  .club-intro--lifestyle { grid-template-columns:1fr; grid-template-rows:auto auto auto; min-height:0; }
+  .club-intro--lifestyle .club-intro__heading { grid-column:1; grid-row:1; max-width:none; }
+  .club-intro--lifestyle .club-intro__lifestyle-images { grid-column:1; grid-row:2; grid-template-columns:1.18fr .82fr; grid-template-rows:auto auto; }
+  .club-intro--lifestyle .club-intro__lifestyle-images figure:first-child { grid-row:1 / span 2; }
+  .club-intro--lifestyle .club-intro__lifestyle-images figure:last-child { grid-column:2; width:100%; }
+  .club-intro--lifestyle .club-intro__club-cards { grid-column:1; grid-row:3; }
+}
