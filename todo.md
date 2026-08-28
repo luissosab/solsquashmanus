@@ -99,3 +99,7 @@
 - [x] Increase the gap between WHAT BRINGS YOU TO SOL? and its three cards by an additional 60%.
 - [x] Validate the redesigned Home Club and decision-card spacing at desktop and mobile breakpoints, then run the production typecheck and build.
 - [x] Keep the cold-plunge image out of the current Home layout and record its existing storage asset for possible future use.
+- [x] Normalize all WHAT BRINGS YOU TO SOL card typography to white headings/body text with mustard secondary/action text, retaining each card background.
+- [x] Remove the blue THE CLUB banner and integrate its exact heading and sentence directly into the mustard section through typography and spacing.
+- [x] Validate the revised Home hierarchy, contrast, spacing, and responsive behavior, then run the production typecheck and build.
+- [x] Correct the actual WHAT BRINGS YOU TO SOL card text elements so titles/body render white and numbers/actions render mustard on all three cards.

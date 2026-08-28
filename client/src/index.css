@@ -456,6 +456,33 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .club-intro--lifestyle .club-intro__module .club-intro__club-card { min-height:0; }
 }
 
+/* Home hierarchy refinement: one typography system for decision cards; Club copy lives directly on mustard. */
+.home-path-card h3,
+.home-path-card strong,
+.home-path-card p,
+.home-path-card--teal h3,
+.home-path-card--teal p,
+.home-path-card--orange h3,
+.home-path-card--orange p,
+.home-path-card--green h3,
+.home-path-card--green p { color:var(--sol-light); }
+.home-path-card span,
+.home-path-card b,
+.home-path-card__number,
+.home-path-card__link,
+.home-path-card--teal .home-path-card__number,
+.home-path-card--teal .home-path-card__link,
+.home-path-card--orange .home-path-card__number,
+.home-path-card--orange .home-path-card__link,
+.home-path-card--green .home-path-card__number,
+.home-path-card--green .home-path-card__link { color:var(--sol-mustard); }
+.club-intro--lifestyle .club-intro__section-intro { background:transparent; border:0; border-radius:0; box-shadow:none; color:var(--sol-navy); padding:0; }
+.club-intro--lifestyle .club-intro__section-intro p,
+.club-intro--lifestyle .club-intro__section-intro h2 { color:var(--sol-navy); }
+@media (max-width:767px) {
+  .club-intro--lifestyle .club-intro__section-intro { padding:0; }
+}
+
 /* Structure-first review: retain only the FAQ-box ball until decorative details are approved. */
 .squash-ball:not(.squash-ball--faq) { display:none !important; }
 .checkout-dialog { grid-template-columns:1fr; grid-template-areas:"title" "offer" "action"; }
