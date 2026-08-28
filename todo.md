@@ -94,3 +94,8 @@
 - [x] Produce one focused best-practice redesign recommendation for the full Home Club section without implementing additional structural changes.
 - [x] Validate the first-card color correction at desktop and mobile breakpoints, then run the production typecheck and build.
 - [x] Write one explicit research-backed Home Club redesign recommendation, without changing the section structure until the user approves it.
+- [x] Replace the Home Club’s detached gallery and card row with three paired modules: court + SQUASH, recovery image + RECOVER & TRAIN, and lounge image + STAY & CONNECT.
+- [x] Preserve all approved Club copy and colors while moving the unused recovery image out of the Club section.
+- [x] Increase the gap between WHAT BRINGS YOU TO SOL? and its three cards by an additional 60%.
+- [x] Validate the redesigned Home Club and decision-card spacing at desktop and mobile breakpoints, then run the production typecheck and build.
+- [x] Keep the cold-plunge image out of the current Home layout and record its existing storage asset for possible future use.

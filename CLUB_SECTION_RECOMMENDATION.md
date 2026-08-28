@@ -10,6 +10,10 @@ This change would solve the section’s main problem: visitors currently have to
 
 > **Keep:** the mustard section background, exact approved copy, three colored propositions, rounded frames, and real Sol photography. **Change only:** the grouping—one relevant photograph directly connected to one proposition.
 
+## Approved Asset Decision
+
+The cold-plunge image is intentionally excluded from the current Home section. Its existing asset, `/manus-storage/sol-cold-plunge_baaf4cf6.png`, remains available for possible future use and has not been deleted.
+
 ## References
 
 [1]: https://www.nngroup.com/articles/visual-hierarchy-ux-definition/ "Visual Hierarchy in UX: Definition — Nielsen Norman Group"

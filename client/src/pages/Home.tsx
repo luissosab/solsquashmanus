@@ -10,7 +10,6 @@ const assets = {
   blueCourt: "/manus-storage/sol-facility-blue-court_a3f6989d.png",
   introVideo: "/manus-storage/sol-squash-intro_5d0ba482.mp4",
   sauna: "/manus-storage/sol-sauna_23e752ac.png",
-  coldPlunge: "/manus-storage/sol-cold-plunge_baaf4cf6.png",
   clubFacility: "/manus-storage/sol-approved-general-facilities_ac64bd88.png",
   mural: "/manus-storage/sol-mural-feature_9dd29c1b.png",
 };
@@ -39,16 +38,11 @@ export default function Home() {
       </section>
       <WaveDivider source="navy" destination="mango" />
       <section className="club-intro club-intro--real club-intro--lifestyle" aria-labelledby="club-intro-title">
-        <div className="club-intro__visual-grid">
-          <div className="club-intro__heading"><p>THE CLUB</p><h2 id="club-intro-title"><span>Come for the</span>{" "}<span>squash. Stay for</span>{" "}<span>everything around it.</span></h2></div>
-          <figure className="club-intro__visual club-intro__visual--facility"><img src={assets.clubFacility} alt="The general facilities at Sol Squash" /></figure>
-          <figure className="club-intro__visual club-intro__visual--sauna"><img src={assets.sauna} alt="The sauna at Sol Squash" /></figure>
-          <figure className="club-intro__visual club-intro__visual--plunge"><img src={assets.coldPlunge} alt="The cold plunge at Sol Squash" /></figure>
-        </div>
-        <div className="club-intro__club-cards">
-          <article className="club-intro__club-card"><h3>SQUASH</h3><strong>5 Full-glass courts</strong><p>Book a court, join a session or train with us. All levels welcome.</p></article>
-          <article className="club-intro__club-card"><h3>RECOVER &amp; TRAIN</h3><strong>Sauna, cold plunge, showers and gym</strong><p>Get your sweat in, reset and leave feeling better than you came.</p></article>
-          <article className="club-intro__club-card"><h3>STAY &amp; CONNECT</h3><strong>Café, lounge and workspace</strong><p>Grab a drink, get some work done or hang around after your match. Sol is a club you actually want to stay in.</p></article>
+        <div className="club-intro__section-intro"><p>THE CLUB</p><h2 id="club-intro-title">Come for the squash. Stay for everything around it.</h2></div>
+        <div className="club-intro__modules">
+          <article className="club-intro__module club-intro__module--squash"><figure><img src={assets.court} alt="One of Sol Squash's full-glass courts" /></figure><div className="club-intro__club-card"><h3>SQUASH</h3><strong>5 Full-glass courts</strong><p>Book a court, join a session or train with us. All levels welcome.</p></div></article>
+          <article className="club-intro__module club-intro__module--recover"><figure><img src={assets.sauna} alt="The sauna at Sol Squash" /></figure><div className="club-intro__club-card"><h3>RECOVER &amp; TRAIN</h3><strong>Sauna, cold plunge, showers and gym</strong><p>Get your sweat in, reset and leave feeling better than you came.</p></div></article>
+          <article className="club-intro__module club-intro__module--stay"><figure><img src={assets.clubFacility} alt="The café, lounge, workspace and glass-court facilities at Sol Squash" /></figure><div className="club-intro__club-card"><h3>STAY &amp; CONNECT</h3><strong>Café, lounge and workspace</strong><p>Grab a drink, get some work done or hang around after your match. Sol is a club you actually want to stay in.</p></div></article>
         </div>
       </section>
       <WaveDivider source="mango" destination="navy" />

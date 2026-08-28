@@ -426,6 +426,36 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .session-card { grid-template-columns:minmax(150px,.42fr) minmax(0,1fr) auto; }
 }
 
+/* Approved Club redesign: one intro band followed by three semantically paired image-and-copy modules. */
+.home-paths__list { margin-top:3.84rem; }
+.club-intro--lifestyle .club-intro__section-intro { background:var(--sol-navy); border:3px solid var(--sol-navy); border-radius:2rem; box-shadow:7px 8px 0 rgba(26,47,107,.24); color:var(--sol-light); margin:0 0 clamp(5rem,8vw,8rem); padding:clamp(2rem,4.5vw,4.5rem); }
+.club-intro--lifestyle .club-intro__section-intro p { color:var(--sol-mustard); font-family:var(--font-display); font-size:clamp(2.5rem,5vw,5rem); font-weight:700; letter-spacing:-.055em; line-height:.86; margin:0 0 1rem; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__section-intro h2 { color:var(--sol-light); font-family:var(--font-body); font-size:clamp(1.65rem,2.8vw,3rem); font-weight:700; letter-spacing:-.045em; line-height:1.02; margin:0; max-width:24ch; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__modules { display:grid; gap:clamp(3rem,5vw,5rem); grid-template-columns:repeat(3,minmax(0,1fr)); }
+.club-intro--lifestyle .club-intro__module { display:grid; gap:1.5rem; grid-template-rows:auto 1fr; min-width:0; }
+.club-intro--lifestyle .club-intro__module figure { aspect-ratio:4 / 3; background:var(--sol-navy); border:3px solid var(--sol-navy); border-radius:1.75rem; box-shadow:7px 8px 0 rgba(26,47,107,.24); margin:0; overflow:hidden; }
+.club-intro--lifestyle .club-intro__module figure img { display:block; height:100%; object-fit:cover; width:100%; }
+.club-intro--lifestyle .club-intro__module--squash figure img { object-position:center; }
+.club-intro--lifestyle .club-intro__module--recover figure img { object-position:center; }
+.club-intro--lifestyle .club-intro__module--stay figure img { object-position:center; }
+.club-intro--lifestyle .club-intro__module .club-intro__club-card { height:100%; margin:0; min-height:240px; }
+.club-intro--lifestyle .club-intro__module--squash .club-intro__club-card { background:var(--sol-orange); border-color:var(--sol-navy); color:var(--sol-light); }
+.club-intro--lifestyle .club-intro__module--recover .club-intro__club-card { background:var(--sol-teal); border-color:var(--sol-mustard); color:var(--sol-light); }
+.club-intro--lifestyle .club-intro__module--stay .club-intro__club-card { background:var(--sol-blue); border-color:var(--sol-navy); color:var(--sol-light); }
+.club-intro--lifestyle .club-intro__module .club-intro__club-card h3,
+.club-intro--lifestyle .club-intro__module .club-intro__club-card p { color:var(--sol-light); }
+.club-intro--lifestyle .club-intro__module .club-intro__club-card strong { color:var(--sol-mustard); }
+@media (max-width:767px) {
+  .home-paths__list { margin-top:3.84rem; }
+  .club-intro--lifestyle .club-intro__section-intro { margin-bottom:5rem; padding:1.5rem; }
+  .club-intro--lifestyle .club-intro__section-intro p { font-size:clamp(2.4rem,12vw,3.4rem); }
+  .club-intro--lifestyle .club-intro__section-intro h2 { font-size:clamp(1.5rem,7.5vw,2rem); max-width:18ch; }
+  .club-intro--lifestyle .club-intro__modules { grid-template-columns:1fr; gap:5rem; }
+  .club-intro--lifestyle .club-intro__module { gap:1.25rem; }
+  .club-intro--lifestyle .club-intro__module figure { aspect-ratio:4 / 3; }
+  .club-intro--lifestyle .club-intro__module .club-intro__club-card { min-height:0; }
+}
+
 /* Structure-first review: retain only the FAQ-box ball until decorative details are approved. */
 .squash-ball:not(.squash-ball--faq) { display:none !important; }
 .checkout-dialog { grid-template-columns:1fr; grid-template-areas:"title" "offer" "action"; }
