@@ -68,3 +68,7 @@
 - [x] Re-upload the verified removed-section facilities image under an unambiguous general-facilities filename, replace the misleading legacy URL, and revalidate the 2×2 Club layout.
 - [x] Restore the lower-left Club tile from the independently verified original upload `pasted_file_PWDtoi_image.png`, then revalidate the final 2×2 layout at desktop and mobile sizes.
 - [x] Directly inspect `pasted_file_PWDtoi_image.png` and confirm it shows Sol’s lounge, café, stairs, and glass-court facilities with no players on court.
+- [x] Remove the Home hero PICK YOUR WAY IN button while retaining the navigation CTA.
+- [x] Normalize the WHAT BRINGS YOU TO SOL card borders so the green card does not have an unmatched outline.
+- [x] Widen the Club 2×2 visual grid to align with the three-card row, increase the image-to-card gap by 75%, and increase the space below the cards by approximately 60%.
+- [x] Move “MORE THAN A GAME, A WAY OF LIFE.” from above MIAMI’S SQUASH HOME to the paragraph below it, removing the redundant Club sentence.

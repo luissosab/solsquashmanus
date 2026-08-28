@@ -352,3 +352,16 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .club-intro--lifestyle .club-intro__heading h2 { font-size:clamp(1rem,4.9vw,1.34rem); line-height:.96; }
   .club-intro--lifestyle .club-intro__club-cards { margin-top:2rem; }
 }
+
+/* Confirmed Home refinements: equal decision cards and aligned, roomier Club composition. */
+.home-path-card,
+.home-path-card--play,
+.home-path-card--new,
+.home-path-card--member { border-color:transparent !important; }
+.club-intro--lifestyle { padding-bottom:clamp(4.4rem,9.6vw,10.4rem); }
+.club-intro--lifestyle .club-intro__visual-grid { max-width:none; width:100%; }
+.club-intro--lifestyle .club-intro__club-cards { margin-top:clamp(3.5rem,7vw,7rem); }
+@media (max-width:767px) {
+  .club-intro--lifestyle { padding-bottom:4.8rem; }
+  .club-intro--lifestyle .club-intro__club-cards { margin-top:3.5rem; }
+}

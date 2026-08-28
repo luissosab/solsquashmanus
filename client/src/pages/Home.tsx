@@ -3,7 +3,6 @@
  */
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { MagneticButton } from "@/components/MagneticButton";
 import { WaveDivider } from "@/components/WaveDivider";
 
 const assets = {
@@ -27,7 +26,6 @@ export default function Home() {
           <motion.p className="eyebrow eyebrow--cyan" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.16 }}>645 NW 72ND STREET · LITTLE RIVER</motion.p>
           <h1 aria-label="MIAMI'S SQUASH HOME."><motion.span initial={{ opacity: 0, y: 46 }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 210, damping: 22, delay: 0.22 }}>MIAMI'S SQUASH HOME.</motion.span></h1>
           <p className="hero-tagline">BUILT BY PLAYERS. MADE FOR EVERYONE.</p>
-          <MagneticButton href="#home-paths" className="button--mango">PICK YOUR WAY IN</MagneticButton>
         </div>
       </section>
       <section className="home-paths" id="home-paths" aria-labelledby="home-paths-title">
@@ -54,7 +52,7 @@ export default function Home() {
       </section>
       <WaveDivider source="mango" destination="navy" />
       <section className="mural-feature">
-        <div className="mural-feature__copy"><p className="eyebrow eyebrow--cyan">MORE THAN A GAME, A WAY OF LIFE.</p><h2>MIAMI'S<br />SQUASH<br /><em>HOME.</em></h2><p>Come for the squash. Stay for everything around it.</p><Link href="/play" className="text-link">PICK YOUR WAY IN <span>↗</span></Link></div>
+        <div className="mural-feature__copy"><h2>MIAMI'S<br />SQUASH<br /><em>HOME.</em></h2><p>MORE THAN A GAME, A WAY OF LIFE.</p><Link href="/play" className="text-link">PICK YOUR WAY IN <span>↗</span></Link></div>
         <figure className="mural-feature__image"><img src={assets.mural} alt="The Sol Squash front mural with squash-ball graphics and the club sun-face" /></figure>
       </section>
     </>
