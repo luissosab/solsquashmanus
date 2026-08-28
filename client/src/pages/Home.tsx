@@ -28,6 +28,7 @@ export default function Home() {
           <p className="hero-tagline">BUILT BY PLAYERS. MADE FOR EVERYONE.</p>
         </div>
       </section>
+      <WaveDivider source="navy" destination="navy" />
       <section className="home-paths" id="home-paths" aria-labelledby="home-paths-title">
         <div className="home-paths__intro"><p className="eyebrow eyebrow--cyan">FIND YOUR WAY IN</p><h2 id="home-paths-title">WHAT BRINGS<br />YOU TO <em>SOL?</em></h2></div>
         <div className="home-paths__list">

@@ -72,3 +72,7 @@
 - [x] Normalize the WHAT BRINGS YOU TO SOL card borders so the green card does not have an unmatched outline.
 - [x] Widen the Club 2×2 visual grid to align with the three-card row, increase the image-to-card gap by 75%, and increase the space below the cards by approximately 60%.
 - [x] Move “MORE THAN A GAME, A WAY OF LIFE.” from above MIAMI’S SQUASH HOME to the paragraph below it, removing the redundant Club sentence.
+- [x] Increase the spacing above and below the three Club cards and give them three distinct colors that do not repeat the WHAT BRINGS YOU TO SOL sequence.
+- [x] Add breathing room below the WHAT BRINGS YOU TO SOL cards before the cyan wave.
+- [x] Repair the cyan wave divider geometry so the upper edge remains continuously curved with no squared segments.
+- [x] Add the missing cyan wave transition between the Home hero and WHAT BRINGS YOU TO SOL.
