@@ -21,14 +21,14 @@
 4. **Layers with a reason:** image placeholders, session cards, leaf forms, court-line motifs, and content never feel like floating dashboard widgets.
 
 ### Color Philosophy
-The site uses **Palm Green (#1B4332)** as the grounding, club-house color; **Mango Gold (#F4A911)** as the sun-struck invitation; **Rally Navy (#0C254A)** for dusk energy and white typography; **Chalk (#FAFAFA)** for breathing room; and **Electric Pool (#00E5FF)** exclusively for the continuous wave dividers and high-energy signals. The colors should feel printed, painted, and inhabitable—not glossy or technical.
+The site uses **Palm Green (#3DB234)** as the grounding, club-house color; **Mango Gold (#F4A911)** as the sun-struck invitation; **Rally Navy (#1A2F6B)** for dusk energy and white typography; **Court Teal (#1A3A3A)** for depth; and **Electric Pool (#00C4C4)** exclusively for the continuous wave dividers and high-energy signals. The colors should feel printed, painted, and inhabitable—not glossy or technical.
 
 ### Layout Paradigm
 An **unspooling promenade** replaces a centered web-page grid. The visitor moves from a wide court-side hero to a stacked sequence of color rooms. Each section tilts its content relationship: left-weighted copy against right-side visual placeholders, then full-bleed session cards, then a dark strip of club rituals. Sections overlap through continuous waves, rising leaves, and cropped visual frames.
 
 ### Signature Elements
 
-1. **Electric Pool sine waves:** continuous #00E5FF wave dividers at each major shift in atmosphere.
+1. **Electric Pool sine waves:** continuous #00C4C4 wave dividers at each major shift in atmosphere.
 2. **Court-corner frames:** thick rounded outlines and curving court-line marks that surround images, sessions, and venue moments.
 3. **Sun sticker:** a hand-painted, circular burst that marks prices, calls-to-action, or key moments without becoming a badge system.
 
@@ -59,17 +59,19 @@ Examples:
 Use the **user-provided Sol Squash logo asset only**. The surrounding brand system supports it with an oversized sun-disc, curved court lines, and a warm painted edge—never a generated or guessed logo mark.
 
 ### Signature Brand Color
-**Electric Pool — #00E5FF**. It is the unmistakable surge that runs through every major section boundary and motion cue.
+**Electric Pool — #00C4C4**. It is the unmistakable surge that runs through every major section boundary and motion cue.
 
 ## Style Decisions
 
 - All primary containers, images, cards, drawers, and mobile navigation surfaces use `rounded-3xl` or a larger equivalent.
-- Major sections meet through continuous sine-wave SVG dividers in `#00E5FF`; straight horizontal rules are not used.
+- Major sections meet through continuous sine-wave SVG dividers in `#00C4C4`; straight horizontal rules are not used.
 - Full supplied copy remains verbatim in the rendered application, with progressive disclosure used only to manage density.
 - Visual blocks use explicit image labels in the component markup so photography/art direction remains visible before final imagery is supplied.
-- Electric Pool `#00E5FF` is reserved for wave dividers, court-line loops, motion/high-energy marks, and small signal accents rather than large functional surfaces.
+- Electric Pool `#00C4C4` is reserved for wave dividers, court-line loops, motion/high-energy marks, and small signal accents rather than large functional surfaces.
 - Pricing, sessions, FAQs, and play options are rendered as physical clubhouse ephemera: printed rate sheets, posted cards, punched session notices, and painted signboards.
 - Every non-photographic image frame uses a sun-softened, mural-like texture and descriptive art-direction label so it reads as a real Sol moment, never an abstract UI placeholder.
+- Headlines use a modern condensed athletic display voice at poster scale, with hierarchy driven by compression and rhythm rather than generic bold sans weight.
+- Every major colour room carries a tactile mural cue through restrained stucco-like grain, painted geometry, court-line fragments, or sun-warmed texture.
 
 ## Supplied Asset Findings
 

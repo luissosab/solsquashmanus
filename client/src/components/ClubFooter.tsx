@@ -3,6 +3,7 @@
  */
 import { Link } from "wouter";
 import { MagneticButton } from "./MagneticButton";
+import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
 const logoSrc = "/manus-storage/sol-squash-logo_dd364204.png";
 
@@ -14,12 +15,13 @@ export function ClubFooter() {
       <div className="club-footer__main">
         <img src={logoSrc} alt="Sol Squash" className="club-footer__logo" />
         <p>Come for the squash. Stay for everything around it.</p>
-        <MagneticButton href="/schedule" className="button--mango">BOOK A SESSION</MagneticButton>
+        <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">BOOK A SESSION</MagneticButton>
       </div>
       <div className="club-footer__links">
         <div>
           <span className="eyebrow eyebrow--cyan">COME FIND US</span>
           <a href="https://maps.google.com/?q=645+NW+72nd+Street+Miami+FL+33150" target="_blank" rel="noreferrer">645 NW 72nd Street<br />Miami, FL 33150</a>
+          <a href="https://wa.me/13054814295" target="_blank" rel="noreferrer">WhatsApp / text: 305 481 4295</a>
           <a href="mailto:sol@solsquash.com">sol@solsquash.com</a>
         </div>
         <div>

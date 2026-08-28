@@ -6,6 +6,7 @@ import { Check } from "lucide-react";
 import { MagneticButton } from "@/components/MagneticButton";
 import { RetroImage } from "@/components/RetroImage";
 import { WaveDivider } from "@/components/WaveDivider";
+import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
 const clubWideImage = "/manus-storage/sol-club-wide_b4871337.png";
 const muralReferenceImage = "/manus-storage/sol-mural-reference_10136907.png";
@@ -43,7 +44,8 @@ export function FirstTimerContent({ includeLeadingWave = true }: { includeLeadin
               <h3>{offer.title}</h3>
               <p className="first-step-card__metadata">{offer.metadata}</p>
               <p>{offer.copy}</p>
-              <MagneticButton href="/schedule" className={offer.tone === "mango" ? "button--navy" : "button--mango"}>{offer.action}</MagneticButton>
+              <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className={offer.tone === "mango" ? "button--navy" : "button--mango"}>{offer.action}</MagneticButton>
+              <p className="booking-handoff-note">Choose a live time and complete your booking next.</p>
             </motion.article>
           ))}
         </div>

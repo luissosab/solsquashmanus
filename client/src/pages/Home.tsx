@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { MagneticButton } from "@/components/MagneticButton";
 import { WaveDivider } from "@/components/WaveDivider";
+import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
 const assets = {
   court: "/manus-storage/sol-facility-glass-court_bc711772.png",
@@ -33,7 +34,15 @@ export default function Home() {
           <h1 aria-label="MIAMI'S SQUASH HOME.">{["MIAMI'S", "SQUASH", "HOME."].map((word, index) => <motion.span key={word} initial={{ opacity: 0, y: 46 }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 210, damping: 22, delay: 0.22 + index * 0.1 }}>{word}</motion.span>)}</h1>
           <p className="hero-tagline">MORE THAN A GAME, A WAY OF LIFE.</p>
           <p className="hero-body">Come for the squash. Stay for everything around it.</p>
-          <MagneticButton href="/schedule" className="button--mango">BOOK A SESSION</MagneticButton>
+          <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">BOOK A SESSION</MagneticButton>
+        </div>
+      </section>
+      <section className="home-paths" aria-labelledby="home-paths-title">
+        <div className="home-paths__intro"><p className="eyebrow eyebrow--cyan">FIND YOUR WAY IN</p><h2 id="home-paths-title">WHAT BRINGS<br />YOU TO <em>SOL?</em></h2></div>
+        <div className="home-paths__list">
+          <Link href="/play" className="home-path-card home-path-card--play"><span>01</span><strong>PLAY</strong><p>Book a court, join a session or train with us. All levels welcome.</p><b>EXPLORE PLAY <i aria-hidden="true">↗</i></b></Link>
+          <Link href="/new-to-squash" className="home-path-card home-path-card--new"><span>02</span><strong>NEW TO SQUASH</strong><p>No experience needed. Rackets provided. Come ready to move.</p><b>START HERE <i aria-hidden="true">↗</i></b></Link>
+          <Link href="/memberships-and-prices" className="home-path-card home-path-card--member"><span>03</span><strong>MEMBERSHIPS &amp; PRICES</strong><p>Court time every day, the sauna, cold plunge and showers, and member pricing on everything else.</p><b>SEE MEMBERSHIPS <i aria-hidden="true">↗</i></b></Link>
         </div>
       </section>
       <WaveDivider source="navy" destination="mango" />
@@ -41,7 +50,7 @@ export default function Home() {
         <div className="section-rail"><span>THE CLUB</span><i /></div>
         <div className="club-intro__heading"><p className="eyebrow">SQUASH, THEN EVERYTHING ELSE</p><h2>A CLUB<br /><em>YOU ACTUALLY</em><br />STAY IN.</h2></div>
         <div className="club-intro__copy"><p>Come for the squash. Stay for everything around it.</p><span className="squash-ball squash-ball--mango" aria-hidden="true"><i /><i /></span></div>
-        <div className="club-feature-grid">{features.map((feature, index) => <motion.article key={feature.title} className={`club-feature club-feature--${feature.tone}`} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: index * 0.08 }}><span className="club-feature__number">{feature.number}</span><h3>{feature.title}</h3><p className="club-feature__lead">{feature.lead}</p><p>{feature.text}</p><span className="club-feature__mark" aria-hidden="true">↗</span></motion.article>)}</div>
+        <div className="club-feature-grid">{features.map((feature, index) => <motion.article key={feature.title} className={`club-feature club-feature--${feature.tone}`} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: index * 0.08 }}><span className="club-feature__number">{feature.number}</span><h3>{feature.title}</h3><p className="club-feature__lead">{feature.lead}</p><p>{feature.text}</p></motion.article>)}</div>
       </section>
       <WaveDivider source="mango" destination="green" />
       <section className="home-rhythm home-rhythm--real">

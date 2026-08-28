@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { MagneticButton } from "./MagneticButton";
+import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
 const logoSrc = "/manus-storage/sol-squash-logo_dd364204.png";
 const navigation = [
@@ -39,7 +40,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="header-action">
-          <MagneticButton href="/schedule" className="button--mango">BOOK A SESSION</MagneticButton>
+          <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">BOOK A SESSION</MagneticButton>
         </div>
         <button className="menu-trigger" onClick={() => setOpen(true)} aria-label="Open navigation menu">
           <Menu size={27} />
@@ -60,7 +61,7 @@ export function SiteHeader() {
                   </motion.div>
                 ))}
               </nav>
-              <MagneticButton href="/schedule" className="button--cyan" onClick={() => setOpen(false)}>BOOK A SESSION</MagneticButton>
+              <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango" onClick={() => setOpen(false)}>BOOK A SESSION</MagneticButton>
               <p>645 NW 72nd Street<br />Miami, FL 33150</p>
             </motion.div>
           </motion.div>
