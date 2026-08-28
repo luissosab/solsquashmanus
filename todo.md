@@ -57,3 +57,4 @@
 - [x] Validate copy preservation, route links, task paths, responsive usability, visual continuity, and production build before saving the website-first revision.
 - [x] Restore the Home club-intro to its original two-copy message and simplify its composition without altering the rest of Home.
 - [x] Restore the Home hero to concise approved positioning, retain the address, and route its primary action to an internal Sol path.
+- [x] Rebuild the Home club-intro as an uppercase facility-led collage with the original concise message and no added marketing copy.

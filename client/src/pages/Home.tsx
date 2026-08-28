@@ -8,6 +8,7 @@ import { WaveDivider } from "@/components/WaveDivider";
 
 const assets = {
   court: "/manus-storage/sol-facility-glass-court_bc711772.png",
+  blueCourt: "/manus-storage/sol-facility-blue-court_a3f6989d.png",
   introVideo: "/manus-storage/sol-squash-intro_5d0ba482.mp4",
   sauna: "/manus-storage/sol-sauna_23e752ac.png",
   coldPlunge: "/manus-storage/sol-cold-plunge_baaf4cf6.png",
@@ -38,10 +39,9 @@ export default function Home() {
         </div>
       </section>
       <WaveDivider source="navy" destination="mango" />
-      <section className="club-intro club-intro--real club-intro--concise">
-        <div className="section-rail"><span>THE CLUB</span><i /></div>
-        <div className="club-intro__heading"><h2>Come for the squash. Stay for everything around it.</h2></div>
-        <span className="squash-ball squash-ball--mango" aria-hidden="true"><i /><i /></span>
+      <section className="club-intro club-intro--real club-intro--facility">
+        <div className="club-intro__collage" aria-hidden="true"><img src={assets.court} alt="" /><img src={assets.blueCourt} alt="" /></div>
+        <div className="club-intro__heading"><p>THE CLUB</p><h2>Come for the<br />squash. Stay for<br />everything around it.</h2></div>
       </section>
       <WaveDivider source="mango" destination="green" />
       <section className="home-rhythm home-rhythm--real">
