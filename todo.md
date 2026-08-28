@@ -63,3 +63,8 @@
 - [x] Keep the general facilities image, remove the two-players-on-court image, and redesign the Home Club section so the text, three images, and three cards have a stronger non-overlapping composition.
 - [x] Restore the approved general-facilities image in the Home Club three-image composition while excluding the two-players-on-court image, then revalidate separation and balance.
 - [x] Restore the exact approved general-facilities image in the Home Club composition, not a court-only replacement, and revalidate the section at desktop and mobile sizes.
+- [x] Build the approved Home Club 2×2 composition: text tile upper-left, exact removed-section image lower-left, two existing images stacked right, and three cards in a separate row below.
+- [x] Visually confirm the lower-left tile uses the exact general-facilities image from the removed Home section despite its misleading legacy filename, with the 2×2 composition revalidated at desktop and mobile sizes.
+- [x] Re-upload the verified removed-section facilities image under an unambiguous general-facilities filename, replace the misleading legacy URL, and revalidate the 2×2 Club layout.
+- [x] Restore the lower-left Club tile from the independently verified original upload `pasted_file_PWDtoi_image.png`, then revalidate the final 2×2 layout at desktop and mobile sizes.
+- [x] Directly inspect `pasted_file_PWDtoi_image.png` and confirm it shows Sol’s lounge, café, stairs, and glass-court facilities with no players on court.

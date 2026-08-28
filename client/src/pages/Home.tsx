@@ -12,7 +12,7 @@ const assets = {
   introVideo: "/manus-storage/sol-squash-intro_5d0ba482.mp4",
   sauna: "/manus-storage/sol-sauna_23e752ac.png",
   coldPlunge: "/manus-storage/sol-cold-plunge_baaf4cf6.png",
-  lounge: "/manus-storage/sol-club-lounge_2783e194.jpg",
+  clubFacility: "/manus-storage/sol-approved-general-facilities_ac64bd88.png",
   mural: "/manus-storage/sol-mural-feature_9dd29c1b.png",
 };
 
@@ -40,11 +40,11 @@ export default function Home() {
       </section>
       <WaveDivider source="navy" destination="mango" />
       <section className="club-intro club-intro--real club-intro--lifestyle" aria-labelledby="club-intro-title">
-        <div className="club-intro__heading"><p>THE CLUB</p><h2 id="club-intro-title">Come for the<br />squash. Stay for<br />everything around it.</h2></div>
-        <div className="club-intro__lifestyle-images" aria-label="Sol Squash club spaces">
-          <figure><img src={assets.lounge} alt="The general club facilities at Sol Squash" /></figure>
-          <figure><img src={assets.sauna} alt="The sauna at Sol Squash" /></figure>
-          <figure><img src={assets.coldPlunge} alt="The cold plunge at Sol Squash" /></figure>
+        <div className="club-intro__visual-grid">
+          <div className="club-intro__heading"><p>THE CLUB</p><h2 id="club-intro-title">Come for the<br />squash. Stay for<br />everything around it.</h2></div>
+          <figure className="club-intro__visual club-intro__visual--facility"><img src={assets.clubFacility} alt="The general facilities at Sol Squash" /></figure>
+          <figure className="club-intro__visual club-intro__visual--sauna"><img src={assets.sauna} alt="The sauna at Sol Squash" /></figure>
+          <figure className="club-intro__visual club-intro__visual--plunge"><img src={assets.coldPlunge} alt="The cold plunge at Sol Squash" /></figure>
         </div>
         <div className="club-intro__club-cards">
           <article className="club-intro__club-card"><h3>SQUASH</h3><strong>5 Full-glass courts</strong><p>Book a court, join a session or train with us. All levels welcome.</p></article>

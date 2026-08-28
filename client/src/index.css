@@ -328,3 +328,27 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .club-intro--lifestyle .club-intro__lifestyle-images figure:last-child { grid-column:2; width:100%; }
   .club-intro--lifestyle .club-intro__club-cards { grid-column:1; grid-row:3; }
 }
+
+/* Approved Club layout: the message is the fourth visual tile in a balanced 2×2 grid. */
+.club-intro--lifestyle { display:block; min-height:0; }
+.club-intro--lifestyle .club-intro__visual-grid { display:grid; gap:clamp(.8rem,1.35vw,1.35rem); grid-template-columns:repeat(2,minmax(0,1fr)); margin:0 auto; max-width:68rem; }
+.club-intro--lifestyle .club-intro__heading,
+.club-intro--lifestyle .club-intro__visual { aspect-ratio:1.32; border:3px solid var(--sol-navy); border-radius:1.5rem; box-shadow:7px 8px 0 rgba(26,47,107,.24); margin:0; overflow:hidden; }
+.club-intro--lifestyle .club-intro__heading { align-items:flex-start; background:var(--sol-navy); display:flex; flex-direction:column; grid-column:1; grid-row:1; justify-content:center; max-width:none; padding:clamp(1.5rem,3vw,3.25rem); }
+.club-intro--lifestyle .club-intro__heading p { color:var(--sol-mustard); font-size:clamp(2.35rem,4.4vw,4.85rem); margin:0 0 .8rem; }
+.club-intro--lifestyle .club-intro__heading h2 { color:var(--sol-light); font-size:clamp(1.45rem,2.45vw,2.8rem); margin:0; max-width:16ch; }
+.club-intro--lifestyle .club-intro__visual { background:var(--sol-navy); }
+.club-intro--lifestyle .club-intro__visual--facility { grid-column:1; grid-row:2; }
+.club-intro--lifestyle .club-intro__visual--sauna { grid-column:2; grid-row:1; }
+.club-intro--lifestyle .club-intro__visual--plunge { grid-column:2; grid-row:2; }
+.club-intro--lifestyle .club-intro__visual img { display:block; height:100%; object-fit:cover; width:100%; }
+.club-intro--lifestyle .club-intro__club-cards { margin-top:clamp(2rem,4vw,4rem); }
+@media (max-width:767px) {
+  .club-intro--lifestyle .club-intro__visual-grid { gap:.65rem; }
+  .club-intro--lifestyle .club-intro__heading,
+  .club-intro--lifestyle .club-intro__visual { aspect-ratio:1; border-radius:1.15rem; box-shadow:4px 5px 0 rgba(26,47,107,.22); }
+  .club-intro--lifestyle .club-intro__heading { padding:1rem; }
+  .club-intro--lifestyle .club-intro__heading p { font-size:clamp(1.7rem,8.4vw,2.25rem); margin-bottom:.45rem; }
+  .club-intro--lifestyle .club-intro__heading h2 { font-size:clamp(1rem,4.9vw,1.34rem); line-height:.96; }
+  .club-intro--lifestyle .club-intro__club-cards { margin-top:2rem; }
+}
