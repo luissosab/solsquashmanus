@@ -16,12 +16,6 @@ const assets = {
   founders: "/manus-storage/sol-founders-on-court_fbc8dbe3.png",
 };
 
-const features = [
-  { number: "01", title: "SQUASH", lead: "5 Full-glass courts.", text: "Book a court, join a session or train with us. All levels welcome.", tone: "green" },
-  { number: "02", title: "RECOVER & TRAIN", lead: "Sauna, cold plunge, showers and gym.", text: "Get your sweat in, reset and leave feeling better than you came.", tone: "mango" },
-  { number: "03", title: "STAY & CONNECT", lead: "Café, lounge and workspace.", text: "Grab a drink, get some work done or hang around after your match.", tone: "navy" },
-];
-
 export default function Home() {
   return (
     <>
@@ -46,11 +40,10 @@ export default function Home() {
         </div>
       </section>
       <WaveDivider source="navy" destination="mango" />
-      <section className="club-intro club-intro--real">
+      <section className="club-intro club-intro--real club-intro--concise">
         <div className="section-rail"><span>THE CLUB</span><i /></div>
-        <div className="club-intro__heading"><p className="eyebrow">SQUASH, THEN EVERYTHING ELSE</p><h2>A CLUB<br /><em>YOU ACTUALLY</em><br />STAY IN.</h2></div>
-        <div className="club-intro__copy"><p>Come for the squash. Stay for everything around it.</p><span className="squash-ball squash-ball--mango" aria-hidden="true"><i /><i /></span></div>
-        <div className="club-feature-grid">{features.map((feature, index) => <motion.article key={feature.title} className={`club-feature club-feature--${feature.tone}`} initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ delay: index * 0.08 }}><span className="club-feature__number">{feature.number}</span><h3>{feature.title}</h3><p className="club-feature__lead">{feature.lead}</p><p>{feature.text}</p></motion.article>)}</div>
+        <div className="club-intro__heading"><h2>Come for the squash. Stay for everything around it.</h2></div>
+        <span className="squash-ball squash-ball--mango" aria-hidden="true"><i /><i /></span>
       </section>
       <WaveDivider source="mango" destination="green" />
       <section className="home-rhythm home-rhythm--real">

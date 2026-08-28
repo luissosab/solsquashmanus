@@ -55,3 +55,4 @@
 - [x] Reorganize Home, Play, and New to Squash so the website completes each visitor decision before handoff.
 - [x] Reorganize Memberships, Sessions, FAQ, and support into clear website-owned information destinations.
 - [x] Validate copy preservation, route links, task paths, responsive usability, visual continuity, and production build before saving the website-first revision.
+- [x] Restore the Home club-intro to its original two-copy message and simplify its composition without altering the rest of Home.
