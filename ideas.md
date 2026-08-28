@@ -71,7 +71,7 @@ Use the **user-provided Sol Squash logo asset only**. The surrounding brand syst
 - Pricing, sessions, FAQs, and play options are rendered as physical clubhouse ephemera: printed rate sheets, posted cards, punched session notices, and painted signboards.
 - Every non-photographic image frame uses a sun-softened, mural-like texture and descriptive art-direction label so it reads as a real Sol moment, never an abstract UI placeholder.
 - Headlines use a modern condensed athletic display voice at poster scale, with hierarchy driven by compression and rhythm rather than generic bold sans weight.
-- Every major colour room carries a tactile mural cue through restrained stucco-like grain, painted geometry, court-line fragments, or sun-warmed texture.
+- Every major colour room uses sun-warmed texture or intentional court-line fragments; non-court diagonal background markings are excluded.
 
 ## Supplied Asset Findings
 
