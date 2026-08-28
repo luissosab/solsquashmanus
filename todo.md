@@ -76,3 +76,9 @@
 - [x] Add breathing room below the WHAT BRINGS YOU TO SOL cards before the cyan wave.
 - [x] Repair the cyan wave divider geometry so the upper edge remains continuously curved with no squared segments.
 - [x] Add the missing cyan wave transition between the Home hero and WHAT BRINGS YOU TO SOL.
+- [x] Fix the Home hero squash-ball distortion at mobile width while preserving the intended desktop treatment.
+- [x] Make the Home THE CLUB text tile fully readable within its square at mobile width without changing the approved wording.
+- [x] Audit every primary route for equivalent mobile distortion, overflow, clipping, and undersized-container failures, then apply reusable corrections.
+- [x] Establish consistent wave-aware vertical spacing across all major sections so tall cyan dividers do not crowd adjacent content.
+- [x] Validate all primary routes at desktop and mobile breakpoints, then run the production typecheck and build.
+- [x] Fix the Schedule session-card time-label collision found during the sitewide mobile/desktop overflow audit.

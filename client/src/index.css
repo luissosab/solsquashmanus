@@ -387,3 +387,41 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .club-intro--lifestyle { padding-bottom:7.5rem; }
   .club-intro--lifestyle .club-intro__club-cards { margin-top:5rem; }
 }
+
+/* Mobile-safe geometry and wave-aware section rhythm across every primary route. */
+.squash-ball { aspect-ratio:1 / 1; box-sizing:border-box; flex:0 0 auto; }
+.site-frame main > section,
+.site-frame main > section > *,
+.home-path-card,
+.club-intro__club-card,
+.first-step-card,
+.way-card,
+.pricing-card,
+.session-card,
+.profile-card,
+.values-list article,
+.faq-topic-panel { min-width:0; }
+.site-frame main > section:has(+ .wave-divider) { padding-bottom:clamp(7.5rem,10vw,10rem); }
+.site-frame main > .wave-divider + section { padding-top:clamp(6rem,8vw,8rem); }
+@media (max-width:767px) {
+  .home-hero--real .squash-ball--hero { display:none !important; }
+  .club-intro--lifestyle .club-intro__heading { justify-content:center; padding:.72rem; }
+  .club-intro--lifestyle .club-intro__heading p { font-size:clamp(1.28rem,5.9vw,1.52rem); line-height:.84; margin:0 0 .55rem; white-space:nowrap; }
+  .club-intro--lifestyle .club-intro__heading h2 { font-size:clamp(.7rem,3.05vw,.82rem); letter-spacing:-.045em; line-height:1.04; max-width:none; width:100%; }
+  .club-intro--lifestyle .club-intro__heading h2 span { display:block; white-space:nowrap; }
+  .site-frame main > section:has(+ .wave-divider) { padding-bottom:5.25rem; }
+  .site-frame main > .wave-divider + section { padding-top:4.75rem; }
+  .home-paths:has(+ .wave-divider) { padding-bottom:6.5rem; }
+  .club-intro--lifestyle:has(+ .wave-divider) { padding-bottom:8rem; }
+  .site-frame main h1,
+  .site-frame main h2,
+  .site-frame main h3 { max-width:100%; }
+}
+
+/* Responsive audit correction: session choice labels must never collide with session titles. */
+.session-card__time { align-items:flex-start; flex-direction:column; gap:.2rem; line-height:1; }
+.session-card__time span { line-height:1; }
+.session-card__time small { line-height:1.2; max-width:13ch; }
+@media (min-width:680px) {
+  .session-card { grid-template-columns:minmax(150px,.42fr) minmax(0,1fr) auto; }
+}
