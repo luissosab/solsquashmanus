@@ -435,17 +435,17 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 }
 
 /* Airier four-tile composition within the existing Club footprint. */
-.club-intro--lifestyle .club-intro__visual-grid { gap:clamp(1.5rem,2.8vw,2.5rem); }
+.club-intro--lifestyle .club-intro__visual-grid { gap:clamp(3rem,5.6vw,5rem); }
 @media (max-width:767px) {
-  .club-intro--lifestyle .club-intro__visual-grid { gap:1.2rem; }
+  .club-intro--lifestyle .club-intro__visual-grid { gap:2.4rem; }
 }
 
 /* Stronger content-to-wave clearance across every route-level section. */
-.site-frame main > section:has(+ .wave-divider) { padding-bottom:clamp(8.5rem,11vw,11rem); }
-.site-frame main > .wave-divider + section { padding-top:clamp(7.5rem,9vw,9.5rem); }
+.site-frame main > section:has(+ .wave-divider) { padding-bottom:clamp(10rem,12vw,12.5rem); }
+.site-frame main > .wave-divider + section { padding-top:clamp(8.75rem,10vw,10.75rem); }
 @media (max-width:767px) {
-  .site-frame main > section:has(+ .wave-divider) { padding-bottom:6.75rem; }
-  .site-frame main > .wave-divider + section { padding-top:6.25rem; }
-  .home-paths:has(+ .wave-divider) { padding-bottom:7.5rem; }
-  .club-intro--lifestyle:has(+ .wave-divider) { padding-bottom:9rem; }
+  .site-frame main > section:has(+ .wave-divider) { padding-bottom:8.25rem; }
+  .site-frame main > .wave-divider + section { padding-top:7.5rem; }
+  .home-paths:has(+ .wave-divider) { padding-bottom:9rem; }
+  .club-intro--lifestyle:has(+ .wave-divider) { padding-bottom:10.5rem; }
 }

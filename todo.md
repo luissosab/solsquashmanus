@@ -86,3 +86,7 @@
 - [x] Increase the gutters between the four Home Club tiles while keeping their combined composition within the same overall footprint.
 - [x] Increase the clear space between section content and cyan wave dividers across every primary route.
 - [x] Validate the structural cleanup at desktop and mobile breakpoints across all primary routes, then run the production typecheck and build.
+- [x] Restore the exact Home Club sentence spacing: “Come for the squash. Stay for everything around it.”
+- [x] Double the current gutters between the four Home Club tiles while preserving their combined overall footprint.
+- [x] Increase section-content clearance from cyan wave dividers again across every primary route.
+- [x] Validate exact copy, spacing, footprint, and responsive behavior across all routes, then run the production typecheck and build.

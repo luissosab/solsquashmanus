@@ -40,7 +40,7 @@ export default function Home() {
       <WaveDivider source="navy" destination="mango" />
       <section className="club-intro club-intro--real club-intro--lifestyle" aria-labelledby="club-intro-title">
         <div className="club-intro__visual-grid">
-          <div className="club-intro__heading"><p>THE CLUB</p><h2 id="club-intro-title"><span>Come for the</span><span>squash. Stay for</span><span>everything around it.</span></h2></div>
+          <div className="club-intro__heading"><p>THE CLUB</p><h2 id="club-intro-title"><span>Come for the</span>{" "}<span>squash. Stay for</span>{" "}<span>everything around it.</span></h2></div>
           <figure className="club-intro__visual club-intro__visual--facility"><img src={assets.clubFacility} alt="The general facilities at Sol Squash" /></figure>
           <figure className="club-intro__visual club-intro__visual--sauna"><img src={assets.sauna} alt="The sauna at Sol Squash" /></figure>
           <figure className="club-intro__visual club-intro__visual--plunge"><img src={assets.coldPlunge} alt="The cold plunge at Sol Squash" /></figure>
