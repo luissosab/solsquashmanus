@@ -12,6 +12,7 @@ const assets = {
   introVideo: "/manus-storage/sol-squash-intro_5d0ba482.mp4",
   sauna: "/manus-storage/sol-sauna_23e752ac.png",
   coldPlunge: "/manus-storage/sol-cold-plunge_baaf4cf6.png",
+  lounge: "/manus-storage/sol-founders-lounge_1745d40e.webp",
   mural: "/manus-storage/sol-mural-feature_9dd29c1b.png",
   founders: "/manus-storage/sol-founders-on-court_fbc8dbe3.png",
 };
@@ -39,9 +40,15 @@ export default function Home() {
         </div>
       </section>
       <WaveDivider source="navy" destination="mango" />
-      <section className="club-intro club-intro--real club-intro--facility">
-        <div className="club-intro__collage" aria-hidden="true"><img src={assets.court} alt="" /><img src={assets.blueCourt} alt="" /></div>
-        <div className="club-intro__heading"><p>THE CLUB</p><h2>Come for the<br />squash. Stay for<br />everything around it.</h2></div>
+      <section className="club-intro club-intro--real club-intro--lifestyle" aria-labelledby="club-intro-title">
+        <div className="club-intro__lifestyle-images" aria-hidden="true"><img src={assets.sauna} alt="" /><img src={assets.lounge} alt="" /><img src={assets.coldPlunge} alt="" /></div>
+        <div className="club-intro__lifestyle-veil" aria-hidden="true" />
+        <div className="club-intro__heading"><p>THE CLUB</p><h2 id="club-intro-title">Come for the<br />squash. Stay for<br />everything around it.</h2></div>
+        <div className="club-intro__club-cards">
+          <article className="club-intro__club-card"><h3>SQUASH</h3><strong>5 Full-glass courts</strong><p>Book a court, join a session or train with us. All levels welcome.</p></article>
+          <article className="club-intro__club-card"><h3>RECOVER &amp; TRAIN</h3><strong>Sauna, cold plunge, showers and gym</strong><p>Get your sweat in, reset and leave feeling better than you came.</p></article>
+          <article className="club-intro__club-card"><h3>STAY &amp; CONNECT</h3><strong>Café, lounge and workspace</strong><p>Grab a drink, get some work done or hang around after your match. Sol is a club you actually want to stay in.</p></article>
+        </div>
       </section>
       <WaveDivider source="mango" destination="green" />
       <section className="home-rhythm home-rhythm--real">

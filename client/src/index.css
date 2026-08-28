@@ -258,3 +258,33 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 .club-intro--facility .club-intro__heading p { color:var(--sol-cyan); font-size:clamp(3rem,5.4vw,5.7rem); letter-spacing:-.055em; line-height:.86; margin-bottom:1rem; }.club-intro--facility .club-intro__heading h2 { font-family:var(--font-body); font-size:clamp(2rem,3.1vw,3.4rem); letter-spacing:-.055em; line-height:.98; max-width:19ch; }
 @media (max-width:767px) { .club-intro--facility .club-intro__heading p { font-size:clamp(2.8rem,13.4vw,3.8rem); margin-bottom:.75rem; }.club-intro--facility .club-intro__heading h2 { font-size:clamp(1.8rem,8.5vw,2.35rem); line-height:1; max-width:16ch; } }
 .junior-section--real { background-image:linear-gradient(110deg,transparent 0 73%,rgba(232,71,26,.72) 73.3% 75%,transparent 75.4%) !important; }.junior-section__painted-label { width:clamp(108px,12vw,142px); height:clamp(108px,12vw,142px); display:grid; place-items:center; background:transparent; border:0; box-shadow:none; transform:rotate(-8deg); }.junior-section__painted-label img { display:block; width:100%; height:100%; object-fit:contain; filter:drop-shadow(5px 6px 0 rgba(26,47,107,.22)); }
+
+/* Home club section: the club is defined by what surrounds squash. Keep the supplied three-card message visible over a lifestyle-led facility collage. */
+.club-intro--lifestyle { background:var(--sol-navy); color:var(--sol-light); display:grid; gap:clamp(2rem,4vw,4.5rem); grid-template-columns:minmax(0,1fr); min-height:clamp(48rem,62vw,64rem); overflow:hidden; padding:clamp(2.75rem,6vw,6.5rem) clamp(1.35rem,8vw,9rem); position:relative; }
+.club-intro--lifestyle .club-intro__lifestyle-images { display:grid; grid-template-columns:1.04fr .9fr 1fr; inset:0; position:absolute; }
+.club-intro--lifestyle .club-intro__lifestyle-images img { display:block; height:100%; min-height:100%; object-fit:cover; width:100%; }
+.club-intro--lifestyle .club-intro__lifestyle-images img:first-child { object-position:center; }
+.club-intro--lifestyle .club-intro__lifestyle-images img:nth-child(2) { object-position:center; }
+.club-intro--lifestyle .club-intro__lifestyle-images img:last-child { object-position:center; }
+.club-intro--lifestyle .club-intro__lifestyle-veil { background:linear-gradient(90deg,rgba(26,47,107,.97) 0%,rgba(26,47,107,.9) 36%,rgba(26,47,107,.7) 66%,rgba(26,47,107,.82) 100%),linear-gradient(180deg,rgba(26,47,107,.2),rgba(26,47,107,.86)); inset:0; pointer-events:none; position:absolute; }
+.club-intro--lifestyle .club-intro__heading { align-self:start; max-width:min(47rem,100%); position:relative; z-index:1; }
+.club-intro--lifestyle .club-intro__heading p { color:var(--sol-light); font-family:var(--font-display); font-size:clamp(2.5rem,5.4vw,5.7rem); font-weight:700; letter-spacing:-.055em; line-height:.86; margin:0 0 1rem; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__heading h2 { color:var(--sol-light); font-family:var(--font-body); font-size:clamp(1.9rem,3.2vw,3.7rem); font-weight:700; letter-spacing:-.055em; line-height:.98; margin:0; max-width:19ch; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__club-cards { align-self:end; display:grid; gap:1rem; grid-template-columns:repeat(3,minmax(0,1fr)); position:relative; z-index:1; }
+.club-intro--lifestyle .club-intro__club-card { background:rgba(26,47,107,.84); border:2px solid rgba(244,169,17,.8); border-radius:1.5rem; box-shadow:7px 8px 0 rgba(12,37,74,.3); color:var(--sol-light); min-height:12rem; padding:clamp(1.15rem,2vw,2rem); }
+.club-intro--lifestyle .club-intro__club-card:nth-child(2) { border-color:rgba(61,178,52,.9); }
+.club-intro--lifestyle .club-intro__club-card:nth-child(3) { border-color:rgba(0,196,196,.9); }
+.club-intro--lifestyle .club-intro__club-card h3 { color:var(--sol-light); font-family:var(--font-display); font-size:clamp(1.3rem,1.8vw,2rem); font-weight:700; letter-spacing:-.035em; line-height:.95; margin:0 0 1rem; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__club-card strong { color:var(--sol-mustard); display:block; font-family:var(--font-body); font-size:clamp(1rem,1.25vw,1.3rem); line-height:1.08; margin-bottom:.7rem; }
+.club-intro--lifestyle .club-intro__club-card p { color:var(--sol-light); font-family:var(--font-body); font-size:clamp(.86rem,1vw,1rem); line-height:1.35; margin:0; max-width:28ch; }
+@media (max-width:767px) {
+  .club-intro--lifestyle { gap:3rem; min-height:63rem; padding:2.5rem 1.35rem 2.75rem; }
+  .club-intro--lifestyle .club-intro__lifestyle-images { grid-template-columns:1fr; }
+  .club-intro--lifestyle .club-intro__lifestyle-images img { display:none; }
+  .club-intro--lifestyle .club-intro__lifestyle-images img:nth-child(2) { display:block; object-position:center; }
+  .club-intro--lifestyle .club-intro__lifestyle-veil { background:linear-gradient(180deg,rgba(26,47,107,.3) 0%,rgba(26,47,107,.78) 42%,rgba(26,47,107,.98) 100%); }
+  .club-intro--lifestyle .club-intro__heading p { font-size:clamp(2.7rem,13vw,4rem); margin-bottom:.9rem; }
+  .club-intro--lifestyle .club-intro__heading h2 { font-size:clamp(1.85rem,8.4vw,2.4rem); line-height:1; max-width:17ch; }
+  .club-intro--lifestyle .club-intro__club-cards { grid-template-columns:1fr; }
+  .club-intro--lifestyle .club-intro__club-card { min-height:0; padding:1.25rem; }
+}
