@@ -370,10 +370,10 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 .home-paths { padding-bottom:clamp(6rem,10vw,9.5rem); }
 .club-intro--lifestyle { padding-bottom:clamp(7rem,12vw,13rem); }
 .club-intro--lifestyle .club-intro__club-cards { margin-top:clamp(5rem,8.5vw,9rem); }
-.club-intro--lifestyle .club-intro__club-card:nth-child(1) { background:var(--sol-orange); border-color:var(--sol-navy); color:var(--sol-navy); }
+.club-intro--lifestyle .club-intro__club-card:nth-child(1) { background:var(--sol-orange); border-color:var(--sol-navy); color:var(--sol-light); }
 .club-intro--lifestyle .club-intro__club-card:nth-child(1) h3,
-.club-intro--lifestyle .club-intro__club-card:nth-child(1) strong,
-.club-intro--lifestyle .club-intro__club-card:nth-child(1) p { color:var(--sol-navy); }
+.club-intro--lifestyle .club-intro__club-card:nth-child(1) p { color:var(--sol-light); }
+.club-intro--lifestyle .club-intro__club-card:nth-child(1) strong { color:var(--sol-mustard); }
 .club-intro--lifestyle .club-intro__club-card:nth-child(2) { background:var(--sol-teal); border-color:var(--sol-mustard); color:var(--sol-light); }
 .club-intro--lifestyle .club-intro__club-card:nth-child(3) { background:var(--sol-blue); border-color:var(--sol-navy); color:var(--sol-light); }
 .club-intro--lifestyle .club-intro__club-card:nth-child(2) h3,

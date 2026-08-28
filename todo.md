@@ -90,3 +90,7 @@
 - [x] Double the current gutters between the four Home Club tiles while preserving their combined overall footprint.
 - [x] Increase section-content clearance from cyan wave dividers again across every primary route.
 - [x] Validate exact copy, spacing, footprint, and responsive behavior across all routes, then run the production typecheck and build.
+- [x] Change the first Home Club card typography to match the other two cards: white heading/body and mustard supporting line, retaining the orange card background.
+- [x] Produce one focused best-practice redesign recommendation for the full Home Club section without implementing additional structural changes.
+- [x] Validate the first-card color correction at desktop and mobile breakpoints, then run the production typecheck and build.
+- [x] Write one explicit research-backed Home Club redesign recommendation, without changing the section structure until the user approves it.
