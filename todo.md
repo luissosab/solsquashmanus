@@ -63,3 +63,10 @@
 - [x] Consolidate the duplicated RECOVER & TRAIN information between the Home Club section and the section immediately below it, only after confirming the intended content placement.
 - [x] Cleanly consolidate RECOVER & TRAIN so the Home Club card contains one non-duplicative summary plus one justified disclosure or CTA.
 - [x] Remove or refactor the orphaned consecutive wave dividers left after deleting the full-width recovery section, then revalidate Home seams at desktop and mobile sizes.
+- [x] Rework the Home Club-to-Story sequence: use facility images as framed section content, bring the following section’s image into the Club composition, and remove any duplicated hero treatment without inventing copy.
+- [x] Replace the Home story disclosure content below THE CLUB with non-hero-redundant approved story/support content while preserving access to existing copy.
+- [x] Revalidate the Home Club-to-Story sequence after removing the repeated hero positioning so the next section has a distinct purpose.
+- [x] Add a concise but meaningful Home story disclosure below THE CLUB that exposes approved story copy in-place without repeating the hero stack.
+- [x] Refine the next Home mural section so it has a distinct role from the hero and Club message, then re-check desktop/mobile continuity.
+- [x] Replace the Home mural section’s repeated hero and Club messages with approved non-redundant content that gives the mural a distinct role.
+- [x] Re-check the complete Home Club-to-Story-to-mural sequence after the copy correction at desktop and mobile sizes.

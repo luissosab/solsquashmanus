@@ -41,23 +41,23 @@ export default function Home() {
       </section>
       <WaveDivider source="navy" destination="navy" />
       <section className="club-intro club-intro--real club-intro--lifestyle" aria-labelledby="club-intro-title">
-        <div className="club-intro__lifestyle-images" aria-hidden="true"><img src={assets.sauna} alt="" /><img src={assets.lounge} alt="" /><img src={assets.coldPlunge} alt="" /></div>
-        <div className="club-intro__lifestyle-veil" aria-hidden="true" />
         <div className="club-intro__heading"><p>THE CLUB</p><h2 id="club-intro-title">Come for the<br />squash. Stay for<br />everything around it.</h2></div>
+        <div className="club-intro__lifestyle-images" aria-label="Sol Squash club spaces">
+          <figure><img src={assets.sauna} alt="The sauna at Sol Squash" /></figure>
+          <figure><img src={assets.lounge} alt="The lounge and workspace at Sol Squash" /></figure>
+          <figure><img src={assets.coldPlunge} alt="The cold plunge at Sol Squash" /></figure>
+          <figure><img src={assets.founders} alt="Bruna and Vini playing squash at Sol" /></figure>
+        </div>
         <div className="club-intro__club-cards">
           <article className="club-intro__club-card"><h3>SQUASH</h3><strong>5 Full-glass courts</strong><p>Book a court, join a session or train with us. All levels welcome.</p></article>
           <article className="club-intro__club-card"><h3>RECOVER &amp; TRAIN</h3><strong>Sauna, cold plunge, showers and gym</strong><p>Get your sweat in, reset and leave feeling better than you came.</p><MagneticButton href="/play" className="button--mango">TRY SQUASH</MagneticButton></article>
           <article className="club-intro__club-card"><h3>STAY &amp; CONNECT</h3><strong>Café, lounge and workspace</strong><p>Grab a drink, get some work done or hang around after your match. Sol is a club you actually want to stay in.</p></article>
         </div>
       </section>
-      <WaveDivider source="navy" destination="navy" />
-      <section className="home-story-callout home-story-callout--real">
-        <div className="home-story-callout__copy"><span className="eyebrow eyebrow--cyan">BUILT FROM THE LOVE OF THE GAME</span><h2>BUILT BY<br />PLAYERS.<br /><em>MADE FOR</em><br />EVERYONE.</h2><p>MIAMI'S SQUASH HOME.</p><MagneticButton href="/our-story" className="button--mango">MEET THE TEAM</MagneticButton></div>
-        <figure className="real-photo-frame real-photo-frame--team"><img src={assets.founders} alt="Bruna and Vini playing squash at Sol" /></figure>
-      </section>
+      <details className="home-story-disclosure"><summary>OUR STORY</summary><div className="home-story-disclosure__content"><span className="eyebrow eyebrow--cyan">BUILT FROM THE LOVE OF THE GAME</span><p>Sol Squash didn't start with a business plan. It started with a sport that changed two lives — and a shared belief that squash deserves a real home in Miami.</p><p>We're Bruna and Vini, co-founders, professional squash players, and partners in life. That club is Sol. A place where squash meets community, where every level is welcome, and where walking through the door feels like something.</p><MagneticButton href="/our-story" className="button--mango">READ OUR STORY</MagneticButton></div></details>
       <WaveDivider source="navy" destination="navy" />
       <section className="mural-feature">
-        <div className="mural-feature__copy"><p className="eyebrow eyebrow--cyan">MORE THAN A GAME, A WAY OF LIFE.</p><h2>MIAMI'S<br />SQUASH<br /><em>HOME.</em></h2><p>Come for the squash. Stay for everything around it.</p><Link href="/play" className="text-link">PICK YOUR WAY IN <span>↗</span></Link></div>
+        <div className="mural-feature__copy"><h2>MORE THAN A GAME,<br /><em>A WAY OF LIFE.</em></h2><Link href="/play" className="text-link">PICK YOUR WAY IN <span>↗</span></Link></div>
         <figure className="mural-feature__image"><img src={assets.mural} alt="The Sol Squash front mural with squash-ball graphics and the club sun-face" /></figure>
       </section>
     </>
