@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { MagneticButton } from "@/components/MagneticButton";
 import { WaveDivider } from "@/components/WaveDivider";
-import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
 const assets = {
   court: "/manus-storage/sol-facility-glass-court_bc711772.png",
@@ -25,13 +24,12 @@ export default function Home() {
         <span className="squash-ball squash-ball--hero" aria-hidden="true"><i /><i /></span>
         <div className="home-hero__copy">
           <motion.p className="eyebrow eyebrow--cyan" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.16 }}>645 NW 72ND STREET · LITTLE RIVER</motion.p>
-          <h1 aria-label="MIAMI'S SQUASH HOME.">{["MIAMI'S", "SQUASH", "HOME."].map((word, index) => <motion.span key={word} initial={{ opacity: 0, y: 46 }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 210, damping: 22, delay: 0.22 + index * 0.1 }}>{word}</motion.span>)}</h1>
-          <p className="hero-tagline">MORE THAN A GAME, A WAY OF LIFE.</p>
-          <p className="hero-body">Come for the squash. Stay for everything around it.</p>
-          <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">BOOK A SESSION</MagneticButton>
+          <h1 aria-label="MIAMI'S SQUASH HOME."><motion.span initial={{ opacity: 0, y: 46 }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 210, damping: 22, delay: 0.22 }}>MIAMI'S SQUASH HOME.</motion.span></h1>
+          <p className="hero-tagline">BUILT BY PLAYERS. MADE FOR EVERYONE.</p>
+          <MagneticButton href="#home-paths" className="button--mango">PICK YOUR WAY IN</MagneticButton>
         </div>
       </section>
-      <section className="home-paths" aria-labelledby="home-paths-title">
+      <section className="home-paths" id="home-paths" aria-labelledby="home-paths-title">
         <div className="home-paths__intro"><p className="eyebrow eyebrow--cyan">FIND YOUR WAY IN</p><h2 id="home-paths-title">WHAT BRINGS<br />YOU TO <em>SOL?</em></h2></div>
         <div className="home-paths__list">
           <Link href="/play" className="home-path-card home-path-card--play"><span>01</span><strong>PLAY</strong><p>Book a court, join a session or train with us. All levels welcome.</p><b>EXPLORE PLAY <i aria-hidden="true">↗</i></b></Link>
