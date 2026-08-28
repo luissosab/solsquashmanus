@@ -425,3 +425,27 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 @media (min-width:680px) {
   .session-card { grid-template-columns:minmax(150px,.42fr) minmax(0,1fr) auto; }
 }
+
+/* Structure-first review: retain only the FAQ-box ball until decorative details are approved. */
+.squash-ball:not(.squash-ball--faq) { display:none !important; }
+.checkout-dialog { grid-template-columns:1fr; grid-template-areas:"title" "offer" "action"; }
+.checkout-dialog > p { max-width:none; }
+@media (min-width:900px) {
+  .beginner-note { grid-template-columns:1.1fr 1fr; }
+}
+
+/* Airier four-tile composition within the existing Club footprint. */
+.club-intro--lifestyle .club-intro__visual-grid { gap:clamp(1.5rem,2.8vw,2.5rem); }
+@media (max-width:767px) {
+  .club-intro--lifestyle .club-intro__visual-grid { gap:1.2rem; }
+}
+
+/* Stronger content-to-wave clearance across every route-level section. */
+.site-frame main > section:has(+ .wave-divider) { padding-bottom:clamp(8.5rem,11vw,11rem); }
+.site-frame main > .wave-divider + section { padding-top:clamp(7.5rem,9vw,9.5rem); }
+@media (max-width:767px) {
+  .site-frame main > section:has(+ .wave-divider) { padding-bottom:6.75rem; }
+  .site-frame main > .wave-divider + section { padding-top:6.25rem; }
+  .home-paths:has(+ .wave-divider) { padding-bottom:7.5rem; }
+  .club-intro--lifestyle:has(+ .wave-divider) { padding-bottom:9rem; }
+}

@@ -82,3 +82,7 @@
 - [x] Establish consistent wave-aware vertical spacing across all major sections so tall cyan dividers do not crowd adjacent content.
 - [x] Validate all primary routes at desktop and mobile breakpoints, then run the production typecheck and build.
 - [x] Fix the Schedule session-card time-label collision found during the sitewide mobile/desktop overflow audit.
+- [x] Temporarily remove every decorative squash ball across the website except the ball inside the FAQ box.
+- [x] Increase the gutters between the four Home Club tiles while keeping their combined composition within the same overall footprint.
+- [x] Increase the clear space between section content and cyan wave dividers across every primary route.
+- [x] Validate the structural cleanup at desktop and mobile breakpoints across all primary routes, then run the production typecheck and build.
