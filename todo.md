@@ -59,3 +59,4 @@
 - [x] Restore the Home hero to concise approved positioning, retain the address, and route its primary action to an internal Sol path.
 - [x] Rebuild the Home club-intro as an uppercase facility-led collage with the original concise message and no added marketing copy.
 - [x] Restore the supplied Home club structure: THE CLUB plus the SQUASH, RECOVER & TRAIN, and STAY & CONNECT cards, using non-court lifestyle imagery and no invented replacement composition.
+- [x] Safe Home Club restoration: removed the founders-on-court image and the unapproved Home Our Story block, and kept the three facility images as separate foreground tiles above the Club cards.

@@ -288,3 +288,26 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .club-intro--lifestyle .club-intro__club-cards { grid-template-columns:1fr; }
   .club-intro--lifestyle .club-intro__club-card { min-height:0; padding:1.25rem; }
 }
+
+/* Safe restoration override: three facility images remain foreground content and stop before the Club cards. */
+.club-intro--lifestyle { background:var(--sol-mustard); color:var(--sol-navy); display:grid; gap:clamp(2rem,4vw,4rem); grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr); grid-template-rows:auto 1fr; min-height:clamp(40rem,55vw,54rem); padding:clamp(2.75rem,6vw,6.5rem) clamp(1.35rem,8vw,9rem); }
+.club-intro--lifestyle .club-intro__heading { align-self:start; grid-column:1; grid-row:1; max-width:32rem; padding-top:clamp(.5rem,2vw,2rem); }
+.club-intro--lifestyle .club-intro__heading p { color:var(--sol-navy); font-size:clamp(2.8rem,5vw,5rem); }
+.club-intro--lifestyle .club-intro__heading h2 { color:var(--sol-navy); font-size:clamp(1.65rem,2.7vw,3rem); max-width:17ch; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__lifestyle-images { align-self:start; display:grid; gap:clamp(.75rem,1.3vw,1.3rem); grid-column:2; grid-row:1; grid-template-columns:repeat(2,minmax(0,1fr)); inset:auto; position:relative; }
+.club-intro--lifestyle .club-intro__lifestyle-images figure { aspect-ratio:1.18; border:3px solid var(--sol-navy); border-radius:1.5rem; box-shadow:7px 8px 0 rgba(26,47,107,.24); margin:0; overflow:hidden; }
+.club-intro--lifestyle .club-intro__lifestyle-images figure:last-child { grid-column:1 / -1; width:50%; }
+.club-intro--lifestyle .club-intro__lifestyle-images img { display:block; height:100%; object-fit:cover; width:100%; }
+.club-intro--lifestyle .club-intro__club-cards { align-self:end; grid-column:1 / -1; grid-row:2; }
+.club-intro--lifestyle .club-intro__club-card { background:var(--sol-navy); border-color:var(--sol-navy); }
+.club-intro--lifestyle .club-intro__club-card:nth-child(2) { border-color:var(--sol-green); }
+.club-intro--lifestyle .club-intro__club-card:nth-child(3) { border-color:var(--sol-cyan); }
+@media (max-width:767px) {
+  .club-intro--lifestyle { gap:2.5rem; grid-template-columns:1fr; grid-template-rows:auto auto auto; min-height:0; padding:2.5rem 1.35rem 3rem; }
+  .club-intro--lifestyle .club-intro__heading { grid-column:1; grid-row:1; padding-top:0; }
+  .club-intro--lifestyle .club-intro__heading p { font-size:clamp(2.9rem,13vw,4rem); }
+  .club-intro--lifestyle .club-intro__heading h2 { font-size:clamp(1.8rem,8.5vw,2.4rem); }
+  .club-intro--lifestyle .club-intro__lifestyle-images { grid-column:1; grid-row:2; }
+  .club-intro--lifestyle .club-intro__lifestyle-images figure:last-child { width:100%; }
+  .club-intro--lifestyle .club-intro__club-cards { grid-column:1; grid-row:3; }
+}
