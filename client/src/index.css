@@ -288,3 +288,4 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .club-intro--lifestyle .club-intro__club-cards { grid-template-columns:1fr; }
   .club-intro--lifestyle .club-intro__club-card { min-height:0; padding:1.25rem; }
 }
+
