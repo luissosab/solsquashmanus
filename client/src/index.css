@@ -483,6 +483,22 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .club-intro--lifestyle .club-intro__section-intro { padding:0; }
 }
 
+/* Home copy hierarchy: expressive type is reserved for section-level messages; supporting copy stays consistent. */
+.club-intro--lifestyle .club-intro__section-intro p { color:var(--sol-navy); font-family:var(--font-display); font-size:clamp(2.9rem,6vw,6rem); font-style:normal; font-weight:700; letter-spacing:-.06em; line-height:.84; margin:0 0 clamp(1.5rem,3vw,2.75rem); text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__section-intro h2 { display:grid; gap:.25rem; max-width:21ch; text-transform:none; }
+.club-intro--lifestyle .club-intro__section-intro h2 span { color:var(--sol-navy); font-family:var(--font-display); font-size:clamp(1.8rem,3.3vw,3.4rem); font-style:normal; font-weight:700; letter-spacing:-.045em; line-height:.96; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__section-intro h2 em { color:var(--sol-teal); font-family:var(--font-serif); font-size:clamp(2.4rem,4.8vw,5rem); font-style:italic; font-weight:600; letter-spacing:-.045em; line-height:.9; text-transform:none; }
+.home-path-card p,
+.club-intro--lifestyle .club-intro__club-card p { font-family:var(--font-body); font-size:.92rem; font-style:normal; font-weight:400; line-height:1.5; }
+.home-path-card strong,
+.club-intro--lifestyle .club-intro__club-card h3 { font-family:var(--font-display); font-style:normal; font-weight:700; }
+@media (max-width:767px) {
+  .club-intro--lifestyle .club-intro__section-intro p { font-size:clamp(2.75rem,14vw,4rem); margin-bottom:1.5rem; }
+  .club-intro--lifestyle .club-intro__section-intro h2 { gap:.35rem; max-width:100%; }
+  .club-intro--lifestyle .club-intro__section-intro h2 span { font-size:clamp(1.45rem,7vw,2rem); }
+  .club-intro--lifestyle .club-intro__section-intro h2 em { font-size:clamp(2.1rem,10.5vw,3rem); max-width:11ch; }
+}
+
 /* Structure-first review: retain only the FAQ-box ball until decorative details are approved. */
 .squash-ball:not(.squash-ball--faq) { display:none !important; }
 .checkout-dialog { grid-template-columns:1fr; grid-template-areas:"title" "offer" "action"; }

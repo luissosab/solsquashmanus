@@ -38,7 +38,7 @@ export default function Home() {
       </section>
       <WaveDivider source="navy" destination="mango" />
       <section className="club-intro club-intro--real club-intro--lifestyle" aria-labelledby="club-intro-title">
-        <div className="club-intro__section-intro"><p>THE CLUB</p><h2 id="club-intro-title">Come for the squash. Stay for everything around it.</h2></div>
+        <div className="club-intro__section-intro"><p>THE CLUB</p><h2 id="club-intro-title" aria-label="Come for the squash. Stay for everything around it."><span>Come for the squash.</span><em>Stay for everything around it.</em></h2></div>
         <div className="club-intro__modules">
           <article className="club-intro__module club-intro__module--squash"><figure><img src={assets.court} alt="One of Sol Squash's full-glass courts" /></figure><div className="club-intro__club-card"><h3>SQUASH</h3><strong>5 Full-glass courts</strong><p>Book a court, join a session or train with us. All levels welcome.</p></div></article>
           <article className="club-intro__module club-intro__module--recover"><figure><img src={assets.sauna} alt="The sauna at Sol Squash" /></figure><div className="club-intro__club-card"><h3>RECOVER &amp; TRAIN</h3><strong>Sauna, cold plunge, showers and gym</strong><p>Get your sweat in, reset and leave feeling better than you came.</p></div></article>

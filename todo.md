@@ -103,3 +103,6 @@
 - [x] Remove the blue THE CLUB banner and integrate its exact heading and sentence directly into the mustard section through typography and spacing.
 - [x] Validate the revised Home hierarchy, contrast, spacing, and responsive behavior, then run the production typecheck and build.
 - [x] Correct the actual WHAT BRINGS YOU TO SOL card text elements so titles/body render white and numbers/actions render mustard on all three cards.
+- [x] Audit Home copy treatments and normalize supporting/card text so color, size, and emphasis follow clear content roles.
+- [x] Restore expressive hierarchy to THE CLUB’s exact main message through controlled scale, Sol palette accents, and selective italics without changing the copy or module structure.
+- [x] Validate the refined Home typography at desktop and mobile breakpoints, then run the production typecheck and build.
