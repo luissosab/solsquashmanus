@@ -10,8 +10,7 @@ export function TasteOfSolBlock() {
     <>
       <WaveDivider source="green" destination="green" />
       <section className="pricing-section pricing-section--real pricing-section--merged-offers">
-        <img className="mural-sun mural-sun--offers" src="/manus-storage/sol-sun-repaired-mustard_e9ef0c03.png" alt="" aria-hidden="true" />
-        <span className="court-mark court-mark--offers" aria-hidden="true" />
+        <img className="mural-sun mural-sun--offers" src="/manus-storage/sol-sun-repaired-mustard_563e528f.png" alt="" aria-hidden="true" />
         <span className="squash-ball squash-ball--offer" aria-hidden="true"><i /><i /></span>
         <div className="decision-offers__grid">
           <article className="decision-offer">
@@ -32,16 +31,15 @@ export function JoinContinuationBlocks() {
   return (
     <>
       <WaveDivider source="mango" destination="green" />
-      <section className="pricing-section pricing-section--real">
+      <section className="pricing-section pricing-section--real pricing-section--packages-comparison">
         <div className="pricing-heading"><p className="eyebrow eyebrow--cyan">ONCE YOU'RE PLAYING</p><h2>PLAY MORE.<br /><em>PAY LESS.</em></h2></div>
-        <div className="pricing-card"><div className="pricing-card__head"><span>PACKAGES</span><strong>KEEP THE RALLY GOING.</strong></div><p>Add a 5-pack for $250 and save $25.</p><MagneticButton href="/play" className="button--mango">SEE SESSIONS</MagneticButton></div>
-      </section>
-      <WaveDivider source="green" destination="green" />
-      <section className="pricing-section pricing-section--real">
-        <details className="disclosure-panel">
-          <summary><span>MEMBER AND NON-MEMBER</span><strong>COMPARE EVERY PRICE <i aria-hidden="true">+</i></strong></summary>
-          <div className="disclosure-panel__content"><div className="pricing-heading"><p className="eyebrow eyebrow--cyan">MEMBER AND NON-MEMBER</p><h2>ALL<br /><em>PRICES.</em></h2></div><div className="pricing-card"><div className="pricing-card__head"><span>WAYS TO GET ON COURT</span><strong>WITH OR WITHOUT A MEMBERSHIP.</strong></div><div className="price-row"><span>Court Access</span><b>From $20</b></div><div className="price-row"><span>Open Play</span><b>$25 / $55</b></div><div className="price-row"><span>Clinics</span><b>$40 / $55</b></div><div className="price-row"><span>Private Lessons</span><b>$125 / $145</b></div><div className="price-row"><span>Junior Sessions</span><b>$40 / $50</b></div><MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">BOOK A SESSION</MagneticButton></div></div>
-        </details>
+        <div className="pricing-decision-stack">
+          <div className="pricing-card"><div className="pricing-card__head"><span>PACKAGES</span><strong>KEEP THE RALLY GOING.</strong></div><p>Add a 5-pack for $250 and save $25.</p><MagneticButton href="/play" className="button--mango">SEE SESSIONS</MagneticButton></div>
+          <details className="disclosure-panel">
+            <summary><span>MEMBER AND NON-MEMBER</span><strong>COMPARE EVERY PRICE <i aria-hidden="true">+</i></strong></summary>
+            <div className="disclosure-panel__content"><div className="pricing-heading"><p className="eyebrow eyebrow--cyan">MEMBER AND NON-MEMBER</p><h2>ALL<br /><em>PRICES.</em></h2></div><div className="pricing-card"><div className="pricing-card__head"><span>WAYS TO GET ON COURT</span><strong>WITH OR WITHOUT A MEMBERSHIP.</strong></div><div className="price-row"><span>Court Access</span><b>From $20</b></div><div className="price-row"><span>Open Play</span><b>$25 / $55</b></div><div className="price-row"><span>Clinics</span><b>$40 / $55</b></div><div className="price-row"><span>Private Lessons</span><b>$125 / $145</b></div><div className="price-row"><span>Junior Sessions</span><b>$40 / $50</b></div><MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">BOOK A SESSION</MagneticButton></div></div>
+          </details>
+        </div>
       </section>
     </>
   );

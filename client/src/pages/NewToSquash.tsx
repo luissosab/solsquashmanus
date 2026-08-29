@@ -35,8 +35,7 @@ export function FirstTimerContent({ includeLeadingWave = true }: { includeLeadin
     <>
       {includeLeadingWave && <WaveDivider source="navy" destination="green" />}
       <section className="first-steps" id="first-steps">
-        <img className="mural-sun mural-sun--first-steps" src="/manus-storage/sol-sun-repaired-orange_f8d55af0.png" alt="" aria-hidden="true" />
-        <span className="court-mark court-mark--first-steps" aria-hidden="true" />
+        <img className="mural-sun mural-sun--first-steps" src="/manus-storage/sol-sun-repaired-orange_e644a385.png" alt="" aria-hidden="true" />
         <div className="section-rail"><span>YOUR FIRST RALLY</span><i /></div>
         <div className="first-steps__heading"><p className="eyebrow">COME AS YOU ARE</p><h2>WE'LL GET<br />YOU <em>PLAYING.</em></h2></div>
         <div className="first-step-grid">
@@ -77,7 +76,8 @@ export default function NewToSquash() {
         <div className="entry-hero__copy">
           <motion.p className="eyebrow eyebrow--cyan" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>THE RACKET IS WAITING</motion.p>
           <motion.h1 initial="hidden" animate="show" variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}>
-            {["NEVER", "PLAYED?", "PERFECT."].map((line) => <motion.span key={line} variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}>{line}</motion.span>)}
+            {["NEVER", "PLAYED?"].map((line) => <motion.span key={line} variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}>{line}</motion.span>)}
+            <motion.em variants={{ hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }}>PERFECT.</motion.em>
           </motion.h1>
           <p>Squash is a dynamic indoor racket sport with great cardio, quick reactions and nonstop action.</p>
           <a className="entry-hero__start" href="#first-steps">START HERE <span aria-hidden="true">↓</span></a>

@@ -681,3 +681,88 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .mural-sun--first-steps, .mural-sun--offers, .mural-sun--values { right:1rem; top:6rem; }
   .court-mark { opacity:.24; }
 }
+
+/* Mural-reference correction: no generic L/U outlines; accents follow the mural's diagonal line language and never overlap content. */
+.court-mark { display:none !important; }
+.entry-hero__copy h1 em {
+  color:var(--sol-orange) !important;
+  display:block;
+  font-family:var(--font-display) !important;
+  font-style:italic !important;
+  font-weight:600 !important;
+}
+.pricing-section--merged-offers {
+  background-image:
+    linear-gradient(137deg,transparent 0 82%,rgba(0,196,196,.28) 82.25% 83.35%,transparent 83.6%),
+    linear-gradient(137deg,transparent 0 87%,rgba(0,196,196,.16) 87.25% 88.1%,transparent 88.35%) !important;
+  display:block !important;
+}
+.pricing-section--merged-offers .decision-offers__grid {
+  gap:clamp(7rem,11vw,11rem);
+  margin-inline:auto;
+  max-width:1240px;
+}
+.pricing-section--merged-offers .decision-offer {
+  align-items:center;
+  gap:clamp(3rem,6vw,7rem);
+  grid-template-columns:minmax(310px,.8fr) minmax(500px,1.2fr);
+}
+.pricing-section--merged-offers .decision-offer .pricing-heading h2 {
+  font-size:clamp(4.2rem,7vw,7rem);
+  line-height:.84;
+}
+.pricing-section--merged-offers .decision-offer > .pricing-card {
+  grid-column:auto;
+  grid-row:auto;
+  max-width:none;
+  min-width:0;
+  padding:clamp(1.5rem,3vw,2.4rem);
+}
+.pricing-section--merged-offers .squash-ball--offer { left:auto; right:clamp(1.5rem,5vw,5rem); }
+.pricing-section--merged-offers .squash-ball--offer i,
+.pricing-section--merged-offers .squash-ball--offer i:first-child,
+.pricing-section--merged-offers .squash-ball--offer i:last-child { background:var(--sol-navy); }
+.beginner-note .squash-ball--beginner i,
+.beginner-note .squash-ball--beginner i:first-child,
+.beginner-note .squash-ball--beginner i:last-child { background:var(--sol-teal); }
+.pricing-section--packages-comparison { background-image:none !important; }
+.pricing-section--packages-comparison .pricing-decision-stack {
+  display:grid;
+  gap:clamp(2.5rem,5vw,4.5rem);
+  grid-column:2;
+}
+.pricing-section--packages-comparison .pricing-card,
+.pricing-section--packages-comparison .disclosure-panel { grid-column:auto; grid-row:auto; margin:0; max-width:none; width:100%; }
+.pricing-section--packages-comparison .disclosure-panel__content { padding-top:2rem; }
+.profiles-section--real {
+  background-image:
+    linear-gradient(145deg,transparent 0 86%,rgba(244,169,17,.19) 86.25% 87.2%,transparent 87.45%),
+    linear-gradient(145deg,transparent 0 90%,rgba(244,169,17,.1) 90.25% 91%,transparent 91.25%) !important;
+  isolation:isolate;
+  overflow:hidden;
+  position:relative;
+}
+.faq-guide {
+  background-image:
+    linear-gradient(28deg,transparent 0 83%,rgba(61,178,52,.3) 83.3% 85%,transparent 85.3%),
+    linear-gradient(145deg,transparent 0 91%,rgba(0,196,196,.14) 91.25% 92%,transparent 92.25%) !important;
+  isolation:isolate;
+  overflow:hidden;
+  position:relative;
+}
+.mural-sun--profiles { content:url("/manus-storage/sol-sun-repaired-cyan_372f6d5e.png"); right:clamp(1.5rem,5vw,5rem); top:clamp(4.5rem,7vw,7rem); transform:rotate(7deg); }
+.mural-sun--values { content:url("/manus-storage/sol-sun-repaired-green_37ae7f24.png"); }
+.mural-sun--faq { content:url("/manus-storage/sol-sun-repaired-orange_e644a385.png"); right:clamp(1.5rem,5vw,5rem); top:clamp(7rem,10vw,10rem); transform:rotate(-27deg); }
+.values-list article > span { color:inherit !important; opacity:.8; }
+.faq-guide > *, .profiles-section--real > * { position:relative; z-index:2; }
+.faq-guide .mural-sun, .profiles-section--real .mural-sun { position:absolute; z-index:1; }
+@media (max-width:899px) {
+  .pricing-section--merged-offers .decision-offer { grid-template-columns:1fr; }
+  .pricing-section--packages-comparison .pricing-decision-stack { grid-column:auto; }
+}
+@media (max-width:767px) {
+  .pricing-section--merged-offers .decision-offers__grid { gap:6rem; }
+  .pricing-section--merged-offers .decision-offer .pricing-heading h2 { font-size:clamp(3.75rem,18vw,5.3rem); }
+  .mural-sun--profiles { right:1rem; top:5.5rem; }
+  .mural-sun--faq { right:1rem; top:7rem; }
+}

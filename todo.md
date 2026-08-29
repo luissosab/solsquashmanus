@@ -123,3 +123,14 @@
 - [x] Validate all affected routes at desktop and mobile breakpoints, then run regression tests, TypeScript, and the production build.
 - [x] Revert the unintended FAQ-specific new-tab action and incoming-wave edits so the FAQ route remains untouched as requested.
 - [x] Verify the unchanged FAQ route at desktop and mobile sizes after the reversion, without introducing presentation changes.
+- [x] Rebuild the merged Taste of Sol and Join the Club layout so cards are wide enough and never collide with headings.
+- [x] Make both dots on every decorative squash ball the same color while allowing ball and dot colors to vary by section.
+- [x] Remove the unapproved rotated-L and rectangular-U court-line shapes and replace them only with mural-derived line geometry that never overlaps content.
+- [x] Emphasize PERFECT. in the New to Squash hero with a contrasting color and italic treatment while keeping START HERE purely instructional.
+- [x] Merge PLAY MORE / PAY LESS and COMPARE EVERY PRICE into one coherent section without deleting approved pricing copy or disclosure behavior.
+- [x] Normalize the font-color pattern across all four Our Values cards while retaining their distinct card backgrounds.
+- [x] Add restrained approved mural accents to additional spacious Our Story areas and the FAQ page.
+- [x] Validate all affected desktop/mobile routes for heading-card collisions, decorative overlap, ball-dot consistency, contrast, and section coherence.
+- [x] Run regression tests, TypeScript, and the production build before saving a reversible correction checkpoint.
+- [x] Audit every rendered squash-ball variant, including the retained FAQ ball and all page-specific accents, and enforce same-color paired dots for each.
+- [x] Extend regression coverage to protect the same-color-dot rule for every rendered squash-ball variant.
