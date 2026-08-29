@@ -8,7 +8,7 @@ import { PLAYBYPOINT_BOOKING_URL, PLAYBYPOINT_TASTE_OF_SOL_URL } from "@/lib/boo
 export function TasteOfSolBlock() {
   return (
     <>
-      <WaveDivider source="green" destination="green" />
+      <WaveDivider source="green" destination="navy" />
       <section className="pricing-section pricing-section--real pricing-section--merged-offers">
         <img className="mural-sun mural-sun--offers" src="/manus-storage/sol-sun-repaired-mustard_563e528f.png" alt="" aria-hidden="true" />
         <span className="squash-ball squash-ball--offer" aria-hidden="true"><i /><i /></span>

@@ -47,21 +47,24 @@ describe("Sol typography grammar", () => {
   it("uses selective mural accents and distinct Values card colors", () => {
     expect(css).toContain(".mural-sun--first-steps");
     expect(css).toContain(".mural-sun--offers");
-    expect(css).toContain(".mural-sun--values");
+    expect(ourStory).toContain("squash-ball--values");
     expect(css).toContain(".mural-sun--faq");
     expect(css).toContain(".mural-sun--profiles");
+    expect(newToSquash).toContain("mural-line-field--entry");
+    expect(newToSquash).toContain("mural-line-field--beginner");
     expect(css).toMatch(/\.values-list article:nth-child\(1\)[\s\S]*?\.values-list article:nth-child\(4\)/);
     expect(css).toContain(".values-list article > span { color:inherit !important;");
   });
 
   it("uses matching dots on every decorative ball and rejects generic L/U court marks", () => {
-    const renderedMarkup = [home, structuralBlocks, newToSquash, playAndPricing].join("\n");
+    const renderedMarkup = [home, structuralBlocks, newToSquash, ourStory, playAndPricing].join("\n");
     const renderedVariants = Array.from(renderedMarkup.matchAll(/squash-ball--([a-z-]+)/g), match => match[1]).sort();
 
-    expect(Array.from(new Set(renderedVariants))).toEqual(["beginner", "dialog", "faq", "hero", "offer"]);
+    expect(Array.from(new Set(renderedVariants))).toEqual(["beginner", "dialog", "faq", "hero", "offer", "values"]);
     expect(css).toContain(".squash-ball i { background:var(--sol-navy); }");
     expect(css).toMatch(/\.squash-ball--offer i,[\s\S]*?background:var\(--sol-navy\)/);
     expect(css).toMatch(/\.squash-ball--beginner i,[\s\S]*?background:var\(--sol-teal\)/);
+    expect(css).toMatch(/\.squash-ball--values i,[\s\S]*?background:var\(--sol-navy\)/);
     expect(css).toContain(".court-mark { display:none !important; }");
     expect(structuralBlocks).not.toContain('className="court-mark');
     expect(newToSquash).not.toContain('className="court-mark');
@@ -77,6 +80,14 @@ describe("Sol typography grammar", () => {
 
   it("renders approved sun accents on Our Story and FAQ", () => {
     expect(ourStory).toContain("mural-sun--profiles");
+    expect(ourStory).not.toContain("mural-sun--values");
     expect(playAndPricing).toContain("mural-sun--faq");
+  });
+
+  it("separates adjacent Play color rooms and uses a lighter green Home overlay", () => {
+    expect(structuralBlocks).toContain('<WaveDivider source="green" destination="navy" />');
+    expect(playAndPricing).toContain('<WaveDivider source="navy" destination="navy" />');
+    expect(css).toContain(".pricing-section--merged-offers { background-color:var(--sol-navy) !important;");
+    expect(css).toContain("rgba(26,58,58,.82)");
   });
 });

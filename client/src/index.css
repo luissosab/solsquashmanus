@@ -766,3 +766,60 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .mural-sun--profiles { right:1rem; top:5.5rem; }
   .mural-sun--faq { right:1rem; top:7rem; }
 }
+
+/* Wave-clearance and accent-placement correction. */
+.site-frame main > section:has(+ .wave-divider) { padding-bottom:clamp(12rem,14vw,15rem); }
+.site-frame main > .wave-divider + section { padding-top:clamp(10rem,12vw,12.5rem); }
+.pricing-section--merged-offers { background-color:var(--sol-navy) !important; color:var(--sol-light); }
+.home-hero--real::after {
+  background:linear-gradient(105deg,rgba(26,58,58,.82) 0%,rgba(26,58,58,.62) 44%,rgba(26,58,58,.12) 100%),radial-gradient(ellipse at 14% 90%,rgba(244,169,17,.16),transparent 39%);
+}
+.values-section--real > * { position:relative; z-index:2; }
+.values-section--real .squash-ball--values {
+  background:var(--sol-orange) !important;
+  border-color:var(--sol-mustard);
+  bottom:clamp(2rem,4vw,4rem);
+  display:block !important;
+  height:clamp(4.75rem,7vw,7rem);
+  left:clamp(1.5rem,5vw,5rem);
+  position:absolute;
+  transform:rotate(-14deg);
+  width:clamp(4.75rem,7vw,7rem);
+  z-index:1;
+}
+.values-section--real .squash-ball--values i,
+.values-section--real .squash-ball--values i:first-child,
+.values-section--real .squash-ball--values i:last-child { background:var(--sol-navy); }
+.entry-hero,
+.beginner-note { isolation:isolate; overflow:hidden; position:relative; }
+.entry-hero > *,
+.beginner-note > * { position:relative; z-index:2; }
+.mural-line-field {
+  display:block;
+  height:clamp(12rem,26vw,24rem);
+  pointer-events:none;
+  position:absolute;
+  width:clamp(18rem,38vw,34rem);
+  z-index:1 !important;
+}
+.mural-line-field--entry {
+  background:linear-gradient(132deg,transparent 0 46%,rgba(244,169,17,.26) 46.3% 47.1%,transparent 47.4% 58%,rgba(0,196,196,.22) 58.3% 59%,transparent 59.3%);
+  bottom:-4rem;
+  left:-5rem;
+}
+.mural-line-field--beginner {
+  background:linear-gradient(48deg,transparent 0 42%,rgba(244,169,17,.24) 42.3% 43.1%,transparent 43.4% 55%,rgba(61,178,52,.22) 55.3% 56%,transparent 56.3%);
+  bottom:-3rem;
+  left:18%;
+}
+@media (max-width:767px) {
+  .site-frame main > section:has(+ .wave-divider) { padding-bottom:10rem; }
+  .site-frame main > .wave-divider + section { padding-top:9rem; }
+  .story-hero--real:has(+ .wave-divider) { padding-bottom:12rem !important; }
+  .story-hero--real .magnetic-button { margin-bottom:1.5rem; position:relative; z-index:4; }
+  .home-hero--real::after { background:linear-gradient(180deg,rgba(26,58,58,.34) 0%,rgba(26,58,58,.56) 52%,rgba(26,58,58,.8) 100%); }
+  .values-section--real .squash-ball--values { bottom:2rem; left:1rem; }
+  .mural-line-field { opacity:.72; }
+  .mural-line-field--entry { bottom:-1rem; left:-9rem; }
+  .mural-line-field--beginner { bottom:-2rem; left:-7rem; }
+}

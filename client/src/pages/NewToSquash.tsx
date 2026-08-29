@@ -53,6 +53,7 @@ export function FirstTimerContent({ includeLeadingWave = true }: { includeLeadin
       </section>
       <WaveDivider source="green" destination="navy" />
       <section className="beginner-note">
+        <span className="mural-line-field mural-line-field--beginner" aria-hidden="true" />
         <span className="squash-ball squash-ball--beginner" aria-hidden="true"><i /><i /></span>
         <div>
           <p className="eyebrow eyebrow--cyan">WE'VE GOT YOU</p>
@@ -73,6 +74,7 @@ export default function NewToSquash() {
   return (
     <>
       <section className="entry-hero">
+        <span className="mural-line-field mural-line-field--entry" aria-hidden="true" />
         <div className="entry-hero__copy">
           <motion.p className="eyebrow eyebrow--cyan" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>THE RACKET IS WAITING</motion.p>
           <motion.h1 initial="hidden" animate="show" variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}>

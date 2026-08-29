@@ -134,3 +134,10 @@
 - [x] Run regression tests, TypeScript, and the production build before saving a reversible correction checkpoint.
 - [x] Audit every rendered squash-ball variant, including the retained FAQ ball and all page-specific accents, and enforce same-color paired dots for each.
 - [x] Extend regression coverage to protect the same-color-dot rule for every rendered squash-ball variant.
+- [x] Fix the mobile Our Story hero so READ OUR STORY remains fully visible and clear of the cyan wave.
+- [x] Increase content clearance from cyan wave dividers again across every primary route.
+- [x] Replace repeated same-position sun masks on consecutive Our Story sections with varied approved mural accents.
+- [x] Give the consecutive Play sections distinct background colors while preserving exact wave source/destination matching.
+- [x] Add restrained approved mural accents to the first and third New to Squash sections.
+- [x] Change the Home video overlay from navy-blue to Sol green and reduce its opacity so the footage is brighter.
+- [x] Validate all affected routes at desktop and mobile breakpoints, then run regression tests, TypeScript, and the production build.
