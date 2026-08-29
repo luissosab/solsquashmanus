@@ -823,3 +823,87 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .mural-line-field--entry { bottom:-1rem; left:-9rem; }
   .mural-line-field--beginner { bottom:-2rem; left:-7rem; }
 }
+
+/* Grouped-card role consistency and squash-ball depth. */
+.squash-ball {
+  filter:drop-shadow(0 .32rem .32rem rgba(12,37,74,.28));
+}
+.values-list article,
+.values-list article:nth-child(1),
+.values-list article:nth-child(2),
+.values-list article:nth-child(3),
+.values-list article:nth-child(4) {
+  color:var(--sol-light) !important;
+}
+.values-list article:nth-child(2) {
+  background:color-mix(in srgb,var(--sol-orange) 78%,var(--sol-navy)) !important;
+}
+.values-list article:nth-child(3) {
+  background:var(--sol-teal) !important;
+  border-color:var(--sol-mustard) !important;
+}
+.values-list article > span {
+  color:var(--sol-mustard) !important;
+  opacity:1;
+}
+.values-list article h3,
+.values-list article p {
+  color:var(--sol-light) !important;
+}
+.profile-card,
+.profile-card--0,
+.profile-card--1,
+.profile-card--2 {
+  color:var(--sol-light) !important;
+}
+.profile-card--1 {
+  background:var(--sol-blue) !important;
+  border-color:var(--sol-green) !important;
+}
+.profile-card--2 {
+  background:color-mix(in srgb,var(--sol-orange) 78%,var(--sol-navy)) !important;
+  border-color:var(--sol-mustard) !important;
+}
+.profile-card__copy > span,
+.profile-card__copy > button {
+  color:var(--sol-mustard) !important;
+}
+.profile-card__copy > h3,
+.profile-card__copy > p:not(.sr-only) {
+  color:var(--sol-light) !important;
+}
+.first-step-card--mango,
+.first-step-card--green {
+  color:var(--sol-light) !important;
+}
+.first-step-card--mango { background:var(--sol-navy) !important; }
+.first-step-card--green { background:var(--sol-teal) !important; }
+.first-step-card__top,
+.first-step-card__metadata,
+.first-step-card .booking-handoff-note {
+  color:var(--sol-mustard) !important;
+}
+.first-step-card h3,
+.first-step-card p:not(.first-step-card__metadata):not(.booking-handoff-note) {
+  color:var(--sol-light) !important;
+}
+.session-card,
+.session-card:nth-child(2),
+.session-card:nth-child(2n) {
+  color:var(--sol-light) !important;
+}
+.session-card { background:var(--sol-navy) !important; }
+.session-card:nth-child(2n) { background:var(--sol-teal) !important; }
+.session-card__time small,
+.session-type,
+.session-card__info p {
+  color:var(--sol-mustard) !important;
+}
+.session-card__time span,
+.session-card__info h3 {
+  color:var(--sol-light) !important;
+}
+.session-type {
+  background:transparent !important;
+  border:1px solid currentColor;
+}

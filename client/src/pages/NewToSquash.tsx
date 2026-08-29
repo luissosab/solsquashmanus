@@ -45,7 +45,7 @@ export function FirstTimerContent({ includeLeadingWave = true }: { includeLeadin
               <h3>{offer.title}</h3>
               <p className="first-step-card__metadata">{offer.metadata}</p>
               <p>{offer.copy}</p>
-              <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className={offer.tone === "mango" ? "button--navy" : "button--mango"}>{offer.action}</MagneticButton>
+              <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">{offer.action}</MagneticButton>
               <p className="booking-handoff-note">Choose a live time and complete your booking next.</p>
             </motion.article>
           ))}

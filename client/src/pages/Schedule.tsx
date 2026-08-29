@@ -23,7 +23,7 @@ export default function Schedule() {
             <article className="session-card" key={`${day.date}-${session.time}`}>
               <div className="session-card__time"><span>CHOOSE</span><small>TIME ON BOOKING</small></div>
               <div className="session-card__info"><span className="session-type">{session.type}</span><h3>{session.title}</h3><p><Users size={15} />See current availability when you book.</p><span className="sr-only">{session.time} to {session.endTime}. {session.spots} spots open.</span></div>
-              <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className={index % 2 === 0 ? "button--navy" : "button--green"}>SEE LIVE TIMES</MagneticButton>
+              <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">SEE LIVE TIMES</MagneticButton>
             </article>
           )))}
         </div>

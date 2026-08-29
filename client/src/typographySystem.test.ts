@@ -90,4 +90,23 @@ describe("Sol typography grammar", () => {
     expect(css).toContain(".pricing-section--merged-offers { background-color:var(--sol-navy) !important;");
     expect(css).toContain("rgba(26,58,58,.82)");
   });
+
+  it("uses one repeated text-color pattern per Values and Team card group", () => {
+    expect(css).toMatch(/\.values-list article > span \{[\s\S]*?color:var\(--sol-mustard\) !important;/);
+    expect(css).toMatch(/\.values-list article h3,[\s\S]*?\.values-list article p \{[\s\S]*?color:var\(--sol-light\) !important;/);
+    expect(css).toMatch(/\.profile-card__copy > span,[\s\S]*?\.profile-card__copy > button \{[\s\S]*?color:var\(--sol-mustard\) !important;/);
+    expect(css).toMatch(/\.profile-card__copy > h3,[\s\S]*?\.profile-card__copy > p:not\(\.sr-only\) \{[\s\S]*?color:var\(--sol-light\) !important;/);
+  });
+
+  it("adds one subtle shadow to every squash-ball variant", () => {
+    expect(css).toMatch(/\.squash-ball \{[\s\S]*?filter:drop-shadow\(0 \.32rem \.32rem rgba\(12,37,74,\.28\)\);/);
+  });
+
+  it("uses repeated text-role patterns in the first-timer and session card groups", () => {
+    expect(newToSquash).not.toContain('offer.tone === "mango" ? "button--navy" : "button--mango"');
+    expect(newToSquash).toContain('className="button--mango"');
+    expect(css).toMatch(/\.first-step-card__top,[\s\S]*?\.first-step-card \.booking-handoff-note \{[\s\S]*?color:var\(--sol-mustard\) !important;/);
+    expect(css).toMatch(/\.session-card__time small,[\s\S]*?\.session-card__info p \{[\s\S]*?color:var\(--sol-mustard\) !important;/);
+    expect(css).toMatch(/\.session-card__time span,[\s\S]*?\.session-card__info h3 \{[\s\S]*?color:var\(--sol-light\) !important;/);
+  });
 });

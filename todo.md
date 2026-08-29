@@ -141,3 +141,10 @@
 - [x] Add restrained approved mural accents to the first and third New to Squash sections.
 - [x] Change the Home video overlay from navy-blue to Sol green and reduce its opacity so the footage is brighter.
 - [x] Validate all affected routes at desktop and mobile breakpoints, then run regression tests, TypeScript, and the production build.
+- [x] Add one subtle, consistent shadow treatment to every rendered squash-ball variant across the website.
+- [x] Apply one identical actual text-color role pattern to every Our Values card, changing card backgrounds rather than text colors when contrast requires it.
+- [x] Apply one identical actual text-color role pattern to every Meet the Team profile card, changing card backgrounds rather than text colors when contrast requires it.
+- [x] Audit other grouped card sets for equivalent role-pattern inconsistencies and correct them without flattening their approved background palette.
+- [x] Validate grouped-card text patterns and ball shadows at desktop and mobile breakpoints, then run regression tests, TypeScript, and the production build.
+- [x] Apply one repeated text-role color pattern to both New to Squash first-timer cards, changing the orange card background rather than its text colors.
+- [x] Apply one repeated text-role color pattern to all Schedule session cards while retaining a varied dark-background palette.
