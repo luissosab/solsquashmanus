@@ -826,7 +826,7 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 
 /* Grouped-card role consistency and squash-ball depth. */
 .squash-ball {
-  filter:drop-shadow(0 .32rem .32rem rgba(12,37,74,.28));
+  filter:drop-shadow(.42rem .58rem .38rem rgba(12,37,74,.5));
 }
 .values-list article,
 .values-list article:nth-child(1),

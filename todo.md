@@ -148,3 +148,4 @@
 - [x] Validate grouped-card text patterns and ball shadows at desktop and mobile breakpoints, then run regression tests, TypeScript, and the production build.
 - [x] Apply one repeated text-role color pattern to both New to Squash first-timer cards, changing the orange card background rather than its text colors.
 - [x] Apply one repeated text-role color pattern to all Schedule session cards while retaining a varied dark-background palette.
+- [x] Strengthen the shared squash-ball shadow so it is clearly visible but still soft, without changing ball geometry, colors, dots, or placement.

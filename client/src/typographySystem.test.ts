@@ -99,7 +99,7 @@ describe("Sol typography grammar", () => {
   });
 
   it("adds one subtle shadow to every squash-ball variant", () => {
-    expect(css).toMatch(/\.squash-ball \{[\s\S]*?filter:drop-shadow\(0 \.32rem \.32rem rgba\(12,37,74,\.28\)\);/);
+    expect(css).toMatch(/\.squash-ball \{[\s\S]*?filter:drop-shadow\(\.42rem \.58rem \.38rem rgba\(12,37,74,\.5\)\);/);
   });
 
   it("uses repeated text-role patterns in the first-timer and session card groups", () => {
