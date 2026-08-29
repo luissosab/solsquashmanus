@@ -499,6 +499,62 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .club-intro--lifestyle .club-intro__section-intro h2 em { font-size:clamp(2.1rem,10.5vw,3rem); max-width:11ch; }
 }
 
+/* Sol typography grammar: role determines family, case, scale and emphasis on every route. */
+:root {
+  --font-serif:"DM Serif Display", Georgia, serif;
+  --type-card-decision:clamp(1.9rem,3.2vw,3.15rem);
+  --type-card-content:clamp(1.35rem,2vw,2rem);
+  --type-body:.92rem;
+  --type-meta:.72rem;
+}
+.eyebrow,
+.section-rail,
+.session-type,
+.pricing-card__head > span,
+.first-step-card__top,
+.first-step-card__metadata,
+.home-path-card > span,
+.faq-topic-nav button span { font-family:var(--font-display); font-size:var(--type-meta); font-style:normal; font-weight:700; letter-spacing:.12em; line-height:1.1; text-transform:uppercase; }
+.site-frame main h1,
+.site-frame main h2 { font-family:var(--font-display); font-style:normal; font-weight:700; text-transform:uppercase; }
+.site-frame main h1 em,
+.site-frame main h2 em { font-family:var(--font-display); font-style:normal; font-weight:700; letter-spacing:inherit; text-transform:inherit; }
+.home-path-card strong,
+.first-step-card h3,
+.way-card h2 { font-family:var(--font-display); font-size:var(--type-card-decision); font-style:normal; font-weight:700; letter-spacing:-.045em; line-height:.92; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__club-card h3,
+.profile-card h3,
+.values-list h3,
+.session-card__info h3,
+.faq-topic-panel__head h3,
+.pricing-card__head strong { font-family:var(--font-display); font-size:var(--type-card-content); font-style:normal; font-weight:700; letter-spacing:-.03em; line-height:.95; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__club-card strong,
+.club-feature__lead,
+.profile-card p:not(.sr-only) { font-family:var(--font-body); font-style:normal; font-weight:700; letter-spacing:0; line-height:1.35; text-transform:none; }
+.home-path-card p,
+.club-intro--lifestyle .club-intro__club-card p,
+.first-step-card p:not(.first-step-card__metadata),
+.way-card__expanded p,
+.values-list p,
+.session-card__info p,
+.faq-list [data-slot="accordion-content"],
+.pricing-card > p { font-family:var(--font-body); font-size:var(--type-body); font-style:normal; font-weight:400; line-height:1.58; text-transform:none; }
+.magnetic-button,
+.text-link,
+.story-detail-button,
+.profile-card button,
+.faq-topic-panel__action { font-family:var(--font-display); font-style:normal; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__section-intro p { font-family:var(--font-display); font-style:normal; font-weight:700; text-transform:uppercase; }
+.club-intro--lifestyle .club-intro__section-intro h2 span { color:var(--sol-navy); font-family:var(--font-body); font-size:clamp(1.35rem,2.2vw,2.2rem); font-style:normal; font-weight:700; letter-spacing:-.035em; line-height:1.12; text-transform:none; }
+.club-intro--lifestyle .club-intro__section-intro h2 em { color:var(--sol-teal); font-family:var(--font-serif); font-size:clamp(2.25rem,4.2vw,4.3rem); font-style:italic; font-weight:400; letter-spacing:-.025em; line-height:.94; text-transform:none; }
+.story-intro > div:nth-child(2) > p,
+.club-footer__main > p { font-family:var(--font-serif); font-style:italic; font-weight:400; letter-spacing:-.015em; text-transform:none; }
+@media (max-width:767px) {
+  :root { --type-card-decision:clamp(1.65rem,8vw,2.25rem); --type-card-content:clamp(1.3rem,6.2vw,1.7rem); --type-body:.9rem; }
+  .club-intro--lifestyle .club-intro__section-intro h2 span { font-size:clamp(1.2rem,5.5vw,1.55rem); }
+  .club-intro--lifestyle .club-intro__section-intro h2 em { font-size:clamp(2rem,9.5vw,2.75rem); max-width:12ch; }
+}
+
 /* Structure-first review: retain only the FAQ-box ball until decorative details are approved. */
 .squash-ball:not(.squash-ball--faq) { display:none !important; }
 .checkout-dialog { grid-template-columns:1fr; grid-template-areas:"title" "offer" "action"; }

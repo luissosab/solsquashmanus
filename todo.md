@@ -106,3 +106,7 @@
 - [x] Audit Home copy treatments and normalize supporting/card text so color, size, and emphasis follow clear content roles.
 - [x] Restore expressive hierarchy to THE CLUB’s exact main message through controlled scale, Sol palette accents, and selective italics without changing the copy or module structure.
 - [x] Validate the refined Home typography at desktop and mobile breakpoints, then run the production typecheck and build.
+- [x] Inventory typography roles and inconsistencies across Home, Play, New to Squash, Memberships & Prices, Our Story, FAQ, and Schedule.
+- [x] Codify one reusable typography grammar: tracked uppercase eyebrows, uppercase display headings, one optional sentence-case serif-italic emotional line, consistent uppercase card titles, consistent bold supporting lines, regular body copy, and tracked uppercase CTAs.
+- [x] Apply the approved typography grammar across every public route without changing copy, structure, colors, imagery, interactions, or disclosure behavior.
+- [x] Validate hierarchy, contrast, wrapping, and readability on every route at desktop and mobile breakpoints, then run the production typecheck and build.
