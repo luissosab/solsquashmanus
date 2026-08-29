@@ -14,6 +14,7 @@ type MagneticButtonProps = {
 
 export function MagneticButton({ children, href = "#", onClick, className = "", ariaLabel }: MagneticButtonProps) {
   const buttonRef = useRef<HTMLAnchorElement>(null);
+  const opensNewTab = /^https?:\/\//.test(href);
   const x = useSpring(0, { stiffness: 400, damping: 10 });
   const y = useSpring(0, { stiffness: 400, damping: 10 });
 
@@ -33,6 +34,8 @@ export function MagneticButton({ children, href = "#", onClick, className = "", 
     <motion.a
       ref={buttonRef}
       href={href}
+      target={opensNewTab ? "_blank" : undefined}
+      rel={opensNewTab ? "noreferrer" : undefined}
       aria-label={ariaLabel}
       className={`magnetic-button ${className}`}
       style={{ x, y }}

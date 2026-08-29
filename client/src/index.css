@@ -547,8 +547,7 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 .club-intro--lifestyle .club-intro__section-intro p { font-family:var(--font-display); font-style:normal; font-weight:700; text-transform:uppercase; }
 .club-intro--lifestyle .club-intro__section-intro h2 span { color:var(--sol-navy); font-family:var(--font-body); font-size:clamp(1.35rem,2.2vw,2.2rem); font-style:normal; font-weight:700; letter-spacing:-.035em; line-height:1.12; text-transform:none; }
 .club-intro--lifestyle .club-intro__section-intro h2 em { color:var(--sol-teal); font-family:var(--font-serif); font-size:clamp(2.25rem,4.2vw,4.3rem); font-style:italic; font-weight:400; letter-spacing:-.025em; line-height:.94; text-transform:none; }
-.story-intro > div:nth-child(2) > p,
-.club-footer__main > p { font-family:var(--font-serif); font-style:italic; font-weight:400; letter-spacing:-.015em; text-transform:none; }
+.story-intro > div:nth-child(2) > p { font-family:var(--font-serif); font-style:italic; font-weight:400; letter-spacing:-.015em; text-transform:none; }
 @media (max-width:767px) {
   :root { --type-card-decision:clamp(1.65rem,8vw,2.25rem); --type-card-content:clamp(1.3rem,6.2vw,1.7rem); --type-body:.9rem; }
   .club-intro--lifestyle .club-intro__section-intro h2 span { font-size:clamp(1.2rem,5.5vw,1.55rem); }
@@ -577,4 +576,108 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   .site-frame main > .wave-divider + section { padding-top:7.5rem; }
   .home-paths:has(+ .wave-divider) { padding-bottom:9rem; }
   .club-intro--lifestyle:has(+ .wave-divider) { padding-bottom:10.5rem; }
+}
+
+/* Cross-page consistency repair: established type roles, merged decisions, exact seams, and selected mural accents. */
+.club-intro--lifestyle .club-intro__section-intro {
+  align-items:end;
+  display:grid;
+  gap:clamp(1.25rem,4vw,4.5rem);
+  grid-template-columns:minmax(0,.8fr) minmax(17rem,1.2fr);
+}
+.club-intro--lifestyle .club-intro__section-intro h2 {
+  color:var(--sol-navy);
+  font-family:var(--font-display);
+  font-size:clamp(3.6rem,7.2vw,7rem);
+  font-style:normal;
+  font-weight:700;
+  letter-spacing:-.06em;
+  line-height:.86;
+  margin:0;
+  text-transform:uppercase;
+}
+.club-intro--lifestyle .club-intro__section-intro .club-intro__promise {
+  color:var(--sol-teal);
+  font-family:var(--font-body);
+  font-size:clamp(1.35rem,2.35vw,2.35rem);
+  font-style:normal;
+  font-weight:700;
+  letter-spacing:-.03em;
+  line-height:1.08;
+  margin:0;
+  max-width:22ch;
+  text-transform:none;
+}
+.club-footer__main .club-footer__promise {
+  color:var(--sol-light);
+  font-family:var(--font-body);
+  font-size:clamp(1rem,1.5vw,1.25rem);
+  font-style:normal;
+  font-weight:600;
+  letter-spacing:0;
+  line-height:1.45;
+  max-width:27ch;
+  text-transform:none;
+}
+.entry-hero__start {
+  align-items:center;
+  color:var(--sol-mustard);
+  display:inline-flex;
+  font-family:var(--font-display);
+  font-size:.78rem;
+  font-weight:700;
+  gap:.55rem;
+  letter-spacing:.12em;
+  margin-top:1.75rem;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+.entry-hero__start:hover { color:var(--sol-cyan); }
+.first-steps { background-color:var(--sol-teal); }
+.pricing-section--merged-offers { background-color:var(--sol-teal); isolation:isolate; overflow:hidden; position:relative; }
+.decision-offers__grid { display:grid; gap:clamp(5rem,9vw,9rem); position:relative; z-index:2; }
+.decision-offer { align-items:center; display:grid; gap:clamp(2rem,5vw,6rem); grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); }
+.decision-offer .pricing-heading,
+.decision-offer .pricing-card { margin:0; max-width:none; width:100%; }
+.pricing-section--merged-offers .decision-offer:nth-child(2) .pricing-card { border-color:var(--sol-green); }
+.junior-section--real h2 em { color:var(--sol-navy) !important; }
+.values-section--real { isolation:isolate; overflow:hidden; position:relative; }
+.values-list article:nth-child(1) { background:var(--sol-navy) !important; border-color:var(--sol-cyan) !important; color:var(--sol-light); }
+.values-list article:nth-child(2) { background:var(--sol-orange) !important; border-color:var(--sol-mustard) !important; color:var(--sol-light); }
+.values-list article:nth-child(3) { background:var(--sol-mustard) !important; border-color:var(--sol-navy) !important; color:var(--sol-navy); }
+.values-list article:nth-child(4) { background:var(--sol-blue) !important; border-color:var(--sol-green) !important; color:var(--sol-light); }
+.values-list article:nth-child(1) h3,
+.values-list article:nth-child(1) p,
+.values-list article:nth-child(2) h3,
+.values-list article:nth-child(2) p,
+.values-list article:nth-child(4) h3,
+.values-list article:nth-child(4) p { color:var(--sol-light); }
+.values-list article:nth-child(3) h3,
+.values-list article:nth-child(3) p { color:var(--sol-navy); }
+.values-list article:nth-child(1) > span { color:var(--sol-cyan); }
+.values-list article:nth-child(2) > span { color:var(--sol-mustard); }
+.values-list article:nth-child(3) > span { color:var(--sol-orange); }
+.values-list article:nth-child(4) > span { color:var(--sol-green); }
+.mural-sun { display:block; height:auto; pointer-events:none; position:absolute; width:clamp(5.75rem,9vw,9rem); z-index:1; }
+.mural-sun--first-steps { right:clamp(1.5rem,6vw,6rem); top:clamp(5rem,8vw,8rem); transform:rotate(-19deg); }
+.mural-sun--offers { right:clamp(1.5rem,6vw,6rem); top:clamp(4rem,7vw,7rem); transform:rotate(12deg); }
+.mural-sun--values { right:clamp(1.5rem,5vw,5rem); top:clamp(4.5rem,7vw,7rem); transform:rotate(25deg); }
+.court-mark { border-color:currentColor; border-style:solid; display:block; opacity:.35; pointer-events:none; position:absolute; z-index:1; }
+.court-mark--first-steps { border-color:var(--sol-mustard); border-width:3px 0 0 3px; bottom:8%; height:30%; left:3%; width:28%; }
+.court-mark--offers { border-color:var(--sol-cyan); border-width:3px 3px 0 0; bottom:7%; height:24%; right:3%; width:24%; }
+.court-mark--values { border-color:var(--sol-mustard); border-width:3px 0 3px 3px; height:32%; left:2%; top:20%; width:19%; }
+.pricing-section--merged-offers .squash-ball--offer { background:var(--sol-green) !important; border:3px solid var(--sol-mustard); bottom:8%; display:block !important; height:clamp(4.5rem,7vw,7rem); left:3%; position:absolute; transform:rotate(-14deg); width:clamp(4.5rem,7vw,7rem); z-index:1; }
+.pricing-section--merged-offers .squash-ball--offer i:first-child { background:var(--sol-orange); }
+.pricing-section--merged-offers .squash-ball--offer i:last-child { background:var(--sol-navy); }
+.beginner-note .squash-ball--beginner { background:var(--sol-orange) !important; border-color:var(--sol-mustard); box-shadow:none !important; display:block !important; transform:rotate(18deg); }
+.beginner-note .squash-ball--beginner i:first-child { background:var(--sol-mustard); }
+.beginner-note .squash-ball--beginner i:last-child { background:var(--sol-teal); }
+@media (max-width:767px) {
+  .club-intro--lifestyle .club-intro__section-intro { align-items:start; grid-template-columns:1fr; }
+  .club-intro--lifestyle .club-intro__section-intro h2 { font-size:clamp(3.4rem,15vw,5rem); }
+  .club-intro--lifestyle .club-intro__section-intro .club-intro__promise { font-size:clamp(1.25rem,6vw,1.7rem); }
+  .decision-offer { grid-template-columns:1fr; }
+  .mural-sun { opacity:.68; width:5rem; }
+  .mural-sun--first-steps, .mural-sun--offers, .mural-sun--values { right:1rem; top:6rem; }
+  .court-mark { opacity:.24; }
 }

@@ -110,3 +110,16 @@
 - [x] Codify one reusable typography grammar: tracked uppercase eyebrows, uppercase display headings, one optional sentence-case serif-italic emotional line, consistent uppercase card titles, consistent bold supporting lines, regular body copy, and tracked uppercase CTAs.
 - [x] Apply the approved typography grammar across every public route without changing copy, structure, colors, imagery, interactions, or disclosure behavior.
 - [x] Validate hierarchy, contrast, wrapping, and readability on every route at desktop and mobile breakpoints, then run the production typecheck and build.
+- [x] Restyle THE CLUB heading and supporting message so they follow the established sitewide typography hierarchy instead of the isolated oversized treatment.
+- [x] Replace the footer’s all-italic slogan treatment with the approved typography grammar while preserving the exact text.
+- [x] Merge the Taste of Sol and Join the Club blocks into one coherent section without removing or rewriting their approved copy or CTAs.
+- [x] Correct START HERE so it functions only as a navigational instruction, not as part of the New to Squash page’s marketing message.
+- [x] Repair the reported green and blue wave handoffs so the destination fill exactly matches the following section background.
+- [x] Apply the approved sun-mask, two-dot squash-ball, and contrasting court-line accents selectively to spacious non-FAQ sections, with varied sun rotations between -30 and 30 degrees.
+- [x] Fix the Sol Junior price contrast so $179/MO remains clearly readable against the mustard background.
+- [x] Give the four Our Values cards distinct Sol palette colors with accessible text contrast.
+- [x] Make every BOOK A SESSION CTA open Playbypoint in a new tab while leaving internal website links unchanged.
+- [x] Leave the FAQ route and its presentation untouched during this correction pass.
+- [x] Validate all affected routes at desktop and mobile breakpoints, then run regression tests, TypeScript, and the production build.
+- [x] Revert the unintended FAQ-specific new-tab action and incoming-wave edits so the FAQ route remains untouched as requested.
+- [x] Verify the unchanged FAQ route at desktop and mobile sizes after the reversion, without introducing presentation changes.

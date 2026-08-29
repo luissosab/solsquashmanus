@@ -14,7 +14,7 @@ export function ClubFooter() {
       <div className="club-footer__mural-mark" aria-hidden="true" />
       <div className="club-footer__main">
         <img src={logoSrc} alt="Sol Squash" className="club-footer__logo" />
-        <p>Come for the squash. Stay for everything around it.</p>
+        <p className="club-footer__promise">Come for the squash. Stay for everything around it.</p>
         <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">BOOK A SESSION</MagneticButton>
       </div>
       <div className="club-footer__links">
