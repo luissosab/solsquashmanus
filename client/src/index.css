@@ -828,6 +828,58 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 .squash-ball {
   filter:drop-shadow(.42rem .58rem .38rem rgba(12,37,74,.5));
 }
+
+/* Home mural accents and complete route-to-footer wave endings. */
+.home-paths,
+.club-intro--lifestyle {
+  isolation:isolate;
+  overflow:hidden;
+  position:relative;
+}
+.home-paths > *,
+.club-intro--lifestyle > * {
+  position:relative;
+  z-index:2;
+}
+.home-paths .mural-sun--home-paths {
+  height:clamp(5.5rem,8vw,8rem);
+  opacity:.9;
+  position:absolute;
+  right:clamp(1.75rem,6vw,6rem);
+  top:clamp(7rem,10vw,10rem);
+  transform:rotate(18deg);
+  width:clamp(5.5rem,8vw,8rem);
+  z-index:1;
+}
+.club-intro--lifestyle .squash-ball--home-club {
+  background:var(--sol-orange) !important;
+  border-color:var(--sol-navy);
+  display:block !important;
+  height:clamp(4.75rem,7vw,7rem);
+  position:absolute;
+  right:clamp(1.75rem,6vw,6rem);
+  top:clamp(6rem,9vw,9rem);
+  transform:rotate(-21deg);
+  width:clamp(4.75rem,7vw,7rem);
+  z-index:1;
+}
+.site-frame main > .wave-divider:last-child {
+  margin-bottom:0;
+}
+@media (max-width:767px) {
+  .home-paths .mural-sun--home-paths {
+    height:4.75rem;
+    right:1.25rem;
+    top:7.5rem;
+    width:4.75rem;
+  }
+  .club-intro--lifestyle .squash-ball--home-club {
+    height:4.25rem;
+    right:1.25rem;
+    top:8rem;
+    width:4.25rem;
+  }
+}
 .values-list article,
 .values-list article:nth-child(1),
 .values-list article:nth-child(2),

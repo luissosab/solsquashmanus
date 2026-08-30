@@ -9,6 +9,7 @@ const home = readFileSync(new URL("./pages/Home.tsx", import.meta.url), "utf8");
 const newToSquash = readFileSync(new URL("./pages/NewToSquash.tsx", import.meta.url), "utf8");
 const ourStory = readFileSync(new URL("./pages/OurStory.tsx", import.meta.url), "utf8");
 const playAndPricing = readFileSync(new URL("./pages/PlayAndPricing.tsx", import.meta.url), "utf8");
+const pageShell = readFileSync(new URL("./components/PageShell.tsx", import.meta.url), "utf8");
 
 describe("Sol typography grammar", () => {
   it("loads the approved display, body, and emotional serif families", () => {
@@ -60,7 +61,7 @@ describe("Sol typography grammar", () => {
     const renderedMarkup = [home, structuralBlocks, newToSquash, ourStory, playAndPricing].join("\n");
     const renderedVariants = Array.from(renderedMarkup.matchAll(/squash-ball--([a-z-]+)/g), match => match[1]).sort();
 
-    expect(Array.from(new Set(renderedVariants))).toEqual(["beginner", "dialog", "faq", "hero", "offer", "values"]);
+    expect(Array.from(new Set(renderedVariants))).toEqual(["beginner", "dialog", "faq", "hero", "home-club", "offer", "values"]);
     expect(css).toContain(".squash-ball i { background:var(--sol-navy); }");
     expect(css).toMatch(/\.squash-ball--offer i,[\s\S]*?background:var\(--sol-navy\)/);
     expect(css).toMatch(/\.squash-ball--beginner i,[\s\S]*?background:var\(--sol-teal\)/);
@@ -108,5 +109,16 @@ describe("Sol typography grammar", () => {
     expect(css).toMatch(/\.first-step-card__top,[\s\S]*?\.first-step-card \.booking-handoff-note \{[\s\S]*?color:var\(--sol-mustard\) !important;/);
     expect(css).toMatch(/\.session-card__time small,[\s\S]*?\.session-card__info p \{[\s\S]*?color:var\(--sol-mustard\) !important;/);
     expect(css).toMatch(/\.session-card__time span,[\s\S]*?\.session-card__info h3 \{[\s\S]*?color:var\(--sol-light\) !important;/);
+  });
+  it("adds approved Home accents and closes routes that lacked a footer wave", () => {
+    expect(home).toContain("mural-sun--home-paths");
+    expect(home).toContain("squash-ball--home-club");
+    expect(css).toContain(".home-paths .mural-sun--home-paths");
+    expect(css).toContain(".club-intro--lifestyle .squash-ball--home-club");
+    expect(pageShell).toContain('location === "/"');
+    expect(pageShell).toContain('location === "/faq"');
+    expect(pageShell).toContain('location === "/schedule"');
+    expect(pageShell).toContain('location === "/play-and-pricing"');
+    expect(pageShell).toContain('<WaveDivider source="navy" destination="navy" />');
   });
 });

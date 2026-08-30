@@ -29,6 +29,7 @@ export default function Home() {
       </section>
       <WaveDivider source="navy" destination="navy" />
       <section className="home-paths" id="home-paths" aria-labelledby="home-paths-title">
+        <img className="mural-sun mural-sun--home-paths" src="/manus-storage/sol-sun-repaired-orange_e644a385.png" alt="" aria-hidden="true" />
         <div className="home-paths__intro"><p className="eyebrow eyebrow--cyan">FIND YOUR WAY IN</p><h2 id="home-paths-title">WHAT BRINGS<br />YOU TO <em>SOL?</em></h2></div>
         <div className="home-paths__list">
           <Link href="/play" className="home-path-card home-path-card--play"><span>01</span><strong>PLAY</strong><p>Book a court, join a session or train with us. All levels welcome.</p><b>EXPLORE PLAY <i aria-hidden="true">↗</i></b></Link>
@@ -38,6 +39,7 @@ export default function Home() {
       </section>
       <WaveDivider source="navy" destination="mango" />
       <section className="club-intro club-intro--real club-intro--lifestyle" aria-labelledby="club-intro-title">
+        <span className="squash-ball squash-ball--home-club" aria-hidden="true"><i /><i /></span>
         <div className="club-intro__section-intro"><h2 id="club-intro-title">THE CLUB</h2><p className="club-intro__promise">Come for the squash. Stay for everything around it.</p></div>
         <div className="club-intro__modules">
           <article className="club-intro__module club-intro__module--squash"><figure><img src={assets.court} alt="One of Sol Squash's full-glass courts" /></figure><div className="club-intro__club-card"><h3>SQUASH</h3><strong>5 Full-glass courts</strong><p>Book a court, join a session or train with us. All levels welcome.</p></div></article>

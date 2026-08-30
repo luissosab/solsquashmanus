@@ -149,3 +149,6 @@
 - [x] Apply one repeated text-role color pattern to both New to Squash first-timer cards, changing the orange card background rather than its text colors.
 - [x] Apply one repeated text-role color pattern to all Schedule session cards while retaining a varied dark-background palette.
 - [x] Strengthen the shared squash-ball shadow so it is clearly visible but still soft, without changing ball geometry, colors, dots, or placement.
+- [x] Add restrained approved mural accents to suitable open areas of the Home page without crowding copy, cards, media, or interactions.
+- [x] Standardize every route’s final content-to-footer transition to one clean cyan wave with exact source and footer background colors, matching the correct Play and Memberships examples.
+- [x] Validate Home accent restraint and all final footer seams at desktop and mobile breakpoints, then run regression tests, TypeScript, and the production build.
