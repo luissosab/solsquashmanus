@@ -4,6 +4,35 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Archivo Narrow";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("/fonts/archivo-narrow-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/dm-serif-display-regular-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/dm-serif-display-italic-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/fonts/manrope-latin.woff2") format("woff2");
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -750,9 +779,9 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   overflow:hidden;
   position:relative;
 }
-.mural-sun--profiles { content:url("/manus-storage/sol-sun-repaired-cyan_372f6d5e.png"); right:clamp(1.5rem,5vw,5rem); top:clamp(4.5rem,7vw,7rem); transform:rotate(7deg); }
-.mural-sun--values { content:url("/manus-storage/sol-sun-repaired-green_37ae7f24.png"); }
-.mural-sun--faq { content:url("/manus-storage/sol-sun-repaired-orange_e644a385.png"); right:clamp(1.5rem,5vw,5rem); top:clamp(7rem,10vw,10rem); transform:rotate(-27deg); }
+.mural-sun--profiles { content:url("/media/sol-sun-repaired-cyan_372f6d5e.png"); right:clamp(1.5rem,5vw,5rem); top:clamp(4.5rem,7vw,7rem); transform:rotate(7deg); }
+.mural-sun--values { content:url("/media/sol-sun-repaired-green_37ae7f24.png"); }
+.mural-sun--faq { content:url("/media/sol-sun-repaired-orange_e644a385.png"); right:clamp(1.5rem,5vw,5rem); top:clamp(7rem,10vw,10rem); transform:rotate(-27deg); }
 .values-list article > span { color:inherit !important; opacity:.8; }
 .faq-guide > *, .profiles-section--real > * { position:relative; z-index:2; }
 .faq-guide .mural-sun, .profiles-section--real .mural-sun { position:absolute; z-index:1; }

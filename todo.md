@@ -152,3 +152,9 @@
 - [x] Add restrained approved mural accents to suitable open areas of the Home page without crowding copy, cards, media, or interactions.
 - [x] Standardize every route’s final content-to-footer transition to one clean cyan wave with exact source and footer background colors, matching the correct Play and Memberships examples.
 - [x] Validate Home accent restraint and all final footer seams at desktop and mobile breakpoints, then run regression tests, TypeScript, and the production build.
+- [x] Audit GitHub authentication, current remotes, repository status, and the target `solsquashmanus` repository before pushing.
+- [x] Inventory every hosted image, video, and other media URL used by the website and record its source and file size.
+- [x] Download every hosted media asset into `client/public` using stable descriptive filenames.
+- [x] Rewrite all website media references to local public-relative paths and verify no hosted media URL remains in runtime source or CSS.
+- [x] Validate the localized site with regression tests, TypeScript, production build, and representative responsive smoke checks.
+- [x] Commit the complete localized project and push it to the user’s `solsquashmanus` GitHub repository without rewriting remote history.

@@ -5,7 +5,7 @@ import { Link } from "wouter";
 import { MagneticButton } from "./MagneticButton";
 import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
-const logoSrc = "/manus-storage/sol-squash-logo_dd364204.png";
+const logoSrc = "/media/sol-squash-logo_dd364204.png";
 
 export function ClubFooter() {
   const returnToTop = () => window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

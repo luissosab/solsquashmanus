@@ -10,7 +10,7 @@ export function TasteOfSolBlock() {
     <>
       <WaveDivider source="green" destination="navy" />
       <section className="pricing-section pricing-section--real pricing-section--merged-offers">
-        <img className="mural-sun mural-sun--offers" src="/manus-storage/sol-sun-repaired-mustard_563e528f.png" alt="" aria-hidden="true" />
+        <img className="mural-sun mural-sun--offers" src="/media/sol-sun-repaired-mustard_563e528f.png" alt="" aria-hidden="true" />
         <span className="squash-ball squash-ball--offer" aria-hidden="true"><i /><i /></span>
         <div className="decision-offers__grid">
           <article className="decision-offer">

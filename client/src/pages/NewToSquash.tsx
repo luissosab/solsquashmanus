@@ -8,8 +8,8 @@ import { RetroImage } from "@/components/RetroImage";
 import { WaveDivider } from "@/components/WaveDivider";
 import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
-const clubWideImage = "/manus-storage/sol-club-wide_b4871337.png";
-const muralReferenceImage = "/manus-storage/sol-mural-reference_10136907.png";
+const clubWideImage = "/media/sol-club-wide_b4871337.png";
+const muralReferenceImage = "/media/sol-mural-reference_10136907.png";
 
 const offers = [
   {
@@ -35,7 +35,7 @@ export function FirstTimerContent({ includeLeadingWave = true }: { includeLeadin
     <>
       {includeLeadingWave && <WaveDivider source="navy" destination="green" />}
       <section className="first-steps" id="first-steps">
-        <img className="mural-sun mural-sun--first-steps" src="/manus-storage/sol-sun-repaired-orange_e644a385.png" alt="" aria-hidden="true" />
+        <img className="mural-sun mural-sun--first-steps" src="/media/sol-sun-repaired-orange_e644a385.png" alt="" aria-hidden="true" />
         <div className="section-rail"><span>YOUR FIRST RALLY</span><i /></div>
         <div className="first-steps__heading"><p className="eyebrow">COME AS YOU ARE</p><h2>WE'LL GET<br />YOU <em>PLAYING.</em></h2></div>
         <div className="first-step-grid">

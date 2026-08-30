@@ -6,12 +6,12 @@ import { Link } from "wouter";
 import { WaveDivider } from "@/components/WaveDivider";
 
 const assets = {
-  court: "/manus-storage/sol-facility-glass-court_bc711772.png",
-  blueCourt: "/manus-storage/sol-facility-blue-court_a3f6989d.png",
-  introVideo: "/manus-storage/sol-squash-intro_5d0ba482.mp4",
-  sauna: "/manus-storage/sol-sauna_23e752ac.png",
-  clubFacility: "/manus-storage/sol-approved-general-facilities_ac64bd88.png",
-  mural: "/manus-storage/sol-mural-feature_9dd29c1b.png",
+  court: "/media/sol-facility-glass-court_bc711772.png",
+  blueCourt: "/media/sol-facility-blue-court_a3f6989d.png",
+  introVideo: "/media/sol-squash-intro_5d0ba482.mp4",
+  sauna: "/media/sol-sauna_23e752ac.png",
+  clubFacility: "/media/sol-approved-general-facilities_ac64bd88.png",
+  mural: "/media/sol-mural-feature_9dd29c1b.png",
 };
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
       </section>
       <WaveDivider source="navy" destination="navy" />
       <section className="home-paths" id="home-paths" aria-labelledby="home-paths-title">
-        <img className="mural-sun mural-sun--home-paths" src="/manus-storage/sol-sun-repaired-orange_e644a385.png" alt="" aria-hidden="true" />
+        <img className="mural-sun mural-sun--home-paths" src="/media/sol-sun-repaired-orange_e644a385.png" alt="" aria-hidden="true" />
         <div className="home-paths__intro"><p className="eyebrow eyebrow--cyan">FIND YOUR WAY IN</p><h2 id="home-paths-title">WHAT BRINGS<br />YOU TO <em>SOL?</em></h2></div>
         <div className="home-paths__list">
           <Link href="/play" className="home-path-card home-path-card--play"><span>01</span><strong>PLAY</strong><p>Book a court, join a session or train with us. All levels welcome.</p><b>EXPLORE PLAY <i aria-hidden="true">↗</i></b></Link>

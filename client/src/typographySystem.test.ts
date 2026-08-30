@@ -1,4 +1,6 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 
 const css = readFileSync(new URL("./index.css", import.meta.url), "utf8");
@@ -10,12 +12,37 @@ const newToSquash = readFileSync(new URL("./pages/NewToSquash.tsx", import.meta.
 const ourStory = readFileSync(new URL("./pages/OurStory.tsx", import.meta.url), "utf8");
 const playAndPricing = readFileSync(new URL("./pages/PlayAndPricing.tsx", import.meta.url), "utf8");
 const pageShell = readFileSync(new URL("./components/PageShell.tsx", import.meta.url), "utf8");
+const sourceRoot = fileURLToPath(new URL(".", import.meta.url));
+
+function readRuntimeSource(directory: string): string {
+  return readdirSync(directory, { withFileTypes: true }).map(entry => {
+    const fullPath = join(directory, entry.name);
+    if (entry.isDirectory()) return readRuntimeSource(fullPath);
+    return /\.(css|ts|tsx)$/.test(entry.name) && !entry.name.includes(".test.") ? readFileSync(fullPath, "utf8") : "";
+  }).join("\n");
+}
+
+const runtimeSource = `${readRuntimeSource(sourceRoot)}\n${html}`;
 
 describe("Sol typography grammar", () => {
   it("loads the approved display, body, and emotional serif families", () => {
-    expect(html).toContain("Archivo+Narrow");
-    expect(html).toContain("Manrope");
-    expect(html).toContain("DM+Serif+Display");
+    expect(html).not.toContain("fonts.googleapis.com");
+    expect(html).not.toContain("fonts.gstatic.com");
+    expect(css).toContain('url("/fonts/archivo-narrow-latin.woff2")');
+    expect(css).toContain('url("/fonts/manrope-latin.woff2")');
+    expect(css).toContain('url("/fonts/dm-serif-display-regular-latin.woff2")');
+    expect(css).toContain('url("/fonts/dm-serif-display-italic-latin.woff2")');
+  });
+
+  it("uses only local public media and font files at runtime", () => {
+    expect(runtimeSource).not.toContain("/manus-storage/");
+    expect(runtimeSource).not.toMatch(/https?:\/\/[^\s"')]+\.(?:gif|jpe?g|mp4|otf|png|svg|ttf|webm|webp|woff2?)/i);
+
+    const localAssets = Array.from(runtimeSource.matchAll(/["'(](\/(?:fonts|media)\/[^"')\s]+)/g), match => match[1]);
+    expect(localAssets.length).toBeGreaterThan(0);
+    for (const asset of new Set(localAssets)) {
+      expect(existsSync(new URL(`../public${asset}`, import.meta.url)), `Missing local asset: ${asset}`).toBe(true);
+    }
   });
 
   it("keeps heading emphasis in the display system instead of arbitrary italics", () => {

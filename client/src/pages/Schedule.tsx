@@ -31,7 +31,7 @@ export default function Schedule() {
         <p className="sr-only">{data.schedule.flatMap((day) => day.sessions.map((session) => `${day.date}. ${day.day}. ${session.title}. ${session.time} to ${session.endTime}. ${session.spots} spots open.`)).join(" ")}</p>
       </section>
       <WaveDivider source="green" destination="navy" />
-      <section className="schedule-coda"><figure className="schedule-coda__image"><img src="/manus-storage/sol-founders-lounge_1745d40e.webp" alt="Bruna and Vini at Sol" /></figure><div><p className="eyebrow eyebrow--cyan">BETWEEN MATCHES</p><h2>COME FOR A<br />SESSION.<br /><em>STAY FOR</em><br />THE CLUB.</h2><MagneticButton href="/memberships-and-prices" className="button--mango">SEE PRICES</MagneticButton></div></section>
+      <section className="schedule-coda"><figure className="schedule-coda__image"><img src="/media/sol-founders-lounge_1745d40e.webp" alt="Bruna and Vini at Sol" /></figure><div><p className="eyebrow eyebrow--cyan">BETWEEN MATCHES</p><h2>COME FOR A<br />SESSION.<br /><em>STAY FOR</em><br />THE CLUB.</h2><MagneticButton href="/memberships-and-prices" className="button--mango">SEE PRICES</MagneticButton></div></section>
     </>
   );
 }

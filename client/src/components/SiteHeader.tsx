@@ -8,7 +8,7 @@ import { Link, useLocation } from "wouter";
 import { MagneticButton } from "./MagneticButton";
 import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
-const logoSrc = "/manus-storage/sol-squash-logo_dd364204.png";
+const logoSrc = "/media/sol-squash-logo_dd364204.png";
 const navigation = [
   { label: "HOME", href: "/" },
   { label: "PLAY", href: "/play" },
