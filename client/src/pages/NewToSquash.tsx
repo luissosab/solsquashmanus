@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 import { MagneticButton } from "@/components/MagneticButton";
 import { RetroImage } from "@/components/RetroImage";
 import { WaveDivider } from "@/components/WaveDivider";
-import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
+import { PLAYBYPOINT_BEGINNER_CLINIC_URL, PLAYBYPOINT_FIRST_LESSON_URL } from "@/lib/booking";
 
 const clubWideImage = "/media/sol-club-wide_b4871337.png";
 const muralReferenceImage = "/media/sol-mural-reference_10136907.png";
@@ -19,6 +19,7 @@ const offers = [
     copy: "Try it for the first time in a private session with Sol founders and coaches Bruna or Vini. We'll provide the racket, show you the basics and get you playing from the start. Then stay for the sauna, cold plunge and showers. One per person.",
     action: "TRY SQUASH",
     tone: "mango",
+    href: PLAYBYPOINT_FIRST_LESSON_URL,
   },
   {
     marker: "02",
@@ -27,6 +28,7 @@ const offers = [
     copy: "For people new to the game and anyone still developing their squash fundamentals. Small group, coached on court. Rackets provided. Dynamic, full-body, seriously fun.",
     action: "SEE SESSIONS",
     tone: "green",
+    href: PLAYBYPOINT_BEGINNER_CLINIC_URL,
   },
 ];
 
@@ -45,7 +47,7 @@ export function FirstTimerContent({ includeLeadingWave = true }: { includeLeadin
               <h3>{offer.title}</h3>
               <p className="first-step-card__metadata">{offer.metadata}</p>
               <p>{offer.copy}</p>
-              <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">{offer.action}</MagneticButton>
+              <MagneticButton href={offer.href} className="button--mango">{offer.action}</MagneticButton>
               <p className="booking-handoff-note">Choose a live time and complete your booking next.</p>
             </motion.article>
           ))}

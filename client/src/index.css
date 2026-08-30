@@ -4,6 +4,21 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+.skip-link {
+  background:var(--sol-mustard, #f4a911);
+  color:var(--sol-navy, #1a2f6b);
+  font-family:var(--font-display, sans-serif);
+  font-weight:700;
+  left:1rem;
+  padding:.8rem 1rem;
+  position:fixed;
+  top:1rem;
+  transform:translateY(-200%);
+  z-index:1000;
+}
+.skip-link:focus { transform:translateY(0); }
+:where(a, button, summary):focus-visible { outline:3px solid var(--sol-cyan, #00c4c4); outline-offset:4px; }
+
 @font-face {
   font-family: "Archivo Narrow";
   font-style: normal;

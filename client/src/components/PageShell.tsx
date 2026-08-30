@@ -16,8 +16,9 @@ export function PageShell({ children }: { children: ReactNode }) {
   }, [location]);
   return (
     <div className="site-frame">
+      <a className="skip-link" href="#main-content">Skip to main content</a>
       <SiteHeader />
-      <motion.main key={location} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.44, ease: [0.23, 1, 0.32, 1] }}>
+      <motion.main id="main-content" tabIndex={-1} key={location} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.44, ease: [0.23, 1, 0.32, 1] }}>
         {children}
         {needsFinalFooterWave && <WaveDivider source="navy" destination="navy" />}
       </motion.main>

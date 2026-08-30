@@ -17,6 +17,7 @@ import Play from "./pages/Play";
 import Join from "./pages/Join";
 import FAQ from "./pages/FAQ";
 import MembershipsAndPrices from "./pages/MembershipsAndPrices";
+import NotFound from "./pages/NotFound";
 
 function Router() {
   return (
@@ -31,7 +32,7 @@ function Router() {
         <Route path="/faq" component={FAQ} />
         <Route path="/schedule" component={Schedule} />
         <Route path="/our-story" component={OurStory} />
-        <Route component={Home} />
+        <Route component={NotFound} />
       </Switch>
     </PageShell>
   );

@@ -29,11 +29,19 @@ export function ClubFooter() {
           <Link href="/play" onClick={returnToTop}>Play</Link>
           <Link href="/new-to-squash" onClick={returnToTop}>New to Squash</Link>
           <Link href="/memberships-and-prices" onClick={returnToTop}>Memberships &amp; Prices</Link>
+          <Link href="/schedule" onClick={returnToTop}>Schedule</Link>
           <Link href="/our-story" onClick={returnToTop}>Our Story</Link>
           <Link href="/faq" onClick={returnToTop}>FAQ</Link>
         </div>
+        <div>
+          <span className="eyebrow eyebrow--cyan">CLUB HOURS</span>
+          <span>Mon–Thu · 6am–10pm</span>
+          <span>Fri · 6am–5pm</span>
+          <span>Sat–Sun · 8am–5pm</span>
+          <small>Hours may shift seasonally. Check the live schedule before visiting.</small>
+        </div>
       </div>
-      <div className="club-footer__bottom">© Sol Squash · <a href="https://www.instagram.com/solsquash/" target="_blank" rel="noreferrer">@solsquash</a></div>
+      <div className="club-footer__bottom">© Sol Squash · <a href="https://www.instagram.com/solsquash/" target="_blank" rel="noreferrer">@solsquash</a> · <a href="https://www.solsquash.com/english-privacy-policy" target="_blank" rel="noreferrer">Privacy</a> · <a href="https://www.solsquash.com/english-terms-conditions" target="_blank" rel="noreferrer">Terms</a></div>
     </footer>
   );
 }
