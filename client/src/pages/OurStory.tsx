@@ -85,14 +85,16 @@ export default function OurStory() {
       </section>
       <HalftoneDivider destination="cream" />
       <section className="bn-team">
-        <RacketQMark tone="orange" />
-        <div className="bn-section-heading">
-          <p className="bn-kicker">The people behind Sol</p>
-          <h2>
-            Meet the
-            <br />
-            <em>home team.</em>
-          </h2>
+        <div className="bn-heading-with-mark">
+          <div className="bn-section-heading">
+            <p className="bn-kicker">The people behind Sol</p>
+            <h2>
+              Meet the
+              <br />
+              <em>home team.</em>
+            </h2>
+          </div>
+          <RacketQMark tone="orange" />
         </div>
         <div className="bn-team-grid">
           {profiles.map((profile, index) => (

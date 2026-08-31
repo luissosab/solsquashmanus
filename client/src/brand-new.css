@@ -382,15 +382,25 @@ body {
 }
 .bn-court-mark {
   fill: none;
-  opacity: 0.12;
+  opacity: 0.26;
   pointer-events: none;
   position: absolute;
   stroke: currentColor;
   stroke-linecap: square;
   stroke-linejoin: miter;
-  stroke-width: 10;
-  transform: rotate(-18deg);
-  width: clamp(34rem, 62vw, 66rem);
+  stroke-width: 9;
+  transform: rotate(-24deg);
+  width: clamp(58rem, 92vw, 112rem);
+  z-index: 0;
+}
+.bn-journeys > :not(.bn-court-mark),
+.bn-offerings > :not(.bn-court-mark),
+.bn-reassurance > :not(.bn-court-mark),
+.bn-schedule-list > :not(.bn-court-mark),
+.bn-membership > :not(.bn-court-mark),
+.bn-story-copy > :not(.bn-court-mark) {
+  position: relative;
+  z-index: 1;
 }
 
 .bn-journeys,
@@ -402,6 +412,15 @@ body {
   padding: clamp(6rem, 11vw, 11rem) clamp(1.25rem, 7vw, 8rem);
   position: relative;
 }
+.bn-journeys,
+.bn-offerings,
+.bn-reassurance,
+.bn-schedule-list,
+.bn-membership,
+.bn-story-copy {
+  isolation: isolate;
+  overflow: hidden;
+}
 .bn-section-heading {
   max-width: 58rem;
 }
@@ -409,6 +428,21 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   max-width: 38rem;
+}
+.bn-heading-with-mark {
+  align-items: center;
+  display: flex;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.bn-heading-with-mark > :not(.bn-racket-q) {
+  min-width: 0;
+}
+.bn-heading-with-mark > .bn-racket-q {
+  flex: 0 0 auto;
 }
 .bn-journey-list {
   display: grid;
@@ -563,6 +597,12 @@ body {
   line-height: 0.95;
   margin: 0;
 }
+.bn-mural-break .bn-heading-with-mark {
+  justify-content: flex-start;
+}
+.bn-mural-break .bn-heading-with-mark > .bn-racket-q {
+  transform: rotate(-8deg);
+}
 
 .bn-page-hero {
   align-items: end;
@@ -629,20 +669,17 @@ body {
 .site-frame .bn-offerings h2 em {
   color: var(--bn-mustard) !important;
 }
-.bn-offerings > .bn-racket-q {
-  position: absolute;
-  right: 7%;
-  top: 9%;
-  transform: rotate(7deg);
-}
 .bn-court-mark--offerings {
-  bottom: -28%;
-  right: -20%;
+  bottom: -46%;
+  right: -30%;
 }
-.bn-offerings > .bn-section-heading {
+.bn-offerings .bn-section-heading {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
+}
+.bn-offerings .bn-heading-with-mark > .bn-racket-q {
+  transform: rotate(12deg);
 }
 .bn-offering-list {
   border-top: 1px solid var(--bn-navy);
@@ -688,16 +725,48 @@ body {
 .bn-next-step {
   align-items: center;
   background: var(--bn-orange);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-  padding: 2rem clamp(1.25rem, 7vw, 8rem);
+  display: grid;
+  gap: clamp(3rem, 8vw, 9rem);
+  grid-template-columns: 0.8fr 1.2fr;
+  min-height: 28rem;
+  padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 7vw, 8rem);
 }
-.bn-next-step > p {
+.bn-next-step h2 {
+  font-size: clamp(3.4rem, 7vw, 7rem);
+}
+.bn-next-step h2 em {
+  color: var(--bn-navy);
+  font-family: var(--font-serif);
+}
+.bn-next-step > div > p:last-child {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 32rem;
+}
+.bn-next-step nav {
+  border-top: 1px solid rgba(0, 34, 105, 0.35);
+}
+.bn-next-step nav a {
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 34, 105, 0.35);
+  color: inherit;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 2rem 1fr auto;
+  min-height: 7rem;
+  padding: 1.5rem 0;
+  text-decoration: none;
+}
+.bn-next-step nav span,
+.bn-next-step nav strong {
   font-family: var(--font-display);
-  font-size: 1.2rem;
   font-weight: 700;
+}
+.bn-next-step nav span {
+  font-size: 0.85rem;
+}
+.bn-next-step nav strong {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 
 .bn-reassurance {
@@ -729,12 +798,11 @@ body {
   color: var(--bn-orange) !important;
 }
 .bn-court-mark--reassurance {
-  right: -19%;
-  top: -24%;
+  right: -28%;
+  top: -38%;
 }
-.bn-first-rally > div:last-child > .bn-racket-q {
-  margin: 0 0 2rem auto;
-  transform: rotate(-6deg);
+.bn-first-rally .bn-heading-with-mark > .bn-racket-q {
+  transform: rotate(-12deg);
 }
 .bn-check-grid {
   display: grid;
@@ -825,8 +893,8 @@ body {
   grid-template-columns: 0.7fr 1.3fr;
 }
 .bn-court-mark--schedule {
-  left: -22%;
-  top: -23%;
+  left: -30%;
+  top: -38%;
 }
 .bn-schedule-list > div:last-child {
   border-top: 1px solid var(--bn-navy);
@@ -874,10 +942,8 @@ body {
   padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 7vw, 8rem);
   position: relative;
 }
-.bn-schedule-note > .bn-racket-q {
-  align-self: start;
-  grid-column: 1/-1;
-  transform: rotate(6deg);
+.bn-schedule-note .bn-heading-with-mark > .bn-racket-q {
+  transform: rotate(8deg);
 }
 .bn-schedule-note p {
   line-height: 1.7;
@@ -895,8 +961,8 @@ body {
 }
 .bn-court-mark--membership {
   color: var(--bn-cyan);
-  right: -18%;
-  top: -24%;
+  right: -28%;
+  top: -38%;
 }
 .bn-membership__prices {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -952,10 +1018,8 @@ body {
 .bn-price-compare {
   background: var(--bn-mustard);
 }
-.bn-price-compare > .bn-racket-q {
-  margin-left: auto;
-  margin-bottom: 2rem;
-  transform: rotate(-5deg);
+.bn-price-compare .bn-heading-with-mark > .bn-racket-q {
+  transform: rotate(-10deg);
 }
 .bn-price-table {
   margin-top: 4rem;
@@ -967,13 +1031,17 @@ body {
   padding: 1rem 0;
 }
 .bn-price-table span {
+  font-size: 2rem;
   font-family: var(--font-display);
   font-weight: 700;
+  line-height: 1.2;
 }
 .bn-price-table__head {
-  font-size: 0.68rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.bn-price-table__head span {
+  font-size: 1.36rem;
 }
 .bn-packages {
   background: var(--bn-teal);
@@ -1062,9 +1130,9 @@ body {
   position: relative;
 }
 .bn-court-mark--story {
-  bottom: -27%;
+  bottom: -45%;
   color: var(--bn-navy);
-  left: -20%;
+  left: -29%;
 }
 .bn-story-copy > div {
   max-width: 52rem;
@@ -1075,9 +1143,8 @@ body {
 .bn-team {
   background: var(--bn-cream);
 }
-.bn-team > .bn-racket-q {
-  margin: 0 0 2rem auto;
-  transform: rotate(4deg);
+.bn-team .bn-heading-with-mark > .bn-racket-q {
+  transform: rotate(11deg);
 }
 .bn-team-grid {
   display: grid;
@@ -1223,8 +1290,8 @@ body {
 }
 .bn-court-mark--journeys {
   color: var(--bn-navy);
-  right: -20%;
-  top: -22%;
+  right: -30%;
+  top: -38%;
 }
 .bn-footer__lead {
   align-items: center;
@@ -1432,6 +1499,22 @@ body {
     min-height: calc(100svh - 96px);
     padding: 6rem 1.25rem 4rem;
   }
+  .bn-page-hero > div {
+    max-width: calc(100vw - 3rem);
+    min-width: 0;
+    width: calc(100vw - 3rem);
+  }
+  .bn-page-hero h1 {
+    font-size: clamp(2.85rem, 12vw, 3.75rem);
+    line-height: 0.84;
+    max-width: 100%;
+  }
+  .bn-page-hero > div > p:not(.bn-kicker) {
+    font-size: 0.98rem;
+    max-width: 19rem;
+    overflow-wrap: anywhere;
+    width: 19rem;
+  }
   .bn-page-hero::before {
     background: linear-gradient(
       180deg,
@@ -1441,6 +1524,14 @@ body {
   }
   .bn-page-hero > .bn-ball-mark {
     display: none;
+  }
+  .bn-heading-with-mark {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .bn-heading-with-mark > .bn-racket-q {
+    height: 3.5rem;
+    width: 3.5rem;
   }
   .bn-offering-row {
     gap: 1rem;
@@ -1454,8 +1545,9 @@ body {
     grid-row: 1;
   }
   .bn-next-step {
-    align-items: flex-start;
-    flex-direction: column;
+    gap: 3rem;
+    grid-template-columns: 1fr;
+    padding: 5rem 1.25rem;
   }
   .bn-reassurance {
     grid-template-columns: 1fr;
@@ -1488,6 +1580,12 @@ body {
   .bn-price-table > div {
     grid-template-columns: 1.25fr 0.8fr 0.8fr;
     gap: 0.5rem;
+  }
+  .bn-price-table span {
+    font-size: 1.15rem;
+  }
+  .bn-price-table__head span {
+    font-size: 0.85rem;
   }
   .bn-package-list details > div {
     grid-template-columns: 1fr;

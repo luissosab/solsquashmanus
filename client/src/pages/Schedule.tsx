@@ -105,14 +105,16 @@ export default function Schedule() {
       </section>
       <HalftoneDivider destination="orange" />
       <section className="bn-schedule-note">
-        <RacketQMark tone="navy" />
-        <div>
-          <p className="bn-kicker">Rather play on your own time?</p>
-          <h2>
-            Book a court
-            <br />
-            or train <em>one-to-one.</em>
-          </h2>
+        <div className="bn-heading-with-mark">
+          <div>
+            <p className="bn-kicker">Rather play on your own time?</p>
+            <h2>
+              Book a court
+              <br />
+              or train <em>one-to-one.</em>
+            </h2>
+          </div>
+          <RacketQMark tone="navy" />
         </div>
         <div>
           <p>

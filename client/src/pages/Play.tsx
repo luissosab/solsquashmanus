@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ArrowRight, Plus } from "lucide-react";
 import { Link } from "wouter";
 import {
-  BallMark,
   BrandWave,
   CourtMark,
   HalftoneDivider,
@@ -77,24 +76,25 @@ export default function Play() {
             Choose how to play
           </a>
         </div>
-        <BallMark tone="green" />
       </section>
       <HalftoneDivider destination="cream" />
       <section className="bn-offerings" id="ways-to-play">
         <CourtMark className="bn-court-mark--offerings" />
-        <div className="bn-section-heading">
-          <p className="bn-kicker">Everything you need to decide</p>
-          <h2>
-            Pick the experience.
-            <br />
-            <em>Then book it.</em>
-          </h2>
-          <p>
-            Prices, formats and what to expect stay here. Playbypoint only
-            handles the final booking and payment.
-          </p>
+        <div className="bn-heading-with-mark">
+          <div className="bn-section-heading">
+            <p className="bn-kicker">Everything you need to decide</p>
+            <h2>
+              Pick the experience.
+              <br />
+              <em>Then book it.</em>
+            </h2>
+            <p>
+              Prices, formats and what to expect stay here. Playbypoint only
+              handles the final booking and payment.
+            </p>
+          </div>
+          <RacketQMark tone="orange" />
         </div>
-        <RacketQMark tone="orange" />
         <div className="bn-offering-list">
           {ways.map((way, index) => (
             <button
@@ -149,13 +149,30 @@ export default function Play() {
       </section>
       <HalftoneDivider destination="orange" />
       <section className="bn-next-step">
-        <p>Not sure where your game belongs?</p>
-        <Link className="bn-text-link" href="/schedule">
-          Explore session types <ArrowRight />
-        </Link>
-        <Link className="bn-text-link" href="/new-to-squash">
-          First time? Start here <ArrowRight />
-        </Link>
+        <div>
+          <p className="bn-kicker">Keep moving</p>
+          <h2>
+            Find your
+            <br />
+            <em>next rally.</em>
+          </h2>
+          <p>
+            Not sure where your game belongs? Start with the path that feels
+            closest.
+          </p>
+        </div>
+        <nav aria-label="Choose your next step">
+          <Link href="/schedule">
+            <span>01</span>
+            <strong>Explore session types</strong>
+            <ArrowRight />
+          </Link>
+          <Link href="/new-to-squash">
+            <span>02</span>
+            <strong>First time? Start here</strong>
+            <ArrowRight />
+          </Link>
+        </nav>
       </section>
       <BrandWave destination="navy" />
       <ExperienceDrawer

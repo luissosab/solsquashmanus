@@ -64,6 +64,7 @@ export default function MembershipsAndPrices() {
           </a>
         </div>
       </section>
+      <HalftoneDivider destination="navy" />
       <section className="bn-membership" id="compare">
         <CourtMark className="bn-court-mark--membership" />
         <div className="bn-membership__lead">
@@ -137,14 +138,16 @@ export default function MembershipsAndPrices() {
       </section>
       <HalftoneDivider destination="mustard" />
       <section className="bn-price-compare" id="everyday-pricing">
-        <RacketQMark tone="navy" />
-        <div className="bn-section-heading">
-          <p className="bn-kicker">Everyday pricing</p>
-          <h2>
-            With a membership.
-            <br />
-            <em>Or without one.</em>
-          </h2>
+        <div className="bn-heading-with-mark">
+          <div className="bn-section-heading">
+            <p className="bn-kicker">Everyday pricing</p>
+            <h2>
+              With a membership.
+              <br />
+              <em>Or without one.</em>
+            </h2>
+          </div>
+          <RacketQMark tone="navy" />
         </div>
         <div className="bn-price-table" role="table">
           <div className="bn-price-table__head" role="row">

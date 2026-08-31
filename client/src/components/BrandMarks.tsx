@@ -73,7 +73,6 @@ export function HalftoneDivider({
               />
             ))
           )}
-          <rect y="60" width="1440" height="36" />
         </g>
       </svg>
     </div>
@@ -114,6 +113,8 @@ export function CourtMark({ className = "" }: { className?: string }) {
       <rect x="208.61" y="121.52" width="332.77" height="506.96" />
       <line x1="208.61" y1="406.98" x2="541.39" y2="406.98" />
       <line x1="375" y1="406.98" x2="375" y2="628.48" />
+      <line x1="208.61" y1="492.77" x2="208.61" y2="490.17" />
+      <line x1="541.39" y1="492.77" x2="541.39" y2="490.17" />
       <polyline points="208.61 490.17, 291.81 490.17, 291.81 406.98" />
       <polyline points="541.39 490.17, 458.19 490.17, 458.19 406.98" />
     </svg>

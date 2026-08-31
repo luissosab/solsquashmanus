@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Check, Plus } from "lucide-react";
 import {
-  BallMark,
   BrandWave,
   CourtMark,
   HalftoneDivider,
@@ -51,7 +50,6 @@ export default function NewToSquash() {
             Choose your first session
           </a>
         </div>
-        <BallMark tone="orange" />
       </section>
       <HalftoneDivider destination="mustard" />
       <section className="bn-reassurance">
@@ -100,13 +98,17 @@ export default function NewToSquash() {
           />
         </div>
         <div>
-          <RacketQMark tone="green" />
-          <p className="bn-kicker">Your first rally</p>
-          <h2>
-            Choose the way
-            <br />
-            you want to <em>begin.</em>
-          </h2>
+          <div className="bn-heading-with-mark">
+            <div>
+              <p className="bn-kicker">Your first rally</p>
+              <h2>
+                Choose the way
+                <br />
+                you want to <em>begin.</em>
+              </h2>
+            </div>
+            <RacketQMark tone="green" />
+          </div>
           {starts.map((item, index) => (
             <button
               className="bn-choice"

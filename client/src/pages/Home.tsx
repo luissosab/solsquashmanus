@@ -1,7 +1,6 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import {
-  BallMark,
   BrandWave,
   CourtMark,
   HalftoneDivider,
@@ -72,7 +71,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <BallMark tone="orange" />
       </section>
       <HalftoneDivider destination="cream" />
 
@@ -147,12 +145,14 @@ export default function Home() {
           alt="Sol Squash's mural-inspired exterior"
         />
         <div>
-          <RacketQMark tone="mustard" />
-          <p>
-            The game is fast.
-            <br />
-            The welcome is easy.
-          </p>
+          <div className="bn-heading-with-mark">
+            <RacketQMark tone="mustard" />
+            <p>
+              The game is fast.
+              <br />
+              The welcome is easy.
+            </p>
+          </div>
           <Link className="bn-button bn-button--mustard" href="/schedule">
             See what's on
           </Link>

@@ -16,6 +16,8 @@ const drawer = read("./components/ExperienceDrawer.tsx");
 const faq = read("./pages/FAQ.tsx");
 const faqSource = read("./pages/PlayAndPricing.tsx");
 const css = read("./brand-new.css");
+const legacyCss = read("./index.css");
+const legacyWave = read("./components/WaveDivider.tsx");
 
 describe("brand-new Sol visitor experience", () => {
   it("keeps the Home video hero", () => {
@@ -32,7 +34,16 @@ describe("brand-new Sol visitor experience", () => {
     expect(marks).toContain("CourtMark");
     expect(marks).toContain('viewBox="0 0 750 750"');
     expect(marks).toContain('x="208.61"');
+    expect(marks).toContain('x1="208.61" y1="492.77"');
+    expect(marks).toContain(
+      'points="541.39 490.17, 458.19 490.17, 458.19 406.98"'
+    );
     expect(css).toContain('mask: url("/media/sol-racket-q-extracted.png")');
+  });
+  it("keeps squash balls out of every primary page hero", () => {
+    for (const page of [home, play, beginner, membership, schedule, story]) {
+      expect(page).not.toContain("BallMark");
+    }
   });
   it("keeps Home visible and makes the desktop menu substantially larger", () => {
     expect(header).toContain('{ label: "Home", href: "/" }');
@@ -52,6 +63,8 @@ describe("brand-new Sol visitor experience", () => {
     expect(marks).not.toContain("source: keyof typeof waveColors");
     expect(css).toContain("margin: clamp(-4.75rem, -4.5vw, -3.25rem)");
     expect(css).not.toContain("--bn-blue");
+    expect(marks).not.toContain('<rect y="60"');
+    expect(legacyWave).not.toContain("backgroundColor: fills[source]");
   });
   it("reserves one cyan wave per non-FAQ page for the footer boundary and uses halftones internally", () => {
     for (const page of [home, play, beginner, membership, schedule, story]) {
@@ -72,6 +85,39 @@ describe("brand-new Sol visitor experience", () => {
   it("gives each primary visitor journey its own implementation", () => {
     for (const page of [play, beginner, membership, schedule, story])
       expect(page).not.toContain('from "./PlayAndPricing"');
+  });
+  it("renders real court geometry as oversized background artwork only", () => {
+    expect(css).toContain("opacity: 0.26");
+    expect(css).toContain("position: absolute");
+    expect(css).toContain("width: clamp(58rem, 92vw, 112rem)");
+    expect(css).toContain(".bn-offerings > :not(.bn-court-mark)");
+    expect(css).toContain("z-index: 1");
+  });
+  it("pairs Q rackets with headings and varies their upright-safe rotations", () => {
+    for (const page of [home, play, beginner, membership, schedule, story]) {
+      expect(page).toContain('className="bn-heading-with-mark"');
+    }
+    for (const angle of [
+      "rotate(12deg)",
+      "rotate(-12deg)",
+      "rotate(8deg)",
+      "rotate(-10deg)",
+      "rotate(11deg)",
+      "rotate(-8deg)",
+    ]) {
+      expect(css).toContain(angle);
+    }
+    expect(css).toContain("justify-content: flex-start");
+  });
+  it("makes the membership comparison legible at twice the former scale", () => {
+    expect(css).toContain("font-size: 2rem");
+    expect(css).toContain("font-size: 1.36rem");
+  });
+  it("promotes the Play routing strip into a proper closing decision section", () => {
+    expect(play).toContain("Find your");
+    expect(play).toContain("next rally.");
+    expect(play).toContain("Explore session types");
+    expect(css).toContain("min-height: 28rem");
   });
   it("keeps decision details on Sol before booking handoffs", () => {
     expect(play).toContain("Prices, formats and what to expect stay here");
@@ -101,5 +147,9 @@ describe("brand-new Sol visitor experience", () => {
     expect(faqSource).toContain('id: "joining"');
     expect(faqSource).toContain('id: "kids"');
     expect(faqSource).toContain('id: "booking"');
+    expect(legacyCss).toContain("--sol-navy:#002269");
+    expect(legacyCss).toContain("--sol-blue:#002269");
+    expect(legacyCss).toContain("background-color:var(--sol-green) !important");
+    expect(legacyWave).toContain('navy: "#002269"');
   });
 });
