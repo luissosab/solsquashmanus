@@ -115,40 +115,41 @@ export default function OurStory() {
       <HalftoneDivider destination="green" />
       <section className="bn-values">
         <div>
-          <p className="bn-kicker">What guides the club</p>
           <h2>
-            Serious squash.
-            <br />
-            <em>No unnecessary barriers.</em>
+            What Sol is <em>really</em> about.
           </h2>
         </div>
         <div>
           <article>
             <span>01</span>
-            <h3>Welcoming</h3>
+            <h3>Community First</h3>
             <p>
-              Your level should shape your experience, never your right to
-              belong.
+              Everyone belongs here — from first-timers to competitive players.
+              What matters is how you feel when you walk in.
             </p>
           </article>
           <article>
             <span>02</span>
-            <h3>Progressive</h3>
+            <h3>Excellence on Court</h3>
             <p>
-              Modern coaching, modern facilities and a better way to experience
-              the sport.
+              We’ve competed at the highest level. That standard shows up in
+              every lesson, session, and interaction at Sol.
             </p>
           </article>
           <article>
             <span>03</span>
-            <h3>Community</h3>
-            <p>Matches matter. So do the conversations after them.</p>
+            <h3>Genuine Care</h3>
+            <p>
+              We truly connect with the people we work with. We’re invested in
+              your growth, on and off the court.
+            </p>
           </article>
           <article>
             <span>04</span>
-            <h3>Joyful</h3>
+            <h3>Squash for Miami</h3>
             <p>
-              Squash is demanding. The club around it should still feel alive.
+              Dynamic, challenging, endlessly fun — Miami is just getting
+              started with this sport and we’re here for all of it.
             </p>
           </article>
         </div>

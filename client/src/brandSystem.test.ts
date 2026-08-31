@@ -127,6 +127,23 @@ describe("brand-new Sol visitor experience", () => {
     expect(css).toContain(".bn-values article:nth-child(4)");
     expect(css).toContain("min-height: 22rem");
     expect(css).toContain("font-size: clamp(3.4rem, 5.25vw, 6.25rem)");
+    expect(story).toContain("Community First");
+    expect(story).toContain(
+      "Everyone belongs here — from first-timers to competitive players."
+    );
+    expect(story).toContain("Excellence on Court");
+    expect(story).toContain("We’ve competed at the highest level.");
+    expect(story).toContain("Genuine Care");
+    expect(story).toContain(
+      "We truly connect with the people we work with. We’re invested in"
+    );
+    expect(story).toContain("Squash for Miami");
+    expect(story).toContain(
+      "Dynamic, challenging, endlessly fun — Miami is just getting"
+    );
+    expect(story).not.toContain("<h3>Welcoming</h3>");
+    expect(story).not.toContain("<h3>Progressive</h3>");
+    expect(story).not.toContain("<h3>Joyful</h3>");
   });
   it("keeps decision details on Sol before booking handoffs", () => {
     expect(play).toContain("Prices, formats and what to expect stay here");
