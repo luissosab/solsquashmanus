@@ -1,336 +1,172 @@
-/**
- * Sol mural language: real profiles lead a selective, evidence-based founders story with room for people, provenance, and the club's values.
- */
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, X } from "lucide-react";
-import { useEffect, useState } from "react";
-import { MagneticButton } from "@/components/MagneticButton";
-import { WaveDivider } from "@/components/WaveDivider";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { ExperienceDrawer } from "@/components/ExperienceDrawer";
+import { SunMark } from "@/components/BrandMarks";
 import { PLAYBYPOINT_PRIVATE_LESSON_URL } from "@/lib/booking";
-
-const story =
-  "Sol Squash didn't start with a business plan. It started with a sport that changed two lives — and a shared belief that squash deserves a real home in Miami. We're Bruna and Vini, co-founders, professional squash players, and partners in life. We met at a squash tournament in Brazil in 2015, moved to London together, competed on the PSA World Tour, and coached players of all levels across the UK, Europe, and the USA. After years of living the sport from every angle — as athletes, coaches, and builders — we decided it was time to create the club we always wished existed. That club is Sol. A place where squash meets community, where every level is welcome, and where walking through the door feels like something. We wanted to share squash through our eyes — the joy, the challenge, the connection. Seeing people fall in love with this sport the way we did is what drives everything we do at Sol. — Bruna & Vini, Co-Founders";
-const howItStarted =
-  "From Brazil to London to Little River. Vini picked up a racket at 7 years old and never put it down. Self-taught from the start, he turned professional, represented the Brazilian National Team for years, reached a career-high world ranking of #132, and won bronze at the 2011 Pan American Games in Guadalajara. He built over two decades of coaching experience alongside his playing career, reaching the final of the PSA World Tour event in Moscow in 2018. Squash isn't something he does. It's who he is. Subbotnik PSA Open — Moscow, 2018. Pan American Games Bronze — Guadalajara, 2011. Bruna came to squash later — but when she did, she went all in. After graduating from university in London, she returned to Brazil and walked into a squash tournament where she met Vini. He became her coach. She turned professional, represented Brazil and Italy internationally, reached a career-high world ranking of #98, and competed at the PSA World Championships. They moved back to London together and built a life around the sport. PSA World Championships — 2021. Representing Brazil — South American Championships. Miami was the next chapter. A city full of energy, wellness culture, and racket sport players — but no real squash home. Having our own place had always been a shared dream. We wanted to share squash through our eyes and our mission. Squash is new in Miami, and while that's a challenge, it's also an incredible opportunity. We get to introduce a whole new generation to the most dynamic, rewarding sport we know. Building Sol — Little River, Miami.";
 
 const profiles = [
   {
-    name: "Bruna Petrillo",
-    role: "Co-Founder & Squash Pro.",
+    name: "Bruna Marchesi",
+    role: "Co-founder · Professional player · Coach",
     image: "/media/sol-bruna-profile_9b6e08d0.jpeg",
-    bio: "PSA World Tour professional who represented Brazil and Italy internationally, competing at World Championships and earning international medals. She discovered squash as an adult and went all the way—which is exactly why she understands every stage of the journey. On court she brings energy, presence and genuine connection.",
-    highlights: ["#98 world ranking", "PSA World Tour", "2 nations"],
-    credentials: [
-      "England Squash L2",
-      "US Squash Coach Pass",
-      "SafeSport Certified",
-      "EN · PT",
-    ],
-    booking: "BOOK A LESSON WITH BRUNA",
+    bio: "Bruna represented Brazil internationally, competed on the PSA World Tour and has coached players across the UK, Europe and the USA. At Sol, she works with beginners, juniors and experienced players while shaping the club experience every day.",
+    highlights:
+      "Brazil national team · PSA World Tour · International coaching",
   },
   {
-    name: "Vinicius Rodrigues",
-    role: "Co-Founder & Head Coach.",
+    name: "Vini Rodrigues",
+    role: "Co-founder · Professional player · Coach",
     image: "/media/sol-vini-profile_e0ff7b8e.jpeg",
-    bio: "PSA World Tour professional, Brazilian National Team member, Pan American Games bronze medalist and PSA World Tour finalist. Self-taught from age seven, Vini started coaching early to fund his pro career—and what began as necessity became a true calling. On court, his natural habitat shows in every session.",
-    highlights: [
-      "#132 world ranking",
-      "20+ years coaching",
-      "Pan Am bronze 2011",
-    ],
-    credentials: [
-      "WSF Level 2",
-      "US Squash L2",
-      "England Squash L2",
-      "SafeSport Certified",
-      "EN · PT · ES",
-    ],
-    booking: "BOOK A LESSON WITH VINI",
+    bio: "Vini represented Brazil, competed professionally on the PSA World Tour and built a coaching career across several countries. At Sol, he combines elite experience with an accessible coaching style for every level.",
+    highlights:
+      "Brazil international · PSA World Tour · International coaching",
   },
   {
     name: "Frida",
-    role: "Chief Vibe Checker & Head of Court Security.",
+    role: "Chief welcome officer",
     image: "/media/sol-frida-profile_cfa40671.jpeg",
-    bio: "She's been part of this story since Brazil. She didn't have a choice, but she seems very happy about it. Frida has been with us since Brazil, survived the move to London, and now patrols the courts of Sol like she owns the place — which, honestly, she kind of does. She takes her naps very seriously and will not be disturbed. She loves chasing the squash ball and has been known to jump on court mid-session when she sees an opportunity she simply cannot ignore. She greets every single person who walks through the door. Always on duty. Do not disturb. Ball chaser. Official alarm. Pure Sol energy.",
-    highlights: ["Always on duty", "Ball chaser", "Pure Sol energy"],
-    credentials: ["Official staff member", "Head of Court Security"],
-    booking: null,
+    bio: "Frida is part of the everyday rhythm of Sol: greeting members, supervising the lounge and making sure nobody takes the club too seriously off court.",
+    highlights: "Club culture · Member greetings · Lounge supervision",
   },
 ];
 
-const values = [
-  [
-    "Community First",
-    "Everyone belongs here — from first-timers to competitive players. What matters is how you feel when you walk in.",
-  ],
-  [
-    "Excellence on Court",
-    "We've competed at the highest level. That standard shows up in every lesson, session, and interaction at Sol.",
-  ],
-  [
-    "Genuine Care",
-    "We truly connect with the people we work with. We're invested in your growth, on and off the court.",
-  ],
-  [
-    "Squash for Miami",
-    "Dynamic, challenging, endlessly fun — Miami is just getting started with this sport and we're here for all of it.",
-  ],
-];
-
 export default function OurStory() {
-  const [drawer, setDrawer] = useState<"story" | "start" | number | null>(null);
-  const activeProfile = typeof drawer === "number" ? profiles[drawer] : null;
-  useEffect(() => {
-    if (drawer === null) return;
-    const onKeyDown = (event: KeyboardEvent) =>
-      event.key === "Escape" && setDrawer(null);
-    document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
-  }, [drawer]);
-  const drawerContent =
-    drawer === "story"
-      ? { title: "OUR STORY", body: story }
-      : drawer === "start"
-        ? { title: "HOW IT STARTED", body: howItStarted }
-        : typeof drawer === "number"
-          ? {
-              title: profiles[drawer].name,
-              body: `${profiles[drawer].role} ${profiles[drawer].bio}`,
-            }
-          : null;
+  const [active, setActive] = useState<number | null>(null);
+  const selected = active === null ? null : profiles[active];
   return (
-    <>
-      <section className="story-hero story-hero--real">
+    <div className="bn-page">
+      <section className="bn-story-hero">
         <img
-          className="story-hero__backdrop"
           src="/media/sol-team_28f84027.jpeg"
-          alt=""
-          aria-hidden="true"
+          alt="Bruna, Vini and Frida on a Sol court"
         />
-        <div className="story-hero__veil" />
-        <div className="story-hero__layout">
-          <figure className="story-hero__frame">
-            <img
-              src="/media/sol-team_28f84027.jpeg"
-              alt="Bruna, Vini, and Frida together on a Sol squash court"
-            />
-          </figure>
-          <div className="story-hero__copy">
-            <p className="eyebrow eyebrow--cyan">FROM BRAZIL TO LITTLE RIVER</p>
-            <h1>
-              BUILT BY
-              <br />
-              PLAYERS.
-              <br />
-              <em>MADE FOR</em>
-              <br />
-              EVERYONE.
-            </h1>
-            <MagneticButton
-              href="#"
-              onClick={() => setDrawer("story")}
-              className="button--mango"
-            >
-              READ OUR STORY
-            </MagneticButton>
-          </div>
-        </div>
-      </section>
-      <WaveDivider source="navy" destination="mango" />
-      <section id="journey" className="story-intro story-intro--real">
+        <div className="bn-story-hero__veil" />
         <div>
-          <p className="eyebrow">THE JOURNEY</p>
-          <h2>
-            FROM BRAZIL
+          <p className="bn-kicker">From Brazil to Little River</p>
+          <h1>
+            Built by players.
             <br />
-            TO LONDON.
-            <br />
-            <em>TO LITTLE RIVER.</em>
-          </h2>
+            <em>Made for everyone.</em>
+          </h1>
         </div>
-        <div>
-          <p>
-            We met at a squash tournament in Brazil in 2015, moved to London
-            together, competed on the PSA World Tour, and coached players of all
-            levels across the UK, Europe, and the USA.
-          </p>
-          <button
-            className="story-detail-button"
-            onClick={() => setDrawer("start")}
-          >
-            HOW IT STARTED <ArrowUpRight size={23} />
-          </button>
-        </div>
+        <SunMark tone="mustard" />
       </section>
-      <WaveDivider source="mango" destination="green" />
-      <section className="credentials-section">
-        <div className="credentials-section__heading">
-          <p className="eyebrow eyebrow--cyan">ON COURT</p>
+      <section className="bn-story-copy">
+        <p className="bn-kicker">The journey</p>
+        <div>
           <h2>
-            PSA WORLD
+            The club they
             <br />
-            TOUR.
-            <br />
-            <em>COACHING.</em>
+            wanted to <em>belong to.</em>
           </h2>
           <p>
-            After years of living the sport from every angle — as athletes,
-            coaches, and builders — we decided it was time to create the club we
-            always wished existed.
+            Bruna and Vini met at a squash tournament in Brazil in 2015, moved
+            to London together, competed on the PSA World Tour, and coached
+            players of every level across the UK, Europe and the USA.
+          </p>
+          <p>
+            After years of living the sport as athletes and coaches, they saw
+            that Miami was missing a true home for squash: modern courts,
+            serious training, an easy welcome for beginners, and enough life
+            around the game to make people stay.
+          </p>
+          <p>
+            Sol is that club. You will not only see their names on the
+            website—you will find them coaching, playing, meeting members and
+            shaping the experience every day.
           </p>
         </div>
-        <div className="credentials-grid">
-          <figure>
-            <img
-              src="/media/sol-vini-match_ea7f6a9a.jpeg"
-              alt="Vini competing on court"
-            />
-          </figure>
-          <figure>
-            <img
-              src="/media/sol-bruna-medals_a77858ba.jpeg"
-              alt="Bruna holding competition medals"
-            />
-          </figure>
-        </div>
       </section>
-      <WaveDivider source="green" destination="navy" />
-      <section id="team" className="profiles-section profiles-section--real">
-        <img
-          className="mural-sun mural-sun--profiles"
-          src="/media/sol-sun-repaired-cyan_372f6d5e.png"
-          alt=""
-          aria-hidden="true"
-        />
-        <div className="profiles-section__heading">
-          <p className="eyebrow eyebrow--cyan">THE PEOPLE WHO RUN THE RALLY</p>
+      <section className="bn-team">
+        <div className="bn-section-heading">
+          <p className="bn-kicker">The people behind Sol</p>
           <h2>
-            MEET
+            Meet the
             <br />
-            <em>THE TEAM.</em>
+            <em>home team.</em>
           </h2>
         </div>
-        <div className="profile-list">
+        <div className="bn-team-grid">
           {profiles.map((profile, index) => (
-            <article
-              key={profile.name}
-              className={`profile-card profile-card--${index}`}
-            >
+            <button key={profile.name} onClick={() => setActive(index)}>
               <img src={profile.image} alt={profile.name} />
-              <div className="profile-card__copy">
-                <span>0{index + 1}</span>
+              <span>0{index + 1}</span>
+              <div>
                 <h3>{profile.name}</h3>
                 <p>{profile.role}</p>
-                <div className="profile-card__highlights">
-                  {profile.highlights.map(item => (
-                    <span key={item}>{item}</span>
-                  ))}
-                </div>
-                <button onClick={() => setDrawer(index)}>
-                  READ BIO <ArrowUpRight size={21} />
-                </button>
+                <strong>
+                  Read profile <ArrowRight />
+                </strong>
               </div>
-            </article>
+            </button>
           ))}
         </div>
       </section>
-      <WaveDivider source="navy" destination="green" />
-      <section id="values" className="values-section values-section--real">
-        <span
-          className="squash-ball squash-ball--values ball-shadow--light"
-          aria-hidden="true"
-        >
-          <i />
-          <i />
-        </span>
-        <div className="values-section__top">
-          <p className="eyebrow eyebrow--cyan">WHAT GUIDES US</p>
+      <section className="bn-values">
+        <div>
+          <p className="bn-kicker">What guides the club</p>
           <h2>
-            OUR <em>VALUES.</em>
+            Serious squash.
+            <br />
+            <em>No unnecessary barriers.</em>
           </h2>
         </div>
-        <div className="values-list">
-          {values.map(([name, detail], index) => (
-            <motion.article
-              key={name}
-              initial={{ opacity: 0, y: 22 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.07 }}
-            >
-              <span>0{index + 1}</span>
-              <h3>{name}</h3>
-              <p>{detail}</p>
-            </motion.article>
-          ))}
+        <div>
+          <article>
+            <span>01</span>
+            <h3>Welcoming</h3>
+            <p>
+              Your level should shape your experience, never your right to
+              belong.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Progressive</h3>
+            <p>
+              Modern coaching, modern facilities and a better way to experience
+              the sport.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Community</h3>
+            <p>Matches matter. So do the conversations after them.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Joyful</h3>
+            <p>
+              Squash is demanding. The club around it should still feel alive.
+            </p>
+          </article>
         </div>
       </section>
-      <AnimatePresence>
-        {drawerContent && (
-          <motion.aside
-            className="story-drawer"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            aria-modal="true"
-            role="dialog"
-          >
-            <motion.div
-              className="story-drawer__panel"
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", stiffness: 280, damping: 30 }}
-            >
-              <button
-                onClick={() => setDrawer(null)}
-                aria-label="Close story drawer"
+      <ExperienceDrawer
+        open={selected !== null}
+        title={selected?.name ?? ""}
+        eyebrow={selected?.role}
+        onClose={() => setActive(null)}
+      >
+        {selected && (
+          <>
+            <p>{selected.bio}</p>
+            <p>
+              <strong>{selected.highlights}</strong>
+            </p>
+            {active !== 2 && (
+              <a
+                className="bn-button bn-button--mustard"
+                href={PLAYBYPOINT_PRIVATE_LESSON_URL}
+                target="_blank"
+                rel="noreferrer"
               >
-                <X size={27} />
-              </button>
-              <span className="eyebrow">SOL SQUASH</span>
-              <h2>{drawerContent.title}</h2>
-              {activeProfile ? (
-                <div className="profile-drawer-content">
-                  <p>{activeProfile.role}</p>
-                  <p>{activeProfile.bio}</p>
-                  <div className="profile-drawer-highlights">
-                    {activeProfile.highlights.map(item => (
-                      <strong key={item}>{item}</strong>
-                    ))}
-                  </div>
-                  <div className="profile-drawer-credentials">
-                    {activeProfile.credentials.map(item => (
-                      <span key={item}>{item}</span>
-                    ))}
-                  </div>
-                  {activeProfile.booking && (
-                    <MagneticButton
-                      href={PLAYBYPOINT_PRIVATE_LESSON_URL}
-                      className="button--mango"
-                    >
-                      {activeProfile.booking}
-                    </MagneticButton>
-                  )}
-                </div>
-              ) : (
-                <div className="story-drawer-copy">
-                  {drawerContent.body
-                    .split(/(?<=\.)\s+(?=[A-Z—])/)
-                    .reduce<string[][]>((groups, sentence, index) => {
-                      const group = Math.floor(index / 3);
-                      groups[group] = [...(groups[group] || []), sentence];
-                      return groups;
-                    }, [])
-                    .map((sentences, index) => (
-                      <p key={index}>{sentences.join(" ")}</p>
-                    ))}
-                </div>
-              )}
-            </motion.div>
-          </motion.aside>
+                Book a lesson
+              </a>
+            )}
+          </>
         )}
-      </AnimatePresence>
-    </>
+      </ExperienceDrawer>
+    </div>
   );
 }

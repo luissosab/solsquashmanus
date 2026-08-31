@@ -1,47 +1,81 @@
-/**
- * Sun-bleached Court Club design: the footer closes the promenade as a rounded tropical nightcap, not a utility shelf.
- */
 import { Link } from "wouter";
-import { MagneticButton } from "./MagneticButton";
+import { CyanWave, RacketQMark, SunMark } from "./BrandMarks";
 import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
-const logoSrc = "/media/sol-squash-logo_dd364204.png";
-
 export function ClubFooter() {
-  const returnToTop = () => window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  const top = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
-    <footer className="club-footer">
-      <div className="club-footer__mural-mark" aria-hidden="true" />
-      <div className="club-footer__main">
-        <img src={logoSrc} alt="Sol Squash" className="club-footer__logo" />
-        <p className="club-footer__promise">Come for the squash. Stay for everything around it.</p>
-        <MagneticButton href={PLAYBYPOINT_BOOKING_URL} className="button--mango">BOOK A SESSION</MagneticButton>
+    <footer className="bn-footer">
+      <CyanWave />
+      <div className="bn-footer__lead">
+        <SunMark tone="mustard" />
+        <p>
+          More than a game.
+          <br />
+          <em>A way of life.</em>
+        </p>
+        <a
+          className="bn-button bn-button--mustard"
+          href={PLAYBYPOINT_BOOKING_URL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Book your court
+        </a>
       </div>
-      <div className="club-footer__links">
+      <div className="bn-footer__grid">
         <div>
-          <span className="eyebrow eyebrow--cyan">COME FIND US</span>
-          <a href="https://maps.google.com/?q=645+NW+72nd+Street+Miami+FL+33150" target="_blank" rel="noreferrer">645 NW 72nd Street<br />Miami, FL 33150</a>
-          <a href="https://wa.me/13054814295" target="_blank" rel="noreferrer">WhatsApp / text: 305 481 4295</a>
+          <h3>Visit</h3>
+          <a
+            href="https://maps.google.com/?q=645+NW+72nd+Street+Miami+FL+33150"
+            target="_blank"
+            rel="noreferrer"
+          >
+            645 NW 72nd Street
+            <br />
+            Miami, FL 33150
+          </a>
+          <a href="https://wa.me/13054814295">305 481 4295</a>
           <a href="mailto:sol@solsquash.com">sol@solsquash.com</a>
         </div>
         <div>
-          <span className="eyebrow eyebrow--cyan">KEEP PLAYING</span>
-          <Link href="/play" onClick={returnToTop}>Play</Link>
-          <Link href="/new-to-squash" onClick={returnToTop}>New to Squash</Link>
-          <Link href="/memberships-and-prices" onClick={returnToTop}>Memberships &amp; Prices</Link>
-          <Link href="/schedule" onClick={returnToTop}>Schedule</Link>
-          <Link href="/our-story" onClick={returnToTop}>Our Story</Link>
-          <Link href="/faq" onClick={returnToTop}>FAQ</Link>
+          <h3>Explore</h3>
+          <Link href="/play" onClick={top}>
+            Play
+          </Link>
+          <Link href="/new-to-squash" onClick={top}>
+            New to squash
+          </Link>
+          <Link href="/memberships-and-prices" onClick={top}>
+            Membership
+          </Link>
+          <Link href="/schedule" onClick={top}>
+            Schedule
+          </Link>
+          <Link href="/our-story" onClick={top}>
+            The club
+          </Link>
+          <Link href="/faq" onClick={top}>
+            FAQ
+          </Link>
         </div>
         <div>
-          <span className="eyebrow eyebrow--cyan">CLUB HOURS</span>
+          <h3>Hours</h3>
           <span>Mon–Thu · 6am–10pm</span>
           <span>Fri · 6am–5pm</span>
           <span>Sat–Sun · 8am–5pm</span>
-          <small>Hours may shift seasonally. Check the live schedule before visiting.</small>
+          <small>
+            Hours may shift seasonally. Check the live schedule before visiting.
+          </small>
         </div>
+        <RacketQMark />
       </div>
-      <div className="club-footer__bottom">© Sol Squash · <a href="https://www.instagram.com/solsquash/" target="_blank" rel="noreferrer">@solsquash</a> · <a href="https://www.solsquash.com/english-privacy-policy" target="_blank" rel="noreferrer">Privacy</a> · <a href="https://www.solsquash.com/english-terms-conditions" target="_blank" rel="noreferrer">Terms</a></div>
+      <div className="bn-footer__legal">
+        <span>© Sol Squash</span>
+        <a href="https://www.instagram.com/solsquash/">Instagram</a>
+        <a href="https://www.solsquash.com/english-privacy-policy">Privacy</a>
+        <a href="https://www.solsquash.com/english-terms-conditions">Terms</a>
+      </div>
     </footer>
   );
 }

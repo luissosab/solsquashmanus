@@ -1,20 +1,14 @@
-/**
- * Sun-bleached Court Club design: a navy clubhouse masthead keeps the supplied bright Sol logo present at every turn.
- */
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { MagneticButton } from "./MagneticButton";
 import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
-const logoSrc = "/media/sol-squash-logo_dd364204.png";
 const navigation = [
-  { label: "PLAY", href: "/play" },
-  { label: "START HERE", href: "/new-to-squash" },
-  { label: "SCHEDULE", href: "/schedule" },
-  { label: "PRICES & MEMBERSHIP", href: "/memberships-and-prices" },
-  { label: "THE CLUB", href: "/our-story" },
+  { label: "Play", href: "/play" },
+  { label: "New to squash", href: "/new-to-squash" },
+  { label: "Membership", href: "/memberships-and-prices" },
+  { label: "The club", href: "/our-story" },
   { label: "FAQ", href: "/faq" },
 ];
 
@@ -23,119 +17,119 @@ export function SiteHeader() {
   const [location] = useLocation();
   useEffect(() => {
     if (!open) return;
-    const onKeyDown = (event: KeyboardEvent) =>
+    const close = (event: KeyboardEvent) =>
       event.key === "Escape" && setOpen(false);
-    document.addEventListener("keydown", onKeyDown);
+    document.addEventListener("keydown", close);
     document.body.style.overflow = "hidden";
     return () => {
-      document.removeEventListener("keydown", onKeyDown);
+      document.removeEventListener("keydown", close);
       document.body.style.overflow = "";
     };
   }, [open]);
-  const returnToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  const navigate = () => {
     setOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
   return (
     <>
-      <header className="site-header">
+      <header className="bn-header">
         <Link
           href="/"
-          className="site-logo"
+          className="bn-header__logo"
           aria-label="Sol Squash home"
-          onClick={returnToTop}
+          onClick={navigate}
         >
-          <img src={logoSrc} alt="Sol Squash" />
+          <img src="/media/sol-squash-logo_dd364204.png" alt="Sol Squash" />
         </Link>
-        <nav className="desktop-nav" aria-label="Main navigation">
+        <nav className="bn-header__nav" aria-label="Main navigation">
           {navigation.map(item => (
             <Link
               key={item.href}
               href={item.href}
               className={location === item.href ? "is-active" : ""}
-              onClick={returnToTop}
+              onClick={navigate}
             >
               {item.label}
             </Link>
           ))}
         </nav>
-        <div className="header-action">
-          <MagneticButton
+        <div className="bn-header__actions">
+          <Link href="/schedule" onClick={navigate}>
+            Schedule
+          </Link>
+          <a
+            className="bn-button bn-button--mustard"
             href={PLAYBYPOINT_BOOKING_URL}
-            className="button--mango"
+            target="_blank"
+            rel="noreferrer"
           >
-            BOOK A SESSION
-          </MagneticButton>
+            Book
+          </a>
         </div>
         <button
-          className="menu-trigger"
+          className="bn-menu-button"
           onClick={() => setOpen(true)}
-          aria-label="Open navigation menu"
+          aria-label="Open menu"
           aria-expanded={open}
-          aria-controls="mobile-navigation"
         >
-          <Menu size={27} />
+          <Menu />
         </button>
       </header>
       <AnimatePresence>
         {open && (
           <motion.div
-            className="mobile-menu"
+            className="bn-menu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setOpen(false)}
           >
             <motion.div
-              id="mobile-navigation"
-              className="mobile-menu__panel"
+              className="bn-menu__panel"
               role="dialog"
               aria-modal="true"
               aria-label="Navigation"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", stiffness: 280, damping: 28 }}
               onClick={event => event.stopPropagation()}
             >
-              <div className="mobile-menu__top">
-                <img src={logoSrc} alt="Sol Squash" />
-                <button
-                  className="menu-trigger menu-trigger--close"
-                  onClick={() => setOpen(false)}
-                  aria-label="Close navigation menu"
-                >
-                  <X size={27} />
+              <div className="bn-menu__top">
+                <img
+                  src="/media/sol-squash-logo_dd364204.png"
+                  alt="Sol Squash"
+                />
+                <button onClick={() => setOpen(false)} aria-label="Close menu">
+                  <X />
                 </button>
               </div>
-              <nav aria-label="Mobile navigation">
+              <nav>
                 {navigation.map((item, index) => (
                   <motion.div
                     key={item.href}
-                    initial={{ opacity: 0, x: 24 }}
+                    initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.08 + index * 0.05 }}
+                    transition={{ delay: index * 0.05 }}
                   >
-                    <Link href={item.href} onClick={returnToTop}>
+                    <Link href={item.href} onClick={navigate}>
+                      <span>0{index + 1}</span>
                       {item.label}
-                      <span>↗</span>
                     </Link>
                   </motion.div>
                 ))}
+                <Link href="/schedule" onClick={navigate}>
+                  <span>06</span>Schedule
+                </Link>
               </nav>
-              <MagneticButton
+              <a
+                className="bn-button bn-button--mustard"
                 href={PLAYBYPOINT_BOOKING_URL}
-                className="button--mango"
-                onClick={() => setOpen(false)}
+                target="_blank"
+                rel="noreferrer"
               >
-                BOOK A SESSION
-              </MagneticButton>
-              <p>
-                645 NW 72nd Street
-                <br />
-                Miami, FL 33150
-              </p>
+                Book a session
+              </a>
+              <p>645 NW 72nd Street · Miami, Florida</p>
             </motion.div>
           </motion.div>
         )}

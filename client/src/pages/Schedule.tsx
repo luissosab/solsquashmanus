@@ -1,9 +1,5 @@
-/**
- * Sun-bleached Court Club design: the schedule is a mobile-first vertical rally list, never a grid or embedded booking iframe.
- */
-import { CalendarDays, MapPin, Users } from "lucide-react";
-import { MagneticButton } from "@/components/MagneticButton";
-import { WaveDivider } from "@/components/WaveDivider";
+import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 import {
   PLAYBYPOINT_BEGINNER_CLINIC_URL,
   PLAYBYPOINT_OPEN_PLAY_URL,
@@ -14,138 +10,110 @@ import {
 
 const sessions = [
   {
-    type: "SOCIAL PLAY",
+    type: "Social play",
     title: "Open Play",
     copy: "Three hours of games, rotations and players matched by level.",
+    price: "$25 members · $55 guests",
     href: PLAYBYPOINT_OPEN_PLAY_URL,
   },
   {
-    type: "COACHED",
-    title: "Clinics & Group Sessions",
+    type: "Coached",
+    title: "Clinics & group sessions",
     copy: "Small-group drills, matches and coaching with Bruna or Vini.",
+    price: "$40 members · $55 guests",
     href: PLAYBYPOINT_SESSIONS_URL,
   },
   {
-    type: "FIRST TIMERS",
-    title: "Beginner Squash Clinic",
-    copy: "A welcoming one-hour group session. No experience needed.",
+    type: "First timers",
+    title: "Beginner clinic",
+    copy: "A welcoming one-hour group session. No experience or racket needed.",
+    price: "$55",
     href: PLAYBYPOINT_BEGINNER_CLINIC_URL,
   },
   {
-    type: "AGES 4–16",
+    type: "Ages 4–16",
     title: "Sol Junior",
     copy: "Mini Squash and junior group sessions for the next generation.",
+    price: "$40 members · $50 guests",
     href: PLAYBYPOINT_SOL_JUNIOR_URL,
   },
 ];
 
 export default function Schedule() {
   return (
-    <>
-      <section className="schedule-hero schedule-hero--real">
+    <div className="bn-page">
+      <section className="bn-page-hero bn-page-hero--schedule">
         <div>
-          <p className="eyebrow eyebrow--cyan">THE COURT IS CALLING</p>
+          <p className="bn-kicker">Sessions at Sol</p>
           <h1>
-            SESSIONS
+            Find your next
             <br />
-            <em>AT SOL.</em>
+            <em>rally.</em>
           </h1>
           <p>
-            Find the kind of rally that feels like your day. Live times and
-            availability are confirmed when you book.
+            Understand every session here. Use the live calendar only when you
+            are ready to choose a time.
           </p>
-        </div>
-        <div className="schedule-hero__date">
-          <CalendarDays size={23} />
-          <div>
-            <span>LIVE TIMES</span>
-            <b>WHEN YOU'RE READY</b>
-          </div>
-          <i aria-hidden="true" />
+          <a
+            className="bn-button bn-button--mustard"
+            href={PLAYBYPOINT_WEEKLY_SCHEDULE_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open the live week
+          </a>
         </div>
       </section>
-      <WaveDivider source="navy" destination="green" />
-      <section id="session-types" className="sessions-section">
-        <div className="sessions-section__top">
-          <div>
-            <p className="eyebrow">CHOOSE YOUR SESSION</p>
-            <h2>
-              SHOW UP.
-              <br />
-              MAKE A <em>RALLY.</em>
-            </h2>
-          </div>
-          <p className="sessions-section__notice">
-            Explore the sessions Sol offers, then choose your live time and
-            availability when you book.
-          </p>
+      <section className="bn-schedule-list">
+        <div className="bn-section-heading">
+          <p className="bn-kicker">Choose by experience</p>
+          <h2>
+            What sounds good
+            <br />
+            <em>today?</em>
+          </h2>
         </div>
-        <div className="session-day">
-          <span>CLUB SESSION FORMATS</span>
-          <strong>CHOOSE YOUR RALLY</strong>
-        </div>
-        <div className="session-list">
-          {sessions.map(session => (
-            <article className="session-card" key={session.title}>
-              <div className="session-card__time">
-                <span>CHOOSE</span>
-                <small>TIME ON BOOKING</small>
-              </div>
-              <div className="session-card__info">
-                <span className="session-type">{session.type}</span>
+        <div>
+          {sessions.map((session, index) => (
+            <article key={session.title}>
+              <span>0{index + 1}</span>
+              <div>
+                <small>{session.type}</small>
                 <h3>{session.title}</h3>
                 <p>{session.copy}</p>
-                <p>
-                  <Users size={15} />
-                  See current availability when you book.
-                </p>
+                <strong>{session.price}</strong>
               </div>
-              <MagneticButton href={session.href} className="button--mango">
-                SEE LIVE TIMES
-              </MagneticButton>
+              <a
+                href={session.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`See live times for ${session.title}`}
+              >
+                <ArrowRight />
+              </a>
             </article>
           ))}
         </div>
-        <div className="schedule-side-note">
-          <MapPin size={20} />
-          <span>
-            645 NW 72nd Street, Miami, FL 33150. Choose a live time and complete
-            your booking next.
-          </span>
-        </div>
-        <MagneticButton
-          href={PLAYBYPOINT_WEEKLY_SCHEDULE_URL}
-          className="button--cyan"
-        >
-          OPEN FULL WEEKLY SCHEDULE
-        </MagneticButton>
       </section>
-      <WaveDivider source="green" destination="navy" />
-      <section className="schedule-coda">
-        <figure className="schedule-coda__image">
-          <img
-            src="/media/sol-founders-lounge_1745d40e.webp"
-            alt="Bruna and Vini at Sol"
-          />
-        </figure>
+      <section className="bn-schedule-note">
         <div>
-          <p className="eyebrow eyebrow--cyan">BETWEEN MATCHES</p>
+          <p className="bn-kicker">Rather play on your own time?</p>
           <h2>
-            COME FOR A<br />
-            SESSION.
+            Book a court
             <br />
-            <em>STAY FOR</em>
-            <br />
-            THE CLUB.
+            or train <em>one-to-one.</em>
           </h2>
-          <MagneticButton
-            href="/memberships-and-prices"
-            className="button--mango"
-          >
-            SEE PRICES
-          </MagneticButton>
+        </div>
+        <div>
+          <p>
+            The weekly schedule is for organized sessions. Court bookings and
+            private lessons have their own live availability.
+          </p>
+          <Link className="bn-text-link" href="/play">
+            Compare every way to play <ArrowRight />
+          </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }
