@@ -37,7 +37,10 @@ export function TasteOfSolBlock() {
   return (
     <>
       <WaveDivider source="green" destination="navy" />
-      <section className="pricing-section pricing-section--real pricing-section--merged-offers">
+      <section
+        id="taste-of-sol"
+        className="pricing-section pricing-section--real pricing-section--merged-offers"
+      >
         <img
           className="mural-sun mural-sun--offers"
           src="/media/sol-sun-repaired-mustard_563e528f.png"
@@ -142,6 +145,7 @@ export function SolClubDetails() {
   ];
   return (
     <section
+      id="sol-club"
       className="membership-details"
       aria-labelledby="membership-details-title"
     >
@@ -231,7 +235,11 @@ export function SolClubDetails() {
 
 export function JuniorDecisionSupport() {
   return (
-    <section id="junior-details" className="junior-details" aria-labelledby="junior-details-title">
+    <section
+      id="junior-details"
+      className="junior-details"
+      aria-labelledby="junior-details-title"
+    >
       <div>
         <p className="eyebrow eyebrow--cyan">TWO PROGRAMMES · ALL LEVELS</p>
         <h2 id="junior-details-title">
@@ -291,7 +299,10 @@ export function JoinContinuationBlocks() {
   return (
     <>
       <WaveDivider source="mango" destination="green" />
-      <section className="pricing-section pricing-section--real pricing-section--packages-comparison">
+      <section
+        id="packages"
+        className="pricing-section pricing-section--real pricing-section--packages-comparison"
+      >
         <div className="pricing-heading">
           <p className="eyebrow eyebrow--cyan">ONCE YOU'RE PLAYING</p>
           <h2>

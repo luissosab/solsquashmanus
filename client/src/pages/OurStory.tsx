@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
+import { PageNavigator } from "@/components/PageNavigator";
 import { WaveDivider } from "@/components/WaveDivider";
 import { PLAYBYPOINT_PRIVATE_LESSON_URL } from "@/lib/booking";
 
@@ -20,7 +21,12 @@ const profiles = [
     image: "/media/sol-bruna-profile_9b6e08d0.jpeg",
     bio: "PSA World Tour professional who represented Brazil and Italy internationally, competing at World Championships and earning international medals. She discovered squash as an adult and went all the way—which is exactly why she understands every stage of the journey. On court she brings energy, presence and genuine connection.",
     highlights: ["#98 world ranking", "PSA World Tour", "2 nations"],
-    credentials: ["England Squash L2", "US Squash Coach Pass", "SafeSport Certified", "EN · PT"],
+    credentials: [
+      "England Squash L2",
+      "US Squash Coach Pass",
+      "SafeSport Certified",
+      "EN · PT",
+    ],
     booking: "BOOK A LESSON WITH BRUNA",
   },
   {
@@ -28,8 +34,18 @@ const profiles = [
     role: "Co-Founder & Head Coach.",
     image: "/media/sol-vini-profile_e0ff7b8e.jpeg",
     bio: "PSA World Tour professional, Brazilian National Team member, Pan American Games bronze medalist and PSA World Tour finalist. Self-taught from age seven, Vini started coaching early to fund his pro career—and what began as necessity became a true calling. On court, his natural habitat shows in every session.",
-    highlights: ["#132 world ranking", "20+ years coaching", "Pan Am bronze 2011"],
-    credentials: ["WSF Level 2", "US Squash L2", "England Squash L2", "SafeSport Certified", "EN · PT · ES"],
+    highlights: [
+      "#132 world ranking",
+      "20+ years coaching",
+      "Pan Am bronze 2011",
+    ],
+    credentials: [
+      "WSF Level 2",
+      "US Squash L2",
+      "England Squash L2",
+      "SafeSport Certified",
+      "EN · PT · ES",
+    ],
     booking: "BOOK A LESSON WITH VINI",
   },
   {
@@ -67,7 +83,8 @@ export default function OurStory() {
   const activeProfile = typeof drawer === "number" ? profiles[drawer] : null;
   useEffect(() => {
     if (drawer === null) return;
-    const onKeyDown = (event: KeyboardEvent) => event.key === "Escape" && setDrawer(null);
+    const onKeyDown = (event: KeyboardEvent) =>
+      event.key === "Escape" && setDrawer(null);
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [drawer]);
@@ -120,8 +137,21 @@ export default function OurStory() {
           </div>
         </div>
       </section>
+      <PageNavigator
+        label="THE CLUB"
+        items={[
+          { label: "Journey", href: "#journey" },
+          { label: "Team", href: "#team" },
+          { label: "Values", href: "#values" },
+          {
+            label: "Book a lesson",
+            href: PLAYBYPOINT_PRIVATE_LESSON_URL,
+            external: true,
+          },
+        ]}
+      />
       <WaveDivider source="navy" destination="mango" />
-      <section className="story-intro story-intro--real">
+      <section id="journey" className="story-intro story-intro--real">
         <div>
           <p className="eyebrow">THE JOURNEY</p>
           <h2>
@@ -179,7 +209,7 @@ export default function OurStory() {
         </div>
       </section>
       <WaveDivider source="green" destination="navy" />
-      <section className="profiles-section profiles-section--real">
+      <section id="team" className="profiles-section profiles-section--real">
         <img
           className="mural-sun mural-sun--profiles"
           src="/media/sol-sun-repaired-cyan_372f6d5e.png"
@@ -196,13 +226,20 @@ export default function OurStory() {
         </div>
         <div className="profile-list">
           {profiles.map((profile, index) => (
-            <article key={profile.name} className={`profile-card profile-card--${index}`}>
+            <article
+              key={profile.name}
+              className={`profile-card profile-card--${index}`}
+            >
               <img src={profile.image} alt={profile.name} />
               <div className="profile-card__copy">
                 <span>0{index + 1}</span>
                 <h3>{profile.name}</h3>
                 <p>{profile.role}</p>
-                <div className="profile-card__highlights">{profile.highlights.map(item => <span key={item}>{item}</span>)}</div>
+                <div className="profile-card__highlights">
+                  {profile.highlights.map(item => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
                 <button onClick={() => setDrawer(index)}>
                   READ BIO <ArrowUpRight size={21} />
                 </button>
@@ -212,8 +249,11 @@ export default function OurStory() {
         </div>
       </section>
       <WaveDivider source="navy" destination="green" />
-      <section className="values-section values-section--real">
-        <span className="squash-ball squash-ball--values ball-shadow--light" aria-hidden="true">
+      <section id="values" className="values-section values-section--real">
+        <span
+          className="squash-ball squash-ball--values ball-shadow--light"
+          aria-hidden="true"
+        >
           <i />
           <i />
         </span>
@@ -264,7 +304,43 @@ export default function OurStory() {
               </button>
               <span className="eyebrow">SOL SQUASH</span>
               <h2>{drawerContent.title}</h2>
-              {activeProfile ? <div className="profile-drawer-content"><p>{activeProfile.role}</p><p>{activeProfile.bio}</p><div className="profile-drawer-highlights">{activeProfile.highlights.map(item => <strong key={item}>{item}</strong>)}</div><div className="profile-drawer-credentials">{activeProfile.credentials.map(item => <span key={item}>{item}</span>)}</div>{activeProfile.booking && <MagneticButton href={PLAYBYPOINT_PRIVATE_LESSON_URL} className="button--mango">{activeProfile.booking}</MagneticButton>}</div> : <div className="story-drawer-copy">{drawerContent.body.split(/(?<=\.)\s+(?=[A-Z—])/).reduce<string[][]>((groups, sentence, index) => { const group = Math.floor(index / 3); groups[group] = [...(groups[group] || []), sentence]; return groups; }, []).map((sentences, index) => <p key={index}>{sentences.join(" ")}</p>)}</div>}
+              {activeProfile ? (
+                <div className="profile-drawer-content">
+                  <p>{activeProfile.role}</p>
+                  <p>{activeProfile.bio}</p>
+                  <div className="profile-drawer-highlights">
+                    {activeProfile.highlights.map(item => (
+                      <strong key={item}>{item}</strong>
+                    ))}
+                  </div>
+                  <div className="profile-drawer-credentials">
+                    {activeProfile.credentials.map(item => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
+                  {activeProfile.booking && (
+                    <MagneticButton
+                      href={PLAYBYPOINT_PRIVATE_LESSON_URL}
+                      className="button--mango"
+                    >
+                      {activeProfile.booking}
+                    </MagneticButton>
+                  )}
+                </div>
+              ) : (
+                <div className="story-drawer-copy">
+                  {drawerContent.body
+                    .split(/(?<=\.)\s+(?=[A-Z—])/)
+                    .reduce<string[][]>((groups, sentence, index) => {
+                      const group = Math.floor(index / 3);
+                      groups[group] = [...(groups[group] || []), sentence];
+                      return groups;
+                    }, [])
+                    .map((sentences, index) => (
+                      <p key={index}>{sentences.join(" ")}</p>
+                    ))}
+                </div>
+              )}
             </motion.div>
           </motion.aside>
         )}

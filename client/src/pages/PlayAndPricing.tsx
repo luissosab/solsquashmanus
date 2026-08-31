@@ -16,6 +16,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { MagneticButton } from "@/components/MagneticButton";
+import { PageNavigator } from "@/components/PageNavigator";
 import { WaveDivider } from "@/components/WaveDivider";
 import {
   JoinContinuationBlocks,
@@ -342,8 +343,20 @@ export default function PlayAndPricing({
               />
             </figure>
           </section>
+          <PageNavigator
+            label="PLAY AT SOL"
+            items={[
+              { label: "Ways to play", href: "#ways-to-play" },
+              { label: "Try Sol", href: "#taste-of-sol" },
+              { label: "Live schedule", href: "/schedule" },
+              { label: "Prices", href: "/memberships-and-prices" },
+            ]}
+          />
           <WaveDivider source="navy" destination="green" />
-          <section className="ways-section ways-section--real">
+          <section
+            id="ways-to-play"
+            className="ways-section ways-section--real"
+          >
             <div className="section-rail">
               <span>WAYS TO PLAY</span>
               <i />
@@ -405,7 +418,19 @@ export default function PlayAndPricing({
       {showJoin && (
         <>
           {showPlay && <WaveDivider source="navy" destination="navy" />}
-          <section className="pricing-section pricing-section--real">
+          <PageNavigator
+            label="PRICES & MEMBERSHIP"
+            items={[
+              { label: "Compare prices", href: "#adult-pricing" },
+              { label: "Sol Club", href: "#sol-club" },
+              { label: "Juniors", href: "#junior-details" },
+              { label: "Packages", href: "#packages" },
+            ]}
+          />
+          <section
+            id="adult-pricing"
+            className="pricing-section pricing-section--real"
+          >
             <div className="pricing-heading">
               <p className="eyebrow eyebrow--cyan">ADULT PRICING</p>
               <h2>

@@ -3,9 +3,7 @@
  */
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { MagneticButton } from "@/components/MagneticButton";
 import { WaveDivider } from "@/components/WaveDivider";
-import { PLAYBYPOINT_WEEKLY_SCHEDULE_URL } from "@/lib/booking";
 
 const assets = {
   court: "/media/sol-facility-glass-court_bc711772.png",
@@ -14,8 +12,6 @@ const assets = {
   sauna: "/media/sol-sauna_23e752ac.png",
   clubFacility: "/media/sol-approved-general-facilities_ac64bd88.png",
   mural: "/media/sol-mural-feature_9dd29c1b.png",
-  team: "/media/sol-team_28f84027.jpeg",
-  lounge: "/media/sol-founders-lounge_1745d40e.webp",
 };
 
 export default function Home() {
@@ -35,7 +31,10 @@ export default function Home() {
           </video>
         </div>
         <div className="home-hero__veil" />
-        <span className="squash-ball squash-ball--hero ball-shadow--light" aria-hidden="true">
+        <span
+          className="squash-ball squash-ball--hero ball-shadow--light"
+          aria-hidden="true"
+        >
           <i />
           <i />
         </span>
@@ -88,7 +87,7 @@ export default function Home() {
         <div className="home-paths__list">
           <Link href="/play" className="home-path-card home-path-card--play">
             <span>01</span>
-            <strong>PLAY</strong>
+            <strong>PLAY AT SOL</strong>
             <p>
               Book a court, join a session or train with us. All levels welcome.
             </p>
@@ -108,17 +107,41 @@ export default function Home() {
             </b>
           </Link>
           <Link
+            href="/schedule"
+            className="home-path-card home-path-card--schedule"
+          >
+            <span>03</span>
+            <strong>SEE THE SCHEDULE</strong>
+            <p>
+              Find Open Play, clinics, coached sessions and junior programmes.
+            </p>
+            <b>
+              WHAT'S ON <i aria-hidden="true">↗</i>
+            </b>
+          </Link>
+          <Link
             href="/memberships-and-prices"
             className="home-path-card home-path-card--member"
           >
-            <span>03</span>
-            <strong>MEMBERSHIPS &amp; PRICES</strong>
+            <span>04</span>
+            <strong>PRICES &amp; MEMBERSHIP</strong>
             <p>
               Court time every day, the sauna, cold plunge and showers, and
               member pricing on everything else.
             </p>
             <b>
               SEE MEMBERSHIPS <i aria-hidden="true">↗</i>
+            </b>
+          </Link>
+          <Link
+            href="/our-story"
+            className="home-path-card home-path-card--club"
+          >
+            <span>05</span>
+            <strong>MEET THE CLUB</strong>
+            <p>Meet Bruna, Vini and the people behind Miami's squash home.</p>
+            <b>
+              OUR STORY <i aria-hidden="true">↗</i>
             </b>
           </Link>
         </div>
@@ -186,88 +209,6 @@ export default function Home() {
         </div>
       </section>
       <WaveDivider source="mango" destination="navy" />
-      <section className="home-schedule" aria-labelledby="home-schedule-title">
-        <span
-          className="squash-ball squash-ball--home-schedule ball-shadow--light"
-          aria-hidden="true"
-        >
-          <i />
-          <i />
-        </span>
-        <div>
-          <p className="eyebrow eyebrow--cyan">WHAT'S HAPPENING AT SOL</p>
-          <h2 id="home-schedule-title">
-            FIND YOUR
-            <br />
-            <em>NEXT RALLY.</em>
-          </h2>
-          <p>
-            Open Play, coached sessions, first-timer clinics and junior
-            programmes run throughout the week. Live times and availability stay
-            current in the booking schedule.
-          </p>
-        </div>
-        <div className="home-schedule__actions">
-          <Link href="/schedule" className="text-link">
-            EXPLORE THE SCHEDULE <span aria-hidden="true">↗</span>
-          </Link>
-          <MagneticButton
-            href={PLAYBYPOINT_WEEKLY_SCHEDULE_URL}
-            className="button--mango"
-          >
-            VIEW THE LIVE WEEK
-          </MagneticButton>
-        </div>
-      </section>
-      <WaveDivider source="navy" destination="green" />
-      <section
-        className="home-community"
-        aria-labelledby="home-community-title"
-      >
-        <div className="home-community__copy">
-          <p className="eyebrow eyebrow--cyan">THE RALLIES KEEP GOING</p>
-          <h2 id="home-community-title">
-            A CLUB
-            <br />
-            BUILT AROUND
-            <br />
-            <em>PEOPLE.</em>
-          </h2>
-          <p>
-            Announcements, club news and games between members happen in the Sol
-            community. Come for a match; leave knowing who you want to play
-            next.
-          </p>
-          <div className="home-community__links">
-            <a
-              href="https://wa.me/13054814295"
-              target="_blank"
-              rel="noreferrer"
-            >
-              JOIN THE WHATSAPP COMMUNITY <span aria-hidden="true">↗</span>
-            </a>
-            <a
-              href="https://www.instagram.com/solsquash/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              FOLLOW @SOLSQUASH <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-        <div className="home-community__gallery">
-          <figure>
-            <img
-              src={assets.team}
-              alt="Bruna, Vini and Frida together at Sol Squash"
-            />
-          </figure>
-          <figure>
-            <img src={assets.lounge} alt="Bruna and Vini in the Sol lounge" />
-          </figure>
-        </div>
-      </section>
-      <WaveDivider source="green" destination="navy" />
       <section className="mural-feature">
         <div className="mural-feature__copy">
           <h2>

@@ -1207,3 +1207,44 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
   background:transparent !important;
   border:1px solid currentColor;
 }
+
+/* Task-first wayfinding: preserve the long-form copy while keeping the next useful choice visible. */
+.page-navigator {
+  align-items:center; background:var(--sol-light); border-bottom:1px solid rgba(26,47,107,.2);
+  color:var(--sol-navy); display:flex; gap:1.4rem; overflow-x:auto;
+  padding:.8rem clamp(1.25rem,7vw,8rem); position:sticky; scrollbar-width:none; top:94px; z-index:45;
+}
+.page-navigator::-webkit-scrollbar { display:none; }
+.page-navigator > span { color:var(--sol-teal); flex:0 0 auto; font-family:var(--font-display); font-size:.68rem; font-weight:700; letter-spacing:.11em; }
+.page-navigator > div { display:flex; gap:.55rem; }
+.page-navigator a {
+  border:1px solid currentColor; border-radius:999px; color:inherit; flex:0 0 auto;
+  font-family:var(--font-display); font-size:.72rem; font-weight:700; letter-spacing:.045em;
+  padding:.55rem .85rem; text-decoration:none; text-transform:uppercase; transition:background .18s ease,color .18s ease;
+}
+.page-navigator a:hover, .page-navigator a:focus-visible { background:var(--sol-navy); color:var(--sol-light); }
+.mobile-action-dock { display:none; }
+.home-path-card--schedule { background:var(--sol-blue); }
+.home-path-card--club { background:var(--sol-orange); }
+
+@media (min-width:900px) {
+  .home-paths__list { grid-template-columns:repeat(6,1fr); }
+  .home-path-card { grid-column:span 2; }
+  .home-path-card:nth-child(-n+2) { grid-column:span 3; }
+}
+@media (max-width:1199px) { .page-navigator { top:88px; } }
+@media (max-width:767px) {
+  .page-navigator { gap:1rem; padding:.65rem 1rem; top:72px; }
+  .page-navigator > span { font-size:.6rem; }
+  .page-navigator a { font-size:.66rem; padding:.48rem .7rem; }
+  .mobile-action-dock {
+    background:var(--sol-navy); border-top:2px solid var(--sol-mustard); bottom:0; display:grid;
+    grid-template-columns:1fr 1.15fr 1fr; left:0; position:fixed; right:0; z-index:90;
+  }
+  .mobile-action-dock a {
+    align-items:center; color:var(--sol-light); display:flex; font-family:var(--font-display);
+    font-size:.68rem; font-weight:700; justify-content:center; letter-spacing:.07em; min-height:3.8rem; text-decoration:none;
+  }
+  .mobile-action-dock a:nth-child(2) { background:var(--sol-mustard); color:var(--sol-navy); font-size:.78rem; }
+  .club-footer { padding-bottom:5rem; }
+}
