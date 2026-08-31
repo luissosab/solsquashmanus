@@ -147,13 +147,13 @@ body {
 }
 .bn-header__nav {
   display: flex;
-  gap: clamp(1.2rem, 2.2vw, 2.6rem);
+  gap: clamp(0.9rem, 1.6vw, 1.9rem);
   justify-content: center;
 }
 .bn-header__nav a,
 .bn-header__actions > a:first-child {
   color: inherit;
-  font-size: 0.82rem;
+  font-size: 1.23rem;
   font-weight: 700;
   letter-spacing: 0.045em;
   padding: 0.5rem 0;
@@ -344,13 +344,34 @@ body {
   width: clamp(5rem, 9vw, 9rem);
 }
 .bn-racket-q {
+  background: currentColor;
   display: block;
-  height: auto;
-  object-fit: contain;
+  height: clamp(4.5rem, 7vw, 7rem);
+  mask: url("/media/sol-racket-q-extracted.png") center / contain no-repeat;
+  -webkit-mask: url("/media/sol-racket-q-extracted.png") center / contain
+    no-repeat;
   width: clamp(4.5rem, 7vw, 7rem);
 }
+.bn-racket-q--green {
+  color: var(--bn-green);
+}
+.bn-racket-q--navy {
+  color: var(--bn-navy);
+}
+.bn-racket-q--mustard {
+  color: var(--bn-mustard);
+}
+.bn-racket-q--orange {
+  color: var(--bn-orange);
+}
+.bn-racket-q--cyan {
+  color: var(--bn-cyan);
+}
+.bn-racket-q--cream {
+  color: var(--bn-cream);
+}
 .bn-brand-wave {
-  height: 90px;
+  height: clamp(3.25rem, 4.5vw, 4.75rem);
   line-height: 0;
   margin: -1px 0;
   overflow: hidden;
@@ -367,14 +388,15 @@ body {
 }
 .bn-court-mark {
   fill: none;
-  opacity: 0.14;
+  opacity: 0.12;
   pointer-events: none;
   position: absolute;
   stroke: currentColor;
   stroke-linecap: square;
   stroke-linejoin: miter;
-  stroke-width: 4;
-  width: clamp(10rem, 19vw, 20rem);
+  stroke-width: 10;
+  transform: rotate(-18deg);
+  width: clamp(34rem, 62vw, 66rem);
 }
 
 .bn-journeys,
@@ -611,8 +633,8 @@ body {
   top: 9%;
 }
 .bn-court-mark--offerings {
-  bottom: 8%;
-  right: -3%;
+  bottom: -28%;
+  right: -20%;
 }
 .bn-offerings > .bn-section-heading {
   display: grid;
@@ -704,8 +726,8 @@ body {
   color: var(--bn-orange) !important;
 }
 .bn-court-mark--reassurance {
-  right: 4%;
-  top: 8%;
+  right: -19%;
+  top: -24%;
 }
 .bn-first-rally > div:last-child > .bn-racket-q {
   margin: 0 0 2rem auto;
@@ -799,8 +821,8 @@ body {
   grid-template-columns: 0.7fr 1.3fr;
 }
 .bn-court-mark--schedule {
-  left: -2%;
-  top: 8%;
+  left: -22%;
+  top: -23%;
 }
 .bn-schedule-list > div:last-child {
   border-top: 1px solid var(--bn-navy);
@@ -868,8 +890,8 @@ body {
 }
 .bn-court-mark--membership {
   color: var(--bn-cyan);
-  right: 3%;
-  top: 5%;
+  right: -18%;
+  top: -24%;
 }
 .bn-membership__prices {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -1034,9 +1056,9 @@ body {
   position: relative;
 }
 .bn-court-mark--story {
-  bottom: 5%;
+  bottom: -27%;
   color: var(--bn-navy);
-  left: 2%;
+  left: -20%;
 }
 .bn-story-copy > div {
   max-width: 52rem;
@@ -1199,8 +1221,8 @@ body {
 }
 .bn-court-mark--journeys {
   color: var(--bn-navy);
-  right: 3%;
-  top: 4%;
+  right: -20%;
+  top: -22%;
 }
 .bn-footer__lead {
   align-items: center;

@@ -100,7 +100,7 @@ export default function Schedule() {
       </section>
       <BrandWave source="cream" destination="orange" />
       <section className="bn-schedule-note">
-        <RacketQMark />
+        <RacketQMark tone="navy" />
         <div>
           <p className="bn-kicker">Rather play on your own time?</p>
           <h2>

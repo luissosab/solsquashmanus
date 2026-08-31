@@ -99,7 +99,7 @@ export default function NewToSquash() {
           />
         </div>
         <div>
-          <RacketQMark />
+          <RacketQMark tone="green" />
           <p className="bn-kicker">Your first rally</p>
           <h2>
             Choose the way

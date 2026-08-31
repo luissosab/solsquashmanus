@@ -26,15 +26,14 @@ export function BallMark({
   );
 }
 
-/** The official logo artwork is cropped—not redrawn—so the racket-shaped Q remains authentic. */
-export function RacketQMark() {
+/** The complete connected Q artwork is extracted from the official logo and recolored only through its alpha mask. */
+export function RacketQMark({
+  tone = "green",
+}: {
+  tone?: "green" | "navy" | "mustard" | "orange" | "cyan" | "cream";
+}) {
   return (
-    <img
-      className="bn-racket-q"
-      src="/media/sol-racket-q-extracted.png"
-      alt=""
-      aria-hidden="true"
-    />
+    <span className={`bn-racket-q bn-racket-q--${tone}`} aria-hidden="true" />
   );
 }
 
@@ -74,16 +73,16 @@ export function BrandWave({
       style={{ backgroundColor: waveColors[source] }}
       aria-hidden="true"
     >
-      <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none">
         <path
-          d="M0,38 C120,74 240,74 360,38 C480,2 600,2 720,38 C840,74 960,74 1080,38 C1200,2 1320,2 1440,38 L1440,90 L0,90 Z"
+          d="M0,28 C120,52 240,52 360,28 C480,4 600,4 720,28 C840,52 960,52 1080,28 C1200,4 1320,4 1440,28 L1440,64 L0,64 Z"
           fill={waveColors[destination]}
         />
         <path
-          d="M0,38 C120,74 240,74 360,38 C480,2 600,2 720,38 C840,74 960,74 1080,38 C1200,2 1320,2 1440,38"
+          d="M0,28 C120,52 240,52 360,28 C480,4 600,4 720,28 C840,52 960,52 1080,28 C1200,4 1320,4 1440,28"
           fill="none"
           stroke="#20d9e8"
-          strokeWidth="9"
+          strokeWidth="11"
           vectorEffect="non-scaling-stroke"
         />
       </svg>
@@ -95,10 +94,14 @@ export function CourtMark({ className = "" }: { className?: string }) {
   return (
     <svg
       className={`bn-court-mark ${className}`}
-      viewBox="0 0 240 220"
+      viewBox="0 0 750 750"
       aria-hidden="true"
     >
-      <path d="M20 200V20h200v180M20 120h200M75 120v80M165 120v80M75 165h90" />
+      <rect x="208.61" y="121.52" width="332.77" height="506.96" />
+      <line x1="208.61" y1="406.98" x2="541.39" y2="406.98" />
+      <line x1="375" y1="406.98" x2="375" y2="628.48" />
+      <polyline points="208.61 490.17, 291.81 490.17, 291.81 406.98" />
+      <polyline points="541.39 490.17, 458.19 490.17, 458.19 406.98" />
     </svg>
   );
 }

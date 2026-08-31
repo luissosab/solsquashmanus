@@ -5,6 +5,7 @@ import { Link, useLocation } from "wouter";
 import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
 const navigation = [
+  { label: "Home", href: "/" },
   { label: "Play", href: "/play" },
   { label: "New to squash", href: "/new-to-squash" },
   { label: "Membership", href: "/memberships-and-prices" },
@@ -118,7 +119,7 @@ export function SiteHeader() {
                   </motion.div>
                 ))}
                 <Link href="/schedule" onClick={navigate}>
-                  <span>06</span>Schedule
+                  <span>07</span>Schedule
                 </Link>
               </nav>
               <a

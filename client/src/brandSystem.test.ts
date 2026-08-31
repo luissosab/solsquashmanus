@@ -10,6 +10,7 @@ const membership = read("./pages/MembershipsAndPrices.tsx");
 const schedule = read("./pages/Schedule.tsx");
 const story = read("./pages/OurStory.tsx");
 const marks = read("./components/BrandMarks.tsx");
+const header = read("./components/SiteHeader.tsx");
 const drawer = read("./components/ExperienceDrawer.tsx");
 const faq = read("./pages/FAQ.tsx");
 const faqSource = read("./pages/PlayAndPricing.tsx");
@@ -25,9 +26,16 @@ describe("brand-new Sol visitor experience", () => {
     expect(marks).toContain("bn-ball-mark");
     expect(marks).toContain("bn-cyan-wave");
     expect(marks).toContain("bn-racket-q");
-    expect(marks).toContain("sol-racket-q-extracted.png");
+    expect(css).toContain("sol-racket-q-extracted.png");
     expect(marks).toContain("BrandWave");
     expect(marks).toContain("CourtMark");
+    expect(marks).toContain('viewBox="0 0 750 750"');
+    expect(marks).toContain('x="208.61"');
+    expect(css).toContain('mask: url("/media/sol-racket-q-extracted.png")');
+  });
+  it("keeps Home visible and makes the desktop menu substantially larger", () => {
+    expect(header).toContain('{ label: "Home", href: "/" }');
+    expect(css).toContain("font-size: 1.23rem");
   });
   it("does not introduce palm-tree iconography", () => {
     expect(

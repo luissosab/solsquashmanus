@@ -93,7 +93,7 @@ export default function Play() {
             handles the final booking and payment.
           </p>
         </div>
-        <RacketQMark />
+        <RacketQMark tone="orange" />
         <div className="bn-offering-list">
           {ways.map((way, index) => (
             <button
@@ -146,6 +146,7 @@ export default function Play() {
           </a>
         </div>
       </section>
+      <BrandWave source="teal" destination="orange" />
       <section className="bn-next-step">
         <p>Not sure where your game belongs?</p>
         <Link className="bn-text-link" href="/schedule">

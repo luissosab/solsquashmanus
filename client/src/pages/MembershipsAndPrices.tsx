@@ -132,7 +132,7 @@ export default function MembershipsAndPrices() {
       </section>
       <BrandWave source="navy" destination="mustard" />
       <section className="bn-price-compare" id="everyday-pricing">
-        <RacketQMark />
+        <RacketQMark tone="navy" />
         <div className="bn-section-heading">
           <p className="bn-kicker">Everyday pricing</p>
           <h2>

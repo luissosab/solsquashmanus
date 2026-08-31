@@ -80,7 +80,7 @@ export default function OurStory() {
       </section>
       <BrandWave source="mustard" destination="cream" />
       <section className="bn-team">
-        <RacketQMark />
+        <RacketQMark tone="orange" />
         <div className="bn-section-heading">
           <p className="bn-kicker">The people behind Sol</p>
           <h2>

@@ -139,13 +139,14 @@ export default function Home() {
         </div>
       </section>
 
+      <BrandWave source="mustard" destination="navy" />
       <section className="bn-mural-break">
         <img
           src="/media/sol-mural-feature_9dd29c1b.png"
           alt="Sol Squash's mural-inspired exterior"
         />
         <div>
-          <RacketQMark />
+          <RacketQMark tone="mustard" />
           <p>
             The game is fast.
             <br />
