@@ -25,7 +25,9 @@ describe("brand-new Sol visitor experience", () => {
     expect(marks).toContain("bn-ball-mark");
     expect(marks).toContain("bn-cyan-wave");
     expect(marks).toContain("bn-racket-q");
-    expect(marks).toContain("sol-squash-logo_dd364204.png");
+    expect(marks).toContain("sol-racket-q-extracted.png");
+    expect(marks).toContain("BrandWave");
+    expect(marks).toContain("CourtMark");
   });
   it("does not introduce palm-tree iconography", () => {
     expect(
@@ -51,6 +53,12 @@ describe("brand-new Sol visitor experience", () => {
     expect(play).toContain("ExperienceDrawer");
     expect(beginner).toContain("ExperienceDrawer");
     expect(story).toContain("ExperienceDrawer");
+  });
+  it("locks readable dark text onto light information surfaces", () => {
+    expect(css).toContain(".site-frame .bn-offerings h2");
+    expect(css).toContain(".site-frame .bn-first-rally h3");
+    expect(css).toContain(".site-frame .bn-price-compare span");
+    expect(css).toContain("color: var(--bn-navy) !important");
   });
   it("keeps the protected FAQ wrapper and topic source intact", () => {
     expect(faq).toContain('<PlayAndPricing section="faq" />');

@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Check, Plus } from "lucide-react";
-import { BallMark } from "@/components/BrandMarks";
+import {
+  BallMark,
+  BrandWave,
+  CourtMark,
+  RacketQMark,
+} from "@/components/BrandMarks";
 import { ExperienceDrawer } from "@/components/ExperienceDrawer";
 import {
   PLAYBYPOINT_BEGINNER_CLINIC_URL,
@@ -47,7 +52,9 @@ export default function NewToSquash() {
         </div>
         <BallMark tone="orange" />
       </section>
+      <BrandWave source="navy" destination="mustard" />
       <section className="bn-reassurance">
+        <CourtMark className="bn-court-mark--reassurance" />
         <div className="bn-section-heading">
           <p className="bn-kicker">Why people get hooked</p>
           <h2>
@@ -83,6 +90,7 @@ export default function NewToSquash() {
           </p>
         </div>
       </section>
+      <BrandWave source="mustard" destination="cream" />
       <section className="bn-first-rally" id="your-first-rally">
         <div className="bn-photo bn-photo--wide">
           <img
@@ -91,6 +99,7 @@ export default function NewToSquash() {
           />
         </div>
         <div>
+          <RacketQMark />
           <p className="bn-kicker">Your first rally</p>
           <h2>
             Choose the way
@@ -113,6 +122,7 @@ export default function NewToSquash() {
           ))}
         </div>
       </section>
+      <BrandWave source="cream" destination="navy" />
       <section className="bn-steps">
         <p className="bn-kicker">What happens next</p>
         <ol>

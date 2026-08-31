@@ -1,12 +1,11 @@
 import { Link } from "wouter";
-import { CyanWave, RacketQMark, SunMark } from "./BrandMarks";
+import { RacketQMark, SunMark } from "./BrandMarks";
 import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 
 export function ClubFooter() {
   const top = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <footer className="bn-footer">
-      <CyanWave />
       <div className="bn-footer__lead">
         <SunMark tone="mustard" />
         <p>

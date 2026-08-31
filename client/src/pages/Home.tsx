@@ -2,9 +2,9 @@ import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import {
   BallMark,
-  CyanWave,
+  BrandWave,
+  CourtMark,
   RacketQMark,
-  SunMark,
 } from "@/components/BrandMarks";
 
 const paths = [
@@ -72,10 +72,11 @@ export default function Home() {
           </div>
         </div>
         <BallMark tone="orange" />
-        <CyanWave />
       </section>
+      <BrandWave source="navy" destination="cream" />
 
       <section className="bn-journeys">
+        <CourtMark className="bn-court-mark--journeys" />
         <div className="bn-section-heading">
           <p className="bn-kicker">Start with what you need</p>
           <h2>
@@ -99,6 +100,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <BrandWave source="cream" destination="mustard" />
 
       <section className="bn-club-story">
         <div className="bn-photo bn-photo--tall">
@@ -106,7 +108,6 @@ export default function Home() {
             src="/media/sol-approved-general-facilities_ac64bd88.png"
             alt="Sol Squash courts, café and social spaces"
           />
-          <SunMark tone="orange" />
         </div>
         <div className="bn-club-story__copy">
           <p className="bn-kicker">Come for the squash</p>

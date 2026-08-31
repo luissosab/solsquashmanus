@@ -1,4 +1,5 @@
 import { Check, Plus } from "lucide-react";
+import { BrandWave, CourtMark, RacketQMark } from "@/components/BrandMarks";
 import {
   PLAYBYPOINT_BOOKING_URL,
   PLAYBYPOINT_SOL_CLUB_URL,
@@ -59,6 +60,7 @@ export default function MembershipsAndPrices() {
         </div>
       </section>
       <section className="bn-membership" id="compare">
+        <CourtMark className="bn-court-mark--membership" />
         <div className="bn-membership__lead">
           <p className="bn-kicker">Sol Club</p>
           <h2>
@@ -128,7 +130,9 @@ export default function MembershipsAndPrices() {
           </details>
         </div>
       </section>
-      <section className="bn-price-compare">
+      <BrandWave source="navy" destination="mustard" />
+      <section className="bn-price-compare" id="everyday-pricing">
+        <RacketQMark />
         <div className="bn-section-heading">
           <p className="bn-kicker">Everyday pricing</p>
           <h2>
@@ -160,6 +164,7 @@ export default function MembershipsAndPrices() {
           ))}
         </div>
       </section>
+      <BrandWave source="mustard" destination="teal" />
       <section className="bn-packages">
         <div>
           <p className="bn-kicker">Playing regularly?</p>
@@ -204,6 +209,7 @@ export default function MembershipsAndPrices() {
           </a>
         </div>
       </section>
+      <BrandWave source="teal" destination="orange" />
       <section className="bn-juniors">
         <div>
           <p className="bn-kicker">Ages 4–16</p>

@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { ArrowRight, Plus } from "lucide-react";
 import { Link } from "wouter";
-import { BallMark, SunMark } from "@/components/BrandMarks";
+import {
+  BallMark,
+  BrandWave,
+  CourtMark,
+  RacketQMark,
+} from "@/components/BrandMarks";
 import { ExperienceDrawer } from "@/components/ExperienceDrawer";
 import {
   PLAYBYPOINT_COURT_URL,
@@ -73,7 +78,9 @@ export default function Play() {
         </div>
         <BallMark tone="green" />
       </section>
+      <BrandWave source="navy" destination="cream" />
       <section className="bn-offerings" id="ways-to-play">
+        <CourtMark className="bn-court-mark--offerings" />
         <div className="bn-section-heading">
           <p className="bn-kicker">Everything you need to decide</p>
           <h2>
@@ -86,6 +93,7 @@ export default function Play() {
             handles the final booking and payment.
           </p>
         </div>
+        <RacketQMark />
         <div className="bn-offering-list">
           {ways.map((way, index) => (
             <button
@@ -105,13 +113,13 @@ export default function Play() {
           ))}
         </div>
       </section>
+      <BrandWave source="cream" destination="teal" />
       <section className="bn-feature-split">
         <div className="bn-photo">
           <img
             src="/media/sol-founders-lounge_1745d40e.webp"
             alt="Bruna and Vini at Sol Squash"
           />
-          <SunMark tone="mustard" />
         </div>
         <div>
           <p className="bn-kicker">Want to try the whole club?</p>

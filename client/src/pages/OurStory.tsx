@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ExperienceDrawer } from "@/components/ExperienceDrawer";
-import { SunMark } from "@/components/BrandMarks";
+import { BrandWave, CourtMark, RacketQMark } from "@/components/BrandMarks";
 import { PLAYBYPOINT_PRIVATE_LESSON_URL } from "@/lib/booking";
 
 const profiles = [
@@ -49,9 +49,10 @@ export default function OurStory() {
             <em>Made for everyone.</em>
           </h1>
         </div>
-        <SunMark tone="mustard" />
       </section>
+      <BrandWave source="navy" destination="mustard" />
       <section className="bn-story-copy">
+        <CourtMark className="bn-court-mark--story" />
         <p className="bn-kicker">The journey</p>
         <div>
           <h2>
@@ -77,7 +78,9 @@ export default function OurStory() {
           </p>
         </div>
       </section>
+      <BrandWave source="mustard" destination="cream" />
       <section className="bn-team">
+        <RacketQMark />
         <div className="bn-section-heading">
           <p className="bn-kicker">The people behind Sol</p>
           <h2>
@@ -102,6 +105,7 @@ export default function OurStory() {
           ))}
         </div>
       </section>
+      <BrandWave source="cream" destination="navy" />
       <section className="bn-values">
         <div>
           <p className="bn-kicker">What guides the club</p>

@@ -16,6 +16,10 @@ body {
   background: var(--bn-cream);
   color: var(--bn-navy);
 }
+.site-frame main:has(.bn-page) {
+  background: var(--bn-cream);
+  color: var(--bn-navy);
+}
 .bn-page {
   overflow: hidden;
 }
@@ -65,7 +69,7 @@ body {
 }
 .bn-kicker {
   font-family: var(--font-display);
-  font-size: 0.78rem !important;
+  font-size: 0.9rem !important;
   font-weight: 700;
   letter-spacing: 0.14em;
   margin: 0 0 1.35rem !important;
@@ -340,19 +344,37 @@ body {
   width: clamp(5rem, 9vw, 9rem);
 }
 .bn-racket-q {
-  background: var(--bn-navy);
   display: block;
-  height: 110px;
+  height: auto;
+  object-fit: contain;
+  width: clamp(4.5rem, 7vw, 7rem);
+}
+.bn-brand-wave {
+  height: 90px;
+  line-height: 0;
+  margin: -1px 0;
   overflow: hidden;
   position: relative;
-  width: 110px;
+  z-index: 5;
 }
-.bn-racket-q img {
-  height: auto;
-  left: -8px;
+.bn-brand-wave svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.bn-brand-wave--flip {
+  transform: scaleY(-1);
+}
+.bn-court-mark {
+  fill: none;
+  opacity: 0.14;
+  pointer-events: none;
   position: absolute;
-  top: -37px;
-  width: 300px;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 4;
+  width: clamp(10rem, 19vw, 20rem);
 }
 
 .bn-journeys,
@@ -362,6 +384,7 @@ body {
 .bn-team,
 .bn-price-compare {
   padding: clamp(6rem, 11vw, 11rem) clamp(1.25rem, 7vw, 8rem);
+  position: relative;
 }
 .bn-section-heading {
   max-width: 58rem;
@@ -440,6 +463,7 @@ body {
   gap: clamp(3rem, 7vw, 8rem);
   grid-template-columns: 1.05fr 0.95fr;
   padding: clamp(6rem, 10vw, 10rem) clamp(1.25rem, 7vw, 8rem);
+  position: relative;
 }
 .bn-photo {
   min-height: 34rem;
@@ -569,6 +593,26 @@ body {
 
 .bn-offerings {
   background: var(--bn-cream);
+  color: var(--bn-navy) !important;
+}
+.site-frame .bn-offerings h2,
+.site-frame .bn-offerings h3,
+.site-frame .bn-offerings p,
+.site-frame .bn-offerings small,
+.site-frame .bn-offerings button {
+  color: var(--bn-navy) !important;
+}
+.site-frame .bn-offerings h2 em {
+  color: var(--bn-mustard) !important;
+}
+.bn-offerings > .bn-racket-q {
+  position: absolute;
+  right: 7%;
+  top: 9%;
+}
+.bn-court-mark--offerings {
+  bottom: 8%;
+  right: -3%;
 }
 .bn-offerings > .bn-section-heading {
   display: grid;
@@ -596,7 +640,7 @@ body {
 .bn-offering-row > span,
 .bn-offering-row small {
   font-family: var(--font-display);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -637,6 +681,34 @@ body {
   display: grid;
   gap: 4rem;
   grid-template-columns: 1fr 1fr;
+}
+.site-frame .bn-reassurance,
+.site-frame .bn-first-rally,
+.site-frame .bn-price-compare {
+  color: var(--bn-navy) !important;
+}
+.site-frame .bn-reassurance h2,
+.site-frame .bn-reassurance p,
+.site-frame .bn-first-rally h2,
+.site-frame .bn-first-rally h3,
+.site-frame .bn-first-rally p,
+.site-frame .bn-first-rally span,
+.site-frame .bn-first-rally strong,
+.site-frame .bn-price-compare h2,
+.site-frame .bn-price-compare span {
+  color: var(--bn-navy) !important;
+}
+.site-frame .bn-reassurance h2 em,
+.site-frame .bn-first-rally h2 em,
+.site-frame .bn-price-compare h2 em {
+  color: var(--bn-orange) !important;
+}
+.bn-court-mark--reassurance {
+  right: 4%;
+  top: 8%;
+}
+.bn-first-rally > div:last-child > .bn-racket-q {
+  margin: 0 0 2rem auto;
 }
 .bn-check-grid {
   display: grid;
@@ -679,7 +751,7 @@ body {
 }
 .bn-choice span {
   font-family: var(--font-display);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -726,6 +798,10 @@ body {
   gap: 5rem;
   grid-template-columns: 0.7fr 1.3fr;
 }
+.bn-court-mark--schedule {
+  left: -2%;
+  top: 8%;
+}
 .bn-schedule-list > div:last-child {
   border-top: 1px solid var(--bn-navy);
 }
@@ -740,7 +816,7 @@ body {
 .bn-schedule-list article > span,
 .bn-schedule-list small {
   font-family: var(--font-display);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -765,11 +841,16 @@ body {
   width: 3rem;
 }
 .bn-schedule-note {
-  background: var(--bn-cyan);
+  background: var(--bn-orange);
   display: grid;
   gap: 4rem;
   grid-template-columns: 1fr 1fr;
   padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 7vw, 8rem);
+  position: relative;
+}
+.bn-schedule-note > .bn-racket-q {
+  align-self: start;
+  grid-column: 1/-1;
 }
 .bn-schedule-note p {
   line-height: 1.7;
@@ -783,6 +864,12 @@ body {
   gap: clamp(4rem, 8vw, 9rem);
   grid-template-columns: 1fr 1fr;
   padding: clamp(6rem, 11vw, 11rem) clamp(1.25rem, 7vw, 8rem);
+  position: relative;
+}
+.bn-court-mark--membership {
+  color: var(--bn-cyan);
+  right: 3%;
+  top: 5%;
 }
 .bn-membership__prices {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -799,7 +886,7 @@ body {
 .bn-membership__prices span,
 .bn-membership__prices small {
   font-family: var(--font-display);
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   letter-spacing: 0.08em;
 }
 .bn-membership__prices strong {
@@ -837,6 +924,10 @@ body {
 }
 .bn-price-compare {
   background: var(--bn-mustard);
+}
+.bn-price-compare > .bn-racket-q {
+  margin-left: auto;
+  margin-bottom: 2rem;
 }
 .bn-price-table {
   margin-top: 4rem;
@@ -940,6 +1031,12 @@ body {
   gap: 4rem;
   grid-template-columns: 0.45fr 1fr;
   padding: clamp(6rem, 10vw, 10rem) clamp(1.25rem, 7vw, 8rem);
+  position: relative;
+}
+.bn-court-mark--story {
+  bottom: 5%;
+  color: var(--bn-navy);
+  left: 2%;
 }
 .bn-story-copy > div {
   max-width: 52rem;
@@ -949,6 +1046,9 @@ body {
 }
 .bn-team {
   background: var(--bn-cream);
+}
+.bn-team > .bn-racket-q {
+  margin: 0 0 2rem auto;
 }
 .bn-team-grid {
   display: grid;
@@ -1096,6 +1196,11 @@ body {
   margin-top: -1rem;
   width: calc(100% + 16rem);
   transform: translateX(-8rem);
+}
+.bn-court-mark--journeys {
+  color: var(--bn-navy);
+  right: 3%;
+  top: 4%;
 }
 .bn-footer__lead {
   align-items: center;
