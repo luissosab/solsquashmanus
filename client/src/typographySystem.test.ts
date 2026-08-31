@@ -88,7 +88,7 @@ describe("Sol typography grammar", () => {
     const renderedMarkup = [home, structuralBlocks, newToSquash, ourStory, playAndPricing].join("\n");
     const renderedVariants = Array.from(renderedMarkup.matchAll(/squash-ball--([a-z-]+)/g), match => match[1]).sort();
 
-    expect(Array.from(new Set(renderedVariants))).toEqual(["beginner", "dialog", "faq", "hero", "home-club", "offer", "values"]);
+    expect(Array.from(new Set(renderedVariants))).toEqual(["beginner", "faq", "hero", "home-club", "home-schedule", "offer", "values"]);
     expect(css).toContain(".squash-ball i { background:var(--sol-navy); }");
     expect(css).toMatch(/\.squash-ball--offer i,[\s\S]*?background:var\(--sol-navy\)/);
     expect(css).toMatch(/\.squash-ball--beginner i,[\s\S]*?background:var\(--sol-teal\)/);
@@ -100,7 +100,7 @@ describe("Sol typography grammar", () => {
   });
 
   it("keeps PERFECT emphasized and combines packages with the price disclosure", () => {
-    expect(newToSquash).toContain(">PERFECT.</motion.em>");
+    expect(newToSquash).toMatch(/<motion\.em[\s\S]*?>\s*PERFECT\.\s*<\/motion\.em>/);
     expect(css).toMatch(/\.entry-hero__copy h1 em[\s\S]*?font-style:italic !important/);
     expect(structuralBlocks).toContain("pricing-section--packages-comparison");
     expect(structuralBlocks).toContain("pricing-decision-stack");
