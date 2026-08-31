@@ -12,10 +12,7 @@ import { PLAYBYPOINT_BOOKING_URL } from "@/lib/booking";
 export function PageShell({ children }: { children: ReactNode }) {
   const [location] = useLocation();
   const needsFinalFooterWave =
-    location === "/" ||
-    location === "/faq" ||
-    location === "/schedule" ||
-    location === "/play-and-pricing";
+    location === "/faq" || location === "/play-and-pricing";
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [location]);

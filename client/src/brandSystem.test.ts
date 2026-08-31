@@ -11,6 +11,7 @@ const schedule = read("./pages/Schedule.tsx");
 const story = read("./pages/OurStory.tsx");
 const marks = read("./components/BrandMarks.tsx");
 const header = read("./components/SiteHeader.tsx");
+const shell = read("./components/PageShell.tsx");
 const drawer = read("./components/ExperienceDrawer.tsx");
 const faq = read("./pages/FAQ.tsx");
 const faqSource = read("./pages/PlayAndPricing.tsx");
@@ -37,6 +38,15 @@ describe("brand-new Sol visitor experience", () => {
     expect(header).toContain('{ label: "Home", href: "/" }');
     expect(css).toContain("font-size: 1.23rem");
   });
+  it("uses the exact logo blue everywhere in the new system and sizes the logo up by 60 percent", () => {
+    expect(css).toContain("--bn-navy: #002269");
+    expect(marks).toContain('navy: "#002269"');
+    expect(css).not.toContain("#0c254a");
+    expect(css).not.toContain("12, 37, 74");
+    expect(css).toContain("height: 93px");
+    expect(css).toContain("width: 125px");
+    expect(css).toContain("height: 120px");
+  });
   it("uses the cyan wave as a transparent shared boundary without an inserted source-color band", () => {
     expect(marks).not.toContain("backgroundColor: waveColors[source]");
     expect(marks).not.toContain("source: keyof typeof waveColors");
@@ -49,6 +59,8 @@ describe("brand-new Sol visitor experience", () => {
       expect(page).toContain("HalftoneDivider");
     }
     expect(marks).toContain("bn-halftone-divider");
+    expect(shell).not.toContain('location === "/"');
+    expect(shell).not.toContain('location === "/schedule"');
   });
   it("does not introduce palm-tree iconography", () => {
     expect(

@@ -38,7 +38,7 @@ export function RacketQMark({
 }
 
 const waveColors = {
-  navy: "#0c254a",
+  navy: "#002269",
   cream: "#f4f0e7",
   mustard: "#f4b41c",
   teal: "#154443",

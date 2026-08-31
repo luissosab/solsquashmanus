@@ -1,5 +1,5 @@
 :root {
-  --bn-navy: #0c254a;
+  --bn-navy: #002269;
   --bn-teal: #154443;
   --bn-green: #35ae39;
   --bn-cyan: #20d9e8;
@@ -120,11 +120,11 @@ body {
 }
 .bn-header {
   align-items: center;
-  background: rgba(12, 37, 74, 0.96);
+  background: var(--bn-navy);
   color: var(--bn-white);
   display: grid;
   grid-template-columns: auto 1fr auto;
-  height: 88px;
+  height: 120px;
   left: 0;
   padding: 0 clamp(1.1rem, 4vw, 4rem);
   position: sticky;
@@ -134,9 +134,9 @@ body {
 }
 .bn-header__logo {
   display: block;
-  height: 58px;
+  height: 93px;
   overflow: hidden;
-  width: 78px;
+  width: 125px;
 }
 .bn-header__logo img {
   height: 100%;
@@ -178,7 +178,7 @@ body {
 }
 .bn-menu {
   backdrop-filter: blur(14px);
-  background: rgba(12, 37, 74, 0.62);
+  background: rgba(0, 34, 105, 0.62);
   inset: 0;
   position: fixed;
   z-index: 110;
@@ -218,13 +218,13 @@ body {
   width: 3rem;
 }
 .bn-menu nav {
-  border-top: 1px solid rgba(12, 37, 74, 0.35);
+  border-top: 1px solid rgba(0, 34, 105, 0.35);
   display: flex;
   flex-direction: column;
 }
 .bn-menu nav a {
   align-items: baseline;
-  border-bottom: 1px solid rgba(12, 37, 74, 0.35);
+  border-bottom: 1px solid rgba(0, 34, 105, 0.35);
   color: inherit;
   display: flex;
   font-size: clamp(1.8rem, 7vw, 3.5rem);
@@ -263,9 +263,9 @@ body {
 .bn-video-hero__veil {
   background: linear-gradient(
     90deg,
-    rgba(12, 37, 74, 0.96) 0%,
-    rgba(12, 37, 74, 0.72) 52%,
-    rgba(12, 37, 74, 0.18) 100%
+    rgba(0, 34, 105, 0.96) 0%,
+    rgba(0, 34, 105, 0.72) 52%,
+    rgba(0, 34, 105, 0.18) 100%
   );
 }
 .bn-video-hero__content {
@@ -438,8 +438,8 @@ body {
 .bn-journey__veil {
   background: linear-gradient(
     180deg,
-    rgba(12, 37, 74, 0.15),
-    rgba(12, 37, 74, 0.95)
+    rgba(0, 34, 105, 0.15),
+    rgba(0, 34, 105, 0.95)
   );
 }
 .bn-journey:hover img {
@@ -514,7 +514,7 @@ body {
   padding: 0;
 }
 .bn-club-story__copy li {
-  border-top: 1px solid rgba(12, 37, 74, 0.35);
+  border-top: 1px solid rgba(0, 34, 105, 0.35);
   display: grid;
   gap: 1rem;
   grid-template-columns: 8rem 1fr;
@@ -577,9 +577,9 @@ body {
 .bn-page-hero::before {
   background: linear-gradient(
     90deg,
-    rgba(12, 37, 74, 0.97),
-    rgba(12, 37, 74, 0.7) 55%,
-    rgba(12, 37, 74, 0.18)
+    rgba(0, 34, 105, 0.97),
+    rgba(0, 34, 105, 0.7) 55%,
+    rgba(0, 34, 105, 0.18)
   );
   content: "";
   inset: 0;
@@ -652,7 +652,7 @@ body {
   align-items: center;
   background: transparent;
   border: 0;
-  border-bottom: 1px solid rgba(12, 37, 74, 0.35);
+  border-bottom: 1px solid rgba(0, 34, 105, 0.35);
   color: inherit;
   cursor: pointer;
   display: grid;
@@ -743,7 +743,7 @@ body {
 }
 .bn-check-grid p {
   align-items: center;
-  border-top: 1px solid rgba(12, 37, 74, 0.3);
+  border-top: 1px solid rgba(0, 34, 105, 0.3);
   display: flex;
   gap: 0.7rem;
   margin: 0;
@@ -762,7 +762,7 @@ body {
   align-items: center;
   background: transparent;
   border: 0;
-  border-top: 1px solid rgba(12, 37, 74, 0.35);
+  border-top: 1px solid rgba(0, 34, 105, 0.35);
   color: inherit;
   cursor: pointer;
   display: grid;
@@ -773,7 +773,7 @@ body {
   width: 100%;
 }
 .bn-choice:last-child {
-  border-bottom: 1px solid rgba(12, 37, 74, 0.35);
+  border-bottom: 1px solid rgba(0, 34, 105, 0.35);
 }
 .bn-choice span {
   font-family: var(--font-display);
@@ -833,7 +833,7 @@ body {
 }
 .bn-schedule-list article {
   align-items: center;
-  border-bottom: 1px solid rgba(12, 37, 74, 0.35);
+  border-bottom: 1px solid rgba(0, 34, 105, 0.35);
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 2rem 1fr auto;
@@ -961,7 +961,7 @@ body {
   margin-top: 4rem;
 }
 .bn-price-table > div {
-  border-bottom: 1px solid rgba(12, 37, 74, 0.35);
+  border-bottom: 1px solid rgba(0, 34, 105, 0.35);
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   padding: 1rem 0;
@@ -1037,8 +1037,8 @@ body {
 .bn-story-hero__veil {
   background: linear-gradient(
     180deg,
-    rgba(12, 37, 74, 0.05),
-    rgba(12, 37, 74, 0.9)
+    rgba(0, 34, 105, 0.05),
+    rgba(0, 34, 105, 0.9)
   );
 }
 .bn-story-hero > div:last-of-type {
@@ -1104,7 +1104,7 @@ body {
   width: 100%;
 }
 .bn-team-grid button::after {
-  background: linear-gradient(180deg, transparent, rgba(12, 37, 74, 0.95));
+  background: linear-gradient(180deg, transparent, rgba(0, 34, 105, 0.95));
   content: "";
   inset: 0;
   position: absolute;
@@ -1147,8 +1147,8 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 .bn-values article {
-  border-left: 1px solid rgba(12, 37, 74, 0.3);
-  border-top: 1px solid rgba(12, 37, 74, 0.3);
+  border-left: 1px solid rgba(0, 34, 105, 0.3);
+  border-top: 1px solid rgba(0, 34, 105, 0.3);
   padding: 1.5rem;
 }
 .bn-values article > span {
@@ -1165,7 +1165,7 @@ body {
 
 .bn-drawer {
   backdrop-filter: blur(18px);
-  background: rgba(12, 37, 74, 0.62);
+  background: rgba(0, 34, 105, 0.62);
   inset: 0;
   position: fixed;
   z-index: 120;
@@ -1328,12 +1328,12 @@ body {
     font-size: clamp(3rem, 14vw, 4.8rem);
   }
   .bn-header {
-    height: 72px;
+    height: 96px;
     padding: 0 1rem;
   }
   .bn-header__logo {
-    height: 50px;
-    width: 68px;
+    height: 80px;
+    width: 109px;
   }
   .bn-header__actions > a:first-child {
     display: none;
@@ -1352,13 +1352,13 @@ body {
   .bn-video-hero,
   .bn-video-hero__content,
   .bn-story-hero {
-    min-height: calc(100svh - 72px);
+    min-height: calc(100svh - 96px);
   }
   .bn-video-hero__veil {
     background: linear-gradient(
       180deg,
-      rgba(12, 37, 74, 0.35),
-      rgba(12, 37, 74, 0.96)
+      rgba(0, 34, 105, 0.35),
+      rgba(0, 34, 105, 0.96)
     );
   }
   .bn-video-hero__content {
@@ -1429,14 +1429,14 @@ body {
     right: 1rem;
   }
   .bn-page-hero {
-    min-height: calc(100svh - 72px);
+    min-height: calc(100svh - 96px);
     padding: 6rem 1.25rem 4rem;
   }
   .bn-page-hero::before {
     background: linear-gradient(
       180deg,
-      rgba(12, 37, 74, 0.35),
-      rgba(12, 37, 74, 0.96)
+      rgba(0, 34, 105, 0.35),
+      rgba(0, 34, 105, 0.96)
     );
   }
   .bn-page-hero > .bn-ball-mark {
