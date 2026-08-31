@@ -65,7 +65,7 @@ export default function Schedule() {
           </a>
         </div>
       </section>
-      <BrandWave source="navy" destination="cream" />
+      <BrandWave destination="cream" />
       <section className="bn-schedule-list">
         <CourtMark className="bn-court-mark--schedule" />
         <div className="bn-section-heading">
@@ -98,7 +98,7 @@ export default function Schedule() {
           ))}
         </div>
       </section>
-      <BrandWave source="cream" destination="orange" />
+      <BrandWave destination="orange" />
       <section className="bn-schedule-note">
         <RacketQMark tone="navy" />
         <div>

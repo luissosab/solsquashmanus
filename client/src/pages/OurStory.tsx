@@ -50,7 +50,7 @@ export default function OurStory() {
           </h1>
         </div>
       </section>
-      <BrandWave source="navy" destination="mustard" />
+      <BrandWave destination="mustard" />
       <section className="bn-story-copy">
         <CourtMark className="bn-court-mark--story" />
         <p className="bn-kicker">The journey</p>
@@ -78,7 +78,7 @@ export default function OurStory() {
           </p>
         </div>
       </section>
-      <BrandWave source="mustard" destination="cream" />
+      <BrandWave destination="cream" />
       <section className="bn-team">
         <RacketQMark tone="orange" />
         <div className="bn-section-heading">
@@ -105,7 +105,7 @@ export default function OurStory() {
           ))}
         </div>
       </section>
-      <BrandWave source="cream" destination="navy" />
+      <BrandWave destination="navy" />
       <section className="bn-values">
         <div>
           <p className="bn-kicker">What guides the club</p>

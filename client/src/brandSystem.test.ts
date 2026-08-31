@@ -37,6 +37,12 @@ describe("brand-new Sol visitor experience", () => {
     expect(header).toContain('{ label: "Home", href: "/" }');
     expect(css).toContain("font-size: 1.23rem");
   });
+  it("uses the cyan wave as a transparent shared boundary without an inserted source-color band", () => {
+    expect(marks).not.toContain("backgroundColor: waveColors[source]");
+    expect(marks).not.toContain("source: keyof typeof waveColors");
+    expect(css).toContain("margin: clamp(-4.75rem, -4.5vw, -3.25rem)");
+    expect(css).not.toContain("--bn-blue");
+  });
   it("does not introduce palm-tree iconography", () => {
     expect(
       [home, play, beginner, membership, schedule, story, marks]

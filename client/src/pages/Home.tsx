@@ -73,7 +73,7 @@ export default function Home() {
         </div>
         <BallMark tone="orange" />
       </section>
-      <BrandWave source="navy" destination="cream" />
+      <BrandWave destination="cream" />
 
       <section className="bn-journeys">
         <CourtMark className="bn-court-mark--journeys" />
@@ -100,7 +100,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <BrandWave source="cream" destination="mustard" />
+      <BrandWave destination="mustard" />
 
       <section className="bn-club-story">
         <div className="bn-photo bn-photo--tall">
@@ -139,7 +139,7 @@ export default function Home() {
         </div>
       </section>
 
-      <BrandWave source="mustard" destination="navy" />
+      <BrandWave destination="navy" />
       <section className="bn-mural-break">
         <img
           src="/media/sol-mural-feature_9dd29c1b.png"

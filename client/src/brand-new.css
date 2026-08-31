@@ -1,6 +1,5 @@
 :root {
   --bn-navy: #0c254a;
-  --bn-blue: #123678;
   --bn-teal: #154443;
   --bn-green: #35ae39;
   --bn-cyan: #20d9e8;
@@ -373,8 +372,9 @@ body {
 .bn-brand-wave {
   height: clamp(3.25rem, 4.5vw, 4.75rem);
   line-height: 0;
-  margin: -1px 0;
+  margin: clamp(-4.75rem, -4.5vw, -3.25rem) 0 -1px;
   overflow: hidden;
+  pointer-events: none;
   position: relative;
   z-index: 5;
 }
@@ -382,9 +382,6 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-}
-.bn-brand-wave--flip {
-  transform: scaleY(-1);
 }
 .bn-court-mark {
   fill: none;

@@ -52,7 +52,7 @@ export default function NewToSquash() {
         </div>
         <BallMark tone="orange" />
       </section>
-      <BrandWave source="navy" destination="mustard" />
+      <BrandWave destination="mustard" />
       <section className="bn-reassurance">
         <CourtMark className="bn-court-mark--reassurance" />
         <div className="bn-section-heading">
@@ -90,7 +90,7 @@ export default function NewToSquash() {
           </p>
         </div>
       </section>
-      <BrandWave source="mustard" destination="cream" />
+      <BrandWave destination="cream" />
       <section className="bn-first-rally" id="your-first-rally">
         <div className="bn-photo bn-photo--wide">
           <img
@@ -122,7 +122,7 @@ export default function NewToSquash() {
           ))}
         </div>
       </section>
-      <BrandWave source="cream" destination="navy" />
+      <BrandWave destination="navy" />
       <section className="bn-steps">
         <p className="bn-kicker">What happens next</p>
         <ol>

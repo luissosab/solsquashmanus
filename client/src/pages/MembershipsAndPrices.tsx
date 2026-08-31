@@ -130,7 +130,7 @@ export default function MembershipsAndPrices() {
           </details>
         </div>
       </section>
-      <BrandWave source="navy" destination="mustard" />
+      <BrandWave destination="mustard" />
       <section className="bn-price-compare" id="everyday-pricing">
         <RacketQMark tone="navy" />
         <div className="bn-section-heading">
@@ -164,7 +164,7 @@ export default function MembershipsAndPrices() {
           ))}
         </div>
       </section>
-      <BrandWave source="mustard" destination="teal" />
+      <BrandWave destination="teal" />
       <section className="bn-packages">
         <div>
           <p className="bn-kicker">Playing regularly?</p>
@@ -209,7 +209,7 @@ export default function MembershipsAndPrices() {
           </a>
         </div>
       </section>
-      <BrandWave source="teal" destination="orange" />
+      <BrandWave destination="orange" />
       <section className="bn-juniors">
         <div>
           <p className="bn-kicker">Ages 4–16</p>

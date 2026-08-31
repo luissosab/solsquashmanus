@@ -78,7 +78,7 @@ export default function Play() {
         </div>
         <BallMark tone="green" />
       </section>
-      <BrandWave source="navy" destination="cream" />
+      <BrandWave destination="cream" />
       <section className="bn-offerings" id="ways-to-play">
         <CourtMark className="bn-court-mark--offerings" />
         <div className="bn-section-heading">
@@ -113,7 +113,7 @@ export default function Play() {
           ))}
         </div>
       </section>
-      <BrandWave source="cream" destination="teal" />
+      <BrandWave destination="teal" />
       <section className="bn-feature-split">
         <div className="bn-photo">
           <img
@@ -146,7 +146,7 @@ export default function Play() {
           </a>
         </div>
       </section>
-      <BrandWave source="teal" destination="orange" />
+      <BrandWave destination="orange" />
       <section className="bn-next-step">
         <p>Not sure where your game belongs?</p>
         <Link className="bn-text-link" href="/schedule">

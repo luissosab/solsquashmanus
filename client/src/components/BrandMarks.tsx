@@ -59,20 +59,12 @@ const waveColors = {
 } as const;
 
 export function BrandWave({
-  source,
   destination,
-  flip = false,
 }: {
-  source: keyof typeof waveColors;
   destination: keyof typeof waveColors;
-  flip?: boolean;
 }) {
   return (
-    <div
-      className={`bn-brand-wave ${flip ? "bn-brand-wave--flip" : ""}`}
-      style={{ backgroundColor: waveColors[source] }}
-      aria-hidden="true"
-    >
+    <div className="bn-brand-wave" aria-hidden="true">
       <svg viewBox="0 0 1440 64" preserveAspectRatio="none">
         <path
           d="M0,28 C120,52 240,52 360,28 C480,4 600,4 720,28 C840,52 960,52 1080,28 C1200,4 1320,4 1440,28 L1440,64 L0,64 Z"
