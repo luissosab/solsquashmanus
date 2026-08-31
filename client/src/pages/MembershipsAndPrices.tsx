@@ -1,5 +1,10 @@
 import { Check, Plus } from "lucide-react";
-import { BrandWave, CourtMark, RacketQMark } from "@/components/BrandMarks";
+import {
+  BrandWave,
+  CourtMark,
+  HalftoneDivider,
+  RacketQMark,
+} from "@/components/BrandMarks";
 import {
   PLAYBYPOINT_BOOKING_URL,
   PLAYBYPOINT_SOL_CLUB_URL,
@@ -130,7 +135,7 @@ export default function MembershipsAndPrices() {
           </details>
         </div>
       </section>
-      <BrandWave destination="mustard" />
+      <HalftoneDivider destination="mustard" />
       <section className="bn-price-compare" id="everyday-pricing">
         <RacketQMark tone="navy" />
         <div className="bn-section-heading">
@@ -164,7 +169,7 @@ export default function MembershipsAndPrices() {
           ))}
         </div>
       </section>
-      <BrandWave destination="teal" />
+      <HalftoneDivider destination="teal" />
       <section className="bn-packages">
         <div>
           <p className="bn-kicker">Playing regularly?</p>
@@ -209,7 +214,7 @@ export default function MembershipsAndPrices() {
           </a>
         </div>
       </section>
-      <BrandWave destination="orange" />
+      <HalftoneDivider destination="orange" />
       <section className="bn-juniors">
         <div>
           <p className="bn-kicker">Ages 4–16</p>
@@ -247,6 +252,7 @@ export default function MembershipsAndPrices() {
           alt="Bruna with competition medals"
         />
       </section>
+      <BrandWave destination="navy" />
     </div>
   );
 }

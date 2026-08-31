@@ -4,6 +4,7 @@ import {
   BallMark,
   BrandWave,
   CourtMark,
+  HalftoneDivider,
   RacketQMark,
 } from "@/components/BrandMarks";
 
@@ -73,7 +74,7 @@ export default function Home() {
         </div>
         <BallMark tone="orange" />
       </section>
-      <BrandWave destination="cream" />
+      <HalftoneDivider destination="cream" />
 
       <section className="bn-journeys">
         <CourtMark className="bn-court-mark--journeys" />
@@ -100,7 +101,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <BrandWave destination="mustard" />
+      <HalftoneDivider destination="mustard" />
 
       <section className="bn-club-story">
         <div className="bn-photo bn-photo--tall">
@@ -139,7 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      <BrandWave destination="navy" />
+      <HalftoneDivider destination="green" />
       <section className="bn-mural-break">
         <img
           src="/media/sol-mural-feature_9dd29c1b.png"
@@ -157,6 +158,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <BrandWave destination="navy" />
     </div>
   );
 }

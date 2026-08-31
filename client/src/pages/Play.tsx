@@ -5,6 +5,7 @@ import {
   BallMark,
   BrandWave,
   CourtMark,
+  HalftoneDivider,
   RacketQMark,
 } from "@/components/BrandMarks";
 import { ExperienceDrawer } from "@/components/ExperienceDrawer";
@@ -78,7 +79,7 @@ export default function Play() {
         </div>
         <BallMark tone="green" />
       </section>
-      <BrandWave destination="cream" />
+      <HalftoneDivider destination="cream" />
       <section className="bn-offerings" id="ways-to-play">
         <CourtMark className="bn-court-mark--offerings" />
         <div className="bn-section-heading">
@@ -113,7 +114,7 @@ export default function Play() {
           ))}
         </div>
       </section>
-      <BrandWave destination="teal" />
+      <HalftoneDivider destination="teal" />
       <section className="bn-feature-split">
         <div className="bn-photo">
           <img
@@ -146,7 +147,7 @@ export default function Play() {
           </a>
         </div>
       </section>
-      <BrandWave destination="orange" />
+      <HalftoneDivider destination="orange" />
       <section className="bn-next-step">
         <p>Not sure where your game belongs?</p>
         <Link className="bn-text-link" href="/schedule">
@@ -156,6 +157,7 @@ export default function Play() {
           First time? Start here <ArrowRight />
         </Link>
       </section>
+      <BrandWave destination="navy" />
       <ExperienceDrawer
         open={selected !== null}
         title={selected?.title ?? ""}

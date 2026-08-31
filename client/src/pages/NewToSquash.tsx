@@ -4,6 +4,7 @@ import {
   BallMark,
   BrandWave,
   CourtMark,
+  HalftoneDivider,
   RacketQMark,
 } from "@/components/BrandMarks";
 import { ExperienceDrawer } from "@/components/ExperienceDrawer";
@@ -52,7 +53,7 @@ export default function NewToSquash() {
         </div>
         <BallMark tone="orange" />
       </section>
-      <BrandWave destination="mustard" />
+      <HalftoneDivider destination="mustard" />
       <section className="bn-reassurance">
         <CourtMark className="bn-court-mark--reassurance" />
         <div className="bn-section-heading">
@@ -90,7 +91,7 @@ export default function NewToSquash() {
           </p>
         </div>
       </section>
-      <BrandWave destination="cream" />
+      <HalftoneDivider destination="cream" />
       <section className="bn-first-rally" id="your-first-rally">
         <div className="bn-photo bn-photo--wide">
           <img
@@ -122,7 +123,7 @@ export default function NewToSquash() {
           ))}
         </div>
       </section>
-      <BrandWave destination="navy" />
+      <HalftoneDivider destination="green" />
       <section className="bn-steps">
         <p className="bn-kicker">What happens next</p>
         <ol>
@@ -151,6 +152,7 @@ export default function NewToSquash() {
           </li>
         </ol>
       </section>
+      <BrandWave destination="navy" />
       <ExperienceDrawer
         open={selected !== null}
         title={selected?.title ?? ""}

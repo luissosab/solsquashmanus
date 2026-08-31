@@ -291,23 +291,6 @@ body {
   top: 18%;
   z-index: 3;
 }
-.bn-video-hero > .bn-cyan-wave {
-  bottom: 1.5rem;
-  left: 0;
-  position: absolute;
-  z-index: 3;
-}
-
-.bn-cyan-wave {
-  height: 44px;
-  width: 100%;
-}
-.bn-cyan-wave path {
-  fill: none;
-  stroke: var(--bn-cyan);
-  stroke-linecap: round;
-  stroke-width: 9;
-}
 .bn-ball-mark {
   background: var(--bn-green);
   border-radius: 50%;
@@ -379,6 +362,20 @@ body {
   z-index: 5;
 }
 .bn-brand-wave svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.bn-halftone-divider {
+  height: clamp(4.5rem, 6vw, 6rem);
+  line-height: 0;
+  margin: clamp(-6rem, -6vw, -4.5rem) 0 -1px;
+  overflow: hidden;
+  pointer-events: none;
+  position: relative;
+  z-index: 5;
+}
+.bn-halftone-divider svg {
   display: block;
   height: 100%;
   width: 100%;
@@ -539,9 +536,16 @@ body {
   position: absolute;
   width: 100%;
 }
+.bn-mural-break::before {
+  background: rgba(53, 174, 57, 0.42);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
 .bn-mural-break > div {
   align-items: flex-start;
-  background: rgba(12, 37, 74, 0.9);
+  background: rgba(21, 68, 67, 0.92);
   bottom: 0;
   color: white;
   display: flex;
@@ -551,6 +555,7 @@ body {
   padding: clamp(2rem, 5vw, 5rem);
   position: absolute;
   right: 0;
+  z-index: 2;
 }
 .bn-mural-break p {
   font-family: var(--font-display);
@@ -628,6 +633,7 @@ body {
   position: absolute;
   right: 7%;
   top: 9%;
+  transform: rotate(7deg);
 }
 .bn-court-mark--offerings {
   bottom: -28%;
@@ -728,6 +734,7 @@ body {
 }
 .bn-first-rally > div:last-child > .bn-racket-q {
   margin: 0 0 2rem auto;
+  transform: rotate(-6deg);
 }
 .bn-check-grid {
   display: grid;
@@ -783,8 +790,8 @@ body {
   font-size: 1.3rem;
 }
 .bn-steps {
-  background: var(--bn-navy);
-  color: white;
+  background: var(--bn-green);
+  color: var(--bn-navy);
   padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 7vw, 8rem);
 }
 .bn-steps ol {
@@ -796,11 +803,11 @@ body {
   padding: 0;
 }
 .bn-steps li {
-  border-top: 2px solid var(--bn-cyan);
+  border-top: 2px solid var(--bn-navy);
   padding: 1.5rem 0;
 }
 .bn-steps li > span {
-  color: var(--bn-cyan);
+  color: var(--bn-navy);
   font-family: var(--font-display);
   font-size: 0.7rem;
 }
@@ -870,6 +877,7 @@ body {
 .bn-schedule-note > .bn-racket-q {
   align-self: start;
   grid-column: 1/-1;
+  transform: rotate(6deg);
 }
 .bn-schedule-note p {
   line-height: 1.7;
@@ -947,6 +955,7 @@ body {
 .bn-price-compare > .bn-racket-q {
   margin-left: auto;
   margin-bottom: 2rem;
+  transform: rotate(-5deg);
 }
 .bn-price-table {
   margin-top: 4rem;
@@ -1068,6 +1077,7 @@ body {
 }
 .bn-team > .bn-racket-q {
   margin: 0 0 2rem auto;
+  transform: rotate(4deg);
 }
 .bn-team-grid {
   display: grid;
@@ -1125,8 +1135,8 @@ body {
   text-transform: uppercase;
 }
 .bn-values {
-  background: var(--bn-navy);
-  color: white;
+  background: var(--bn-green);
+  color: var(--bn-navy);
   display: grid;
   gap: 5rem;
   grid-template-columns: 0.8fr 1.2fr;
@@ -1137,12 +1147,12 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 .bn-values article {
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(12, 37, 74, 0.3);
+  border-top: 1px solid rgba(12, 37, 74, 0.3);
   padding: 1.5rem;
 }
 .bn-values article > span {
-  color: var(--bn-cyan);
+  color: var(--bn-navy);
   font-family: var(--font-display);
   font-size: 0.68rem;
 }
@@ -1211,11 +1221,6 @@ body {
   overflow: hidden;
   padding: 0 clamp(1.25rem, 7vw, 8rem) 2rem;
 }
-.bn-footer > .bn-cyan-wave {
-  margin-top: -1rem;
-  width: calc(100% + 16rem);
-  transform: translateX(-8rem);
-}
 .bn-court-mark--journeys {
   color: var(--bn-navy);
   right: -20%;
@@ -1227,6 +1232,12 @@ body {
   gap: 2rem;
   grid-template-columns: auto 1fr auto;
   padding: clamp(4rem, 8vw, 8rem) 0;
+}
+.bn-footer__lead .bn-sun-mark {
+  transform: rotate(-4deg);
+}
+.bn-footer__grid > .bn-racket-q {
+  transform: rotate(5deg);
 }
 .bn-footer__lead p {
   font-family: var(--font-display);

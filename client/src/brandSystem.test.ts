@@ -24,7 +24,7 @@ describe("brand-new Sol visitor experience", () => {
   it("uses the mural's locked symbols", () => {
     expect(marks).toContain("sol-sun-repaired");
     expect(marks).toContain("bn-ball-mark");
-    expect(marks).toContain("bn-cyan-wave");
+    expect(marks).toContain("bn-brand-wave");
     expect(marks).toContain("bn-racket-q");
     expect(css).toContain("sol-racket-q-extracted.png");
     expect(marks).toContain("BrandWave");
@@ -42,6 +42,13 @@ describe("brand-new Sol visitor experience", () => {
     expect(marks).not.toContain("source: keyof typeof waveColors");
     expect(css).toContain("margin: clamp(-4.75rem, -4.5vw, -3.25rem)");
     expect(css).not.toContain("--bn-blue");
+  });
+  it("reserves one cyan wave per non-FAQ page for the footer boundary and uses halftones internally", () => {
+    for (const page of [home, play, beginner, membership, schedule, story]) {
+      expect(page.match(/<BrandWave destination="navy" \/>/g)).toHaveLength(1);
+      expect(page).toContain("HalftoneDivider");
+    }
+    expect(marks).toContain("bn-halftone-divider");
   });
   it("does not introduce palm-tree iconography", () => {
     expect(

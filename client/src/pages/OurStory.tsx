@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ExperienceDrawer } from "@/components/ExperienceDrawer";
-import { BrandWave, CourtMark, RacketQMark } from "@/components/BrandMarks";
+import {
+  BrandWave,
+  CourtMark,
+  HalftoneDivider,
+  RacketQMark,
+} from "@/components/BrandMarks";
 import { PLAYBYPOINT_PRIVATE_LESSON_URL } from "@/lib/booking";
 
 const profiles = [
@@ -50,7 +55,7 @@ export default function OurStory() {
           </h1>
         </div>
       </section>
-      <BrandWave destination="mustard" />
+      <HalftoneDivider destination="mustard" />
       <section className="bn-story-copy">
         <CourtMark className="bn-court-mark--story" />
         <p className="bn-kicker">The journey</p>
@@ -78,7 +83,7 @@ export default function OurStory() {
           </p>
         </div>
       </section>
-      <BrandWave destination="cream" />
+      <HalftoneDivider destination="cream" />
       <section className="bn-team">
         <RacketQMark tone="orange" />
         <div className="bn-section-heading">
@@ -105,7 +110,7 @@ export default function OurStory() {
           ))}
         </div>
       </section>
-      <BrandWave destination="navy" />
+      <HalftoneDivider destination="green" />
       <section className="bn-values">
         <div>
           <p className="bn-kicker">What guides the club</p>
@@ -146,6 +151,7 @@ export default function OurStory() {
           </article>
         </div>
       </section>
+      <BrandWave destination="navy" />
       <ExperienceDrawer
         open={selected !== null}
         title={selected?.name ?? ""}

@@ -1,6 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import { BrandWave, CourtMark, RacketQMark } from "@/components/BrandMarks";
+import {
+  BrandWave,
+  CourtMark,
+  HalftoneDivider,
+  RacketQMark,
+} from "@/components/BrandMarks";
 import {
   PLAYBYPOINT_BEGINNER_CLINIC_URL,
   PLAYBYPOINT_OPEN_PLAY_URL,
@@ -65,7 +70,7 @@ export default function Schedule() {
           </a>
         </div>
       </section>
-      <BrandWave destination="cream" />
+      <HalftoneDivider destination="cream" />
       <section className="bn-schedule-list">
         <CourtMark className="bn-court-mark--schedule" />
         <div className="bn-section-heading">
@@ -98,7 +103,7 @@ export default function Schedule() {
           ))}
         </div>
       </section>
-      <BrandWave destination="orange" />
+      <HalftoneDivider destination="orange" />
       <section className="bn-schedule-note">
         <RacketQMark tone="navy" />
         <div>
@@ -119,6 +124,7 @@ export default function Schedule() {
           </Link>
         </div>
       </section>
+      <BrandWave destination="navy" />
     </div>
   );
 }

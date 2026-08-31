@@ -37,26 +37,48 @@ export function RacketQMark({
   );
 }
 
-export function CyanWave() {
-  return (
-    <svg
-      className="bn-cyan-wave"
-      viewBox="0 0 900 44"
-      preserveAspectRatio="none"
-      aria-hidden="true"
-    >
-      <path d="M0 22 C75 -4 150 48 225 22 S375 -4 450 22 S600 48 675 22 S825 -4 900 22" />
-    </svg>
-  );
-}
-
 const waveColors = {
   navy: "#0c254a",
   cream: "#f4f0e7",
   mustard: "#f4b41c",
   teal: "#154443",
+  green: "#35ae39",
   orange: "#ef7354",
 } as const;
+
+export function HalftoneDivider({
+  destination,
+}: {
+  destination: keyof typeof waveColors;
+}) {
+  const rows = [
+    { y: 7, radius: 1.2, offset: 0 },
+    { y: 19, radius: 2, offset: 8 },
+    { y: 31, radius: 3, offset: 0 },
+    { y: 43, radius: 4.2, offset: 8 },
+    { y: 55, radius: 5.8, offset: 0 },
+  ];
+
+  return (
+    <div className="bn-halftone-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 96" preserveAspectRatio="none">
+        <g fill={waveColors[destination]}>
+          {rows.flatMap((row, rowIndex) =>
+            Array.from({ length: 91 }, (_, dotIndex) => (
+              <circle
+                key={`${rowIndex}-${dotIndex}`}
+                cx={dotIndex * 16 + row.offset}
+                cy={row.y}
+                r={row.radius}
+              />
+            ))
+          )}
+          <rect y="60" width="1440" height="36" />
+        </g>
+      </svg>
+    </div>
+  );
+}
 
 export function BrandWave({
   destination,
