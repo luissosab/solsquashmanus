@@ -1135,12 +1135,6 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 .package-table__row small { line-height:1.4; margin-top:.25rem; }
 .package-table > p { font-size:.78rem; line-height:1.55; margin:1rem 0 0; opacity:.84; }
 
-.story-timeline { display:grid; gap:.75rem; grid-column:1/-1; grid-template-columns:repeat(3,1fr); list-style:none; margin:1rem 0 0; padding:0; }
-.story-timeline li { background:rgba(26,47,107,.09); border-top:4px solid var(--sol-navy); padding:1.2rem; }
-.story-timeline span, .story-timeline strong { display:block; font-family:var(--font-display); }
-.story-timeline span { color:var(--sol-teal); font-size:.7rem; font-weight:700; letter-spacing:.1em; }
-.story-timeline strong { font-size:1.7rem; margin:.45rem 0; }
-.story-timeline p { line-height:1.5; margin:0; }
 .profile-card { cursor:default; }
 .profile-card__highlights { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:1rem; }
 .profile-card__highlights span { border:1px solid currentColor; border-radius:999px; font-family:var(--font-display); font-size:.6rem; font-weight:700; letter-spacing:.04em; padding:.3rem .5rem; }
@@ -1160,13 +1154,23 @@ html, body, .site-frame, .site-header, .home-hero, .entry-hero, .play-hero, .beg
 @media (max-width:767px) {
   .home-hero--real { align-items:flex-end; min-height:calc(100svh - 72px); }
   .home-hero--real .home-hero__copy { max-width:100%; }
-  .home-community__gallery, .membership-benefit-grid, .junior-program-grid, .membership-rules, .story-timeline { grid-template-columns:1fr; }
+  .home-community__gallery, .membership-benefit-grid, .junior-program-grid, .membership-rules { grid-template-columns:1fr; }
   .home-community__gallery figure, .home-community__gallery figure:last-child { margin:0; min-height:18rem; }
   .membership-plan-strip, .junior-rate-strip { grid-template-columns:1fr; }
   .package-table__head { display:none; }
   .package-table__row { grid-template-columns:1fr; }
   .package-table__row span::before { color:var(--sol-cyan); content:"MEMBERS"; font-family:var(--font-display); font-size:.62rem; font-weight:700; letter-spacing:.1em; }
   .package-table__row span:last-child::before { content:"NON-MEMBERS"; }
+}
+
+/* Requested navigation scale: 80% larger than the prior displayed desktop size. */
+@media (min-width:1200px) and (max-width:1499px) {
+  .desktop-nav, .header-action { display:none; }
+  .menu-trigger { display:grid; }
+}
+@media (min-width:1500px) {
+  .desktop-nav a { font-size:1.224rem; letter-spacing:.045em; }
+  .desktop-nav { gap:clamp(.75rem,1.25vw,1.35rem); }
 }
 .first-step-card--mango,
 .first-step-card--green {

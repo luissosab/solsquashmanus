@@ -145,7 +145,6 @@ export default function OurStory() {
             HOW IT STARTED <ArrowUpRight size={23} />
           </button>
         </div>
-        <ol className="story-timeline" aria-label="Sol Squash journey"><li><span>2015</span><strong>BRAZIL</strong><p>Bruna and Vini meet through squash and build a shared life around the sport.</p></li><li><span>NEXT</span><strong>LONDON</strong><p>Professional competition and coaching across the UK, Europe and the USA.</p></li><li><span>NOW</span><strong>LITTLE RIVER</strong><p>The club they always wished existed becomes Miami's squash home.</p></li></ol>
       </section>
       <WaveDivider source="mango" destination="green" />
       <section className="credentials-section">
