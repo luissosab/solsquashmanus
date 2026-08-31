@@ -3,7 +3,6 @@
  */
 import { CalendarDays, MapPin, Users } from "lucide-react";
 import { MagneticButton } from "@/components/MagneticButton";
-import { PageNavigator } from "@/components/PageNavigator";
 import { WaveDivider } from "@/components/WaveDivider";
 import {
   PLAYBYPOINT_BEGINNER_CLINIC_URL,
@@ -65,19 +64,6 @@ export default function Schedule() {
           <i aria-hidden="true" />
         </div>
       </section>
-      <PageNavigator
-        label="SCHEDULE"
-        items={[
-          { label: "Session types", href: "#session-types" },
-          {
-            label: "Live week",
-            href: PLAYBYPOINT_WEEKLY_SCHEDULE_URL,
-            external: true,
-          },
-          { label: "Play options", href: "/play" },
-          { label: "Prices", href: "/memberships-and-prices" },
-        ]}
-      />
       <WaveDivider source="navy" destination="green" />
       <section id="session-types" className="sessions-section">
         <div className="sessions-section__top">

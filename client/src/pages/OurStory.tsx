@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MagneticButton } from "@/components/MagneticButton";
-import { PageNavigator } from "@/components/PageNavigator";
 import { WaveDivider } from "@/components/WaveDivider";
 import { PLAYBYPOINT_PRIVATE_LESSON_URL } from "@/lib/booking";
 
@@ -137,19 +136,6 @@ export default function OurStory() {
           </div>
         </div>
       </section>
-      <PageNavigator
-        label="THE CLUB"
-        items={[
-          { label: "Journey", href: "#journey" },
-          { label: "Team", href: "#team" },
-          { label: "Values", href: "#values" },
-          {
-            label: "Book a lesson",
-            href: PLAYBYPOINT_PRIVATE_LESSON_URL,
-            external: true,
-          },
-        ]}
-      />
       <WaveDivider source="navy" destination="mango" />
       <section id="journey" className="story-intro story-intro--real">
         <div>

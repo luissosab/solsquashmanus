@@ -4,7 +4,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { MagneticButton } from "@/components/MagneticButton";
-import { PageNavigator } from "@/components/PageNavigator";
 import { RetroImage } from "@/components/RetroImage";
 import { WaveDivider } from "@/components/WaveDivider";
 import {
@@ -199,15 +198,6 @@ export default function NewToSquash() {
           tint="mango"
         />
       </section>
-      <PageNavigator
-        label="START HERE"
-        items={[
-          { label: "Why squash", href: "#why-squash" },
-          { label: "First lesson", href: "#first-steps" },
-          { label: "Beginner clinic", href: "#first-steps" },
-          { label: "Prices", href: "/memberships-and-prices" },
-        ]}
-      />
       <section
         id="why-squash"
         className="why-squash"
