@@ -49,13 +49,15 @@ describe("brand-new Sol visitor experience", () => {
     expect(header).toContain('{ label: "Home", href: "/" }');
     expect(css).toContain("font-size: 1.23rem");
   });
-  it("uses the exact logo blue everywhere in the new system and sizes the logo up by 60 percent", () => {
+  it("uses the exact logo blue everywhere and matches the logo box to the unchanged header heights", () => {
     expect(css).toContain("--bn-navy: #002269");
     expect(marks).toContain('navy: "#002269"');
     expect(css).not.toContain("#0c254a");
     expect(css).not.toContain("12, 37, 74");
-    expect(css).toContain("height: 93px");
-    expect(css).toContain("width: 125px");
+    expect(css).toContain("height: 120px");
+    expect(css).toContain("width: 240px");
+    expect(css).toContain("height: 96px");
+    expect(css).toContain("width: 192px");
     expect(css).toContain("height: 120px");
   });
   it("uses the cyan wave as a transparent shared boundary without an inserted source-color band", () => {
@@ -72,6 +74,8 @@ describe("brand-new Sol visitor experience", () => {
       expect(page).toContain("HalftoneDivider");
     }
     expect(marks).toContain("bn-halftone-divider");
+    expect(marks).toContain('viewBox="0 0 1440 61"');
+    expect(marks).not.toContain('viewBox="0 0 1440 96"');
     expect(shell).not.toContain('location === "/"');
     expect(shell).not.toContain('location === "/schedule"');
   });
@@ -98,12 +102,12 @@ describe("brand-new Sol visitor experience", () => {
       expect(page).toContain('className="bn-heading-with-mark"');
     }
     for (const angle of [
-      "rotate(12deg)",
-      "rotate(-12deg)",
-      "rotate(8deg)",
-      "rotate(-10deg)",
-      "rotate(11deg)",
-      "rotate(-8deg)",
+      "rotate(24deg)",
+      "rotate(-28deg)",
+      "rotate(18deg)",
+      "rotate(-24deg)",
+      "rotate(27deg)",
+      "rotate(-22deg)",
     ]) {
       expect(css).toContain(angle);
     }
@@ -118,6 +122,11 @@ describe("brand-new Sol visitor experience", () => {
     expect(play).toContain("next rally.");
     expect(play).toContain("Explore session types");
     expect(css).toContain("min-height: 28rem");
+  });
+  it("treats the club values as a primary brand statement rather than quiet grid copy", () => {
+    expect(css).toContain(".bn-values article:nth-child(4)");
+    expect(css).toContain("min-height: 22rem");
+    expect(css).toContain("font-size: clamp(3.4rem, 5.25vw, 6.25rem)");
   });
   it("keeps decision details on Sol before booking handoffs", () => {
     expect(play).toContain("Prices, formats and what to expect stay here");

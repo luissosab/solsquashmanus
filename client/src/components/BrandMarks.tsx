@@ -56,12 +56,12 @@ export function HalftoneDivider({
     { y: 19, radius: 2, offset: 8 },
     { y: 31, radius: 3, offset: 0 },
     { y: 43, radius: 4.2, offset: 8 },
-    { y: 55, radius: 5.8, offset: 0 },
+    { y: 55, radius: 6, offset: 0 },
   ];
 
   return (
     <div className="bn-halftone-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 96" preserveAspectRatio="none">
+      <svg viewBox="0 0 1440 61" preserveAspectRatio="none">
         <g fill={waveColors[destination]}>
           {rows.flatMap((row, rowIndex) =>
             Array.from({ length: 91 }, (_, dotIndex) => (
