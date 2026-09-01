@@ -51,29 +51,37 @@ export function HalftoneDivider({
 }: {
   destination: keyof typeof waveColors;
 }) {
+  const dotRadius = 2.5;
   const rows = [
-    { y: 7, radius: 1.2, offset: 0 },
-    { y: 19, radius: 2, offset: 8 },
-    { y: 31, radius: 3, offset: 0 },
-    { y: 43, radius: 4.2, offset: 8 },
-    { y: 55, radius: 6, offset: 0 },
+    { y: 2.5, spacing: 16, offset: 0, opacity: 0.08 },
+    { y: 8.75, spacing: 12, offset: 6, opacity: 0.28 },
+    { y: 15, spacing: 9, offset: 0, opacity: 0.5 },
+    { y: 21.25, spacing: 7, offset: 3.5, opacity: 0.72 },
+    { y: 27.5, spacing: 5.6, offset: 0, opacity: 0.92 },
   ];
 
   return (
     <div className="bn-halftone-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 61" preserveAspectRatio="none">
-        <g fill={waveColors[destination]}>
-          {rows.flatMap((row, rowIndex) =>
-            Array.from({ length: 91 }, (_, dotIndex) => (
-              <circle
-                key={`${rowIndex}-${dotIndex}`}
-                cx={dotIndex * 16 + row.offset}
-                cy={row.y}
-                r={row.radius}
-              />
-            ))
-          )}
-        </g>
+      <svg viewBox="0 0 1440 30" preserveAspectRatio="none">
+        {rows.map((row, rowIndex) => (
+          <g
+            key={rowIndex}
+            fill={waveColors[destination]}
+            fillOpacity={row.opacity}
+          >
+            {Array.from(
+              { length: Math.ceil(1440 / row.spacing) + 1 },
+              (_, dotIndex) => (
+                <circle
+                  key={`${rowIndex}-${dotIndex}`}
+                  cx={dotIndex * row.spacing + row.offset}
+                  cy={row.y}
+                  r={dotRadius}
+                />
+              )
+            )}
+          </g>
+        ))}
       </svg>
     </div>
   );

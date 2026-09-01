@@ -55,9 +55,9 @@ describe("brand-new Sol visitor experience", () => {
     expect(css).not.toContain("#0c254a");
     expect(css).not.toContain("12, 37, 74");
     expect(css).toContain("height: 120px");
-    expect(css).toContain("width: 240px");
+    expect(css).toContain("width: 205px");
     expect(css).toContain("height: 96px");
-    expect(css).toContain("width: 192px");
+    expect(css).toContain("width: 164px");
     expect(css).toContain("height: 120px");
   });
   it("uses the cyan wave as a transparent shared boundary without an inserted source-color band", () => {
@@ -74,8 +74,17 @@ describe("brand-new Sol visitor experience", () => {
       expect(page).toContain("HalftoneDivider");
     }
     expect(marks).toContain("bn-halftone-divider");
-    expect(marks).toContain('viewBox="0 0 1440 61"');
-    expect(marks).not.toContain('viewBox="0 0 1440 96"');
+    expect(marks).toContain('viewBox="0 0 1440 30"');
+    expect(marks).toContain("const dotRadius = 2.5");
+    expect(marks).toContain("spacing: 16");
+    expect(marks).toContain("spacing: 12");
+    expect(marks).toContain("spacing: 9");
+    expect(marks).toContain("spacing: 7");
+    expect(marks).toContain("spacing: 5.6");
+    expect(marks).toContain("opacity: 0.08");
+    expect(marks).toContain("opacity: 0.92");
+    expect(marks).toContain("fillOpacity={row.opacity}");
+    expect(css).toContain("height: clamp(2.25rem, 3vw, 3rem)");
     expect(shell).not.toContain('location === "/"');
     expect(shell).not.toContain('location === "/schedule"');
   });
