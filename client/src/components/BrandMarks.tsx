@@ -51,13 +51,13 @@ export function HalftoneDivider({
 }: {
   destination: keyof typeof waveColors;
 }) {
-  const dotRadius = 2.5;
+  const dotSpacing = 7;
   const rows = [
-    { y: 2.5, spacing: 16, offset: 0, opacity: 0.08 },
-    { y: 8.75, spacing: 12, offset: 6, opacity: 0.28 },
-    { y: 15, spacing: 9, offset: 0, opacity: 0.5 },
-    { y: 21.25, spacing: 7, offset: 3.5, opacity: 0.72 },
-    { y: 27.5, spacing: 5.6, offset: 0, opacity: 0.92 },
+    { y: 2.5, radius: 0.7, offset: 0, opacity: 0.08 },
+    { y: 8.75, radius: 1.25, offset: 3.5, opacity: 0.28 },
+    { y: 15, radius: 1.8, offset: 0, opacity: 0.5 },
+    { y: 21.25, radius: 2.35, offset: 3.5, opacity: 0.72 },
+    { y: 27, radius: 3, offset: 0, opacity: 0.92 },
   ];
 
   return (
@@ -70,13 +70,13 @@ export function HalftoneDivider({
             fillOpacity={row.opacity}
           >
             {Array.from(
-              { length: Math.ceil(1440 / row.spacing) + 1 },
+              { length: Math.ceil(1440 / dotSpacing) + 1 },
               (_, dotIndex) => (
                 <circle
                   key={`${rowIndex}-${dotIndex}`}
-                  cx={dotIndex * row.spacing + row.offset}
+                  cx={dotIndex * dotSpacing + row.offset}
                   cy={row.y}
-                  r={dotRadius}
+                  r={row.radius}
                 />
               )
             )}

@@ -75,12 +75,13 @@ describe("brand-new Sol visitor experience", () => {
     }
     expect(marks).toContain("bn-halftone-divider");
     expect(marks).toContain('viewBox="0 0 1440 30"');
-    expect(marks).toContain("const dotRadius = 2.5");
-    expect(marks).toContain("spacing: 16");
-    expect(marks).toContain("spacing: 12");
-    expect(marks).toContain("spacing: 9");
-    expect(marks).toContain("spacing: 7");
-    expect(marks).toContain("spacing: 5.6");
+    expect(marks).toContain("const dotSpacing = 7");
+    expect(marks).not.toContain("spacing:");
+    expect(marks).toContain("radius: 0.7");
+    expect(marks).toContain("radius: 1.25");
+    expect(marks).toContain("radius: 1.8");
+    expect(marks).toContain("radius: 2.35");
+    expect(marks).toContain("radius: 3");
     expect(marks).toContain("opacity: 0.08");
     expect(marks).toContain("opacity: 0.92");
     expect(marks).toContain("fillOpacity={row.opacity}");
