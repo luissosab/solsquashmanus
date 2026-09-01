@@ -150,8 +150,9 @@ describe("brand-new Sol visitor experience", () => {
     expect(css).toContain(".bn-values article:nth-child(4)");
     expect(css).toContain("min-height: 22rem");
     expect(css).toContain("font-size: clamp(3.4rem, 5.25vw, 6.25rem)");
-    expect(css).toContain("border-radius: 50%");
-    expect(css).toContain("height: clamp(4.5rem, 5vw, 5.5rem)");
+    expect(css).toContain("grid-template-rows: auto 1fr auto");
+    expect(css).toContain("min-width: 6rem");
+    expect(css).toContain("grid-column: 2");
     expect(story).toContain("Community First");
     expect(story).toContain(
       "Everyone belongs here — from first-timers to competitive players."
@@ -170,18 +171,17 @@ describe("brand-new Sol visitor experience", () => {
     expect(story).not.toContain("<h3>Progressive</h3>");
     expect(story).not.toContain("<h3>Joyful</h3>");
   });
-  it("preserves the full founders' record and verified achievements", () => {
+  it("preserves the full founders' biographies and verified achievements", () => {
     expect(story).toContain("From Brazil.");
     expect(story).not.toContain("The club they");
     expect(story).toContain("career-high world ranking of #98");
     expect(story).toContain("career-high world ranking of #132");
     expect(story).toContain("2011 Pan American Games");
-    expect(story).toContain("2018 Subbotnik");
-    expect(story).toContain("PSA Open final");
-    expect(story).toContain("2021 PSA World Championships");
+    expect(story).toContain("Moscow in 2018");
+    expect(story).toContain("competed at the PSA World Championships");
     expect(story).toContain("England Squash Level 2");
     expect(story).toContain("SafeSport Certified");
-    expect(css).toContain(".bn-founder-record");
+    expect(story).not.toContain("bn-founder-record");
     expect(css).toContain(".bn-profile-drawer__facts");
   });
   it("uses squash-ball accents as decorative punctuation outside the heroes", () => {

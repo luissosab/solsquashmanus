@@ -104,39 +104,6 @@ export default function OurStory() {
             coaching, playing, meeting members and shaping the club every day.
           </p>
         </div>
-        <div className="bn-founder-record">
-          <article>
-            <span>Vini · The lifelong player</span>
-            <h3>Seven years old to the PSA World Tour.</h3>
-            <p>
-              Self-taught from the start, Vini represented the Brazilian
-              National Team, reached world number 132, won bronze at the 2011
-              Pan American Games in Guadalajara, and reached the 2018 Subbotnik
-              PSA Open final in Moscow. He built more than twenty years of
-              coaching experience alongside his playing career.
-            </p>
-          </article>
-          <article>
-            <span>Bruna · The all-in convert</span>
-            <h3>From adult beginner to world number 98.</h3>
-            <p>
-              After university in London, Bruna returned to Brazil, met Vini at
-              a tournament, and made him her coach. She turned professional,
-              represented Brazil and Italy internationally, and competed at the
-              2021 PSA World Championships.
-            </p>
-          </article>
-          <article>
-            <span>Together · The Miami chapter</span>
-            <h3>A shared dream in Little River.</h3>
-            <p>
-              Miami had energy, wellness culture and racket-sport players, but
-              no dedicated squash home. Sol gives them a place to introduce a
-              new generation to the dynamic, demanding and rewarding sport
-              around which they built their lives.
-            </p>
-          </article>
-        </div>
         <BallMark
           tone="cyan"
           className="bn-accent-ball bn-accent-ball--story"
