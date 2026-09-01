@@ -67,7 +67,7 @@ export function ClubFooter() {
             Hours may shift seasonally. Check the live schedule before visiting.
           </small>
         </div>
-        <RacketQMark />
+        <RacketQMark tilt="right-soft" />
       </div>
       <div className="bn-footer__legal">
         <span>© Sol Squash</span>

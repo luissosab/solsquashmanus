@@ -14,6 +14,13 @@ export function PageShell({ children }: { children: ReactNode }) {
   const needsFinalFooterWave =
     location === "/faq" || location === "/play-and-pricing";
   useEffect(() => {
+    const targetId = window.location.hash.slice(1);
+    if (targetId) {
+      requestAnimationFrame(() => {
+        document.getElementById(targetId)?.scrollIntoView({ block: "start" });
+      });
+      return;
+    }
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [location]);
   return (

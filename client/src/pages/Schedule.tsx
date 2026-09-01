@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import {
+  BallMark,
   BrandWave,
   CourtMark,
   HalftoneDivider,
@@ -105,6 +106,10 @@ export default function Schedule() {
       </section>
       <HalftoneDivider destination="orange" />
       <section className="bn-schedule-note">
+        <BallMark
+          tone="green"
+          className="bn-accent-ball bn-accent-ball--schedule"
+        />
         <div className="bn-heading-with-mark">
           <div>
             <p className="bn-kicker">Rather play on your own time?</p>
@@ -114,7 +119,7 @@ export default function Schedule() {
               or train <em>one-to-one.</em>
             </h2>
           </div>
-          <RacketQMark tone="navy" />
+          <RacketQMark tone="navy" tilt="left-soft" />
         </div>
         <div>
           <p>

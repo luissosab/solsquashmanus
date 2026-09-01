@@ -41,8 +41,18 @@ describe("brand-new Sol visitor experience", () => {
     expect(css).toContain('mask: url("/media/sol-racket-q-extracted.png")');
   });
   it("keeps squash balls out of every primary page hero", () => {
-    for (const page of [home, play, beginner, membership, schedule, story]) {
-      expect(page).not.toContain("BallMark");
+    for (const [page, heroClass] of [
+      [home, "bn-video-hero"],
+      [play, "bn-page-hero"],
+      [beginner, "bn-page-hero"],
+      [membership, "bn-page-hero"],
+      [schedule, "bn-page-hero"],
+      [story, "bn-story-hero"],
+    ]) {
+      const start = page.indexOf(`<section className="${heroClass}`);
+      const end = page.indexOf("</section>", start);
+      expect(page.slice(start, end)).not.toContain("BallMark");
+      expect(page.slice(end)).toContain("BallMark");
     }
   });
   it("keeps Home visible and makes the desktop menu substantially larger", () => {
@@ -112,15 +122,18 @@ describe("brand-new Sol visitor experience", () => {
       expect(page).toContain('className="bn-heading-with-mark"');
     }
     for (const angle of [
-      "rotate(24deg)",
-      "rotate(-28deg)",
-      "rotate(18deg)",
-      "rotate(-24deg)",
-      "rotate(27deg)",
       "rotate(-22deg)",
+      "rotate(-7deg)",
+      "rotate(18deg)",
+      "rotate(43deg)",
+      "rotate(58deg)",
     ]) {
       expect(css).toContain(angle);
     }
+    expect(home).toContain('tilt="right"');
+    expect(play).toContain('tilt="left"');
+    expect(beginner).toContain('tilt="right-soft"');
+    expect(schedule).toContain('tilt="left-soft"');
     expect(css).toContain("justify-content: flex-start");
   });
   it("makes the membership comparison legible at twice the former scale", () => {
@@ -137,6 +150,8 @@ describe("brand-new Sol visitor experience", () => {
     expect(css).toContain(".bn-values article:nth-child(4)");
     expect(css).toContain("min-height: 22rem");
     expect(css).toContain("font-size: clamp(3.4rem, 5.25vw, 6.25rem)");
+    expect(css).toContain("border-radius: 50%");
+    expect(css).toContain("height: clamp(4.5rem, 5vw, 5.5rem)");
     expect(story).toContain("Community First");
     expect(story).toContain(
       "Everyone belongs here — from first-timers to competitive players."
@@ -154,6 +169,36 @@ describe("brand-new Sol visitor experience", () => {
     expect(story).not.toContain("<h3>Welcoming</h3>");
     expect(story).not.toContain("<h3>Progressive</h3>");
     expect(story).not.toContain("<h3>Joyful</h3>");
+  });
+  it("preserves the full founders' record and verified achievements", () => {
+    expect(story).toContain("From Brazil.");
+    expect(story).not.toContain("The club they");
+    expect(story).toContain("career-high world ranking of #98");
+    expect(story).toContain("career-high world ranking of #132");
+    expect(story).toContain("2011 Pan American Games");
+    expect(story).toContain("2018 Subbotnik");
+    expect(story).toContain("PSA Open final");
+    expect(story).toContain("2021 PSA World Championships");
+    expect(story).toContain("England Squash Level 2");
+    expect(story).toContain("SafeSport Certified");
+    expect(css).toContain(".bn-founder-record");
+    expect(css).toContain(".bn-profile-drawer__facts");
+  });
+  it("uses squash-ball accents as decorative punctuation outside the heroes", () => {
+    for (const page of [home, play, beginner, membership, schedule, story]) {
+      expect(page).toContain("bn-accent-ball");
+    }
+    expect(marks).toContain('aria-hidden="true"');
+    expect(css).toContain(".bn-accent-ball--home");
+    expect(css).toContain(".bn-accent-ball--values");
+    expect(css).toContain(
+      ".bn-story-copy > :not(.bn-court-mark):not(.bn-accent-ball)"
+    );
+  });
+  it("gives the junior headline enough vertical room for the squash descender", () => {
+    expect(css).toContain(".bn-juniors h2");
+    expect(css).toContain("line-height: 0.94");
+    expect(css).toContain("padding-bottom: 0.12em");
   });
   it("keeps decision details on Sol before booking handoffs", () => {
     expect(play).toContain("Prices, formats and what to expect stay here");

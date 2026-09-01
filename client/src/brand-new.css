@@ -320,6 +320,50 @@ body {
   left: 54%;
   top: 53%;
 }
+.bn-accent-ball {
+  box-shadow: none;
+  height: clamp(4.5rem, 7vw, 7.5rem);
+  opacity: 0.9;
+  pointer-events: none;
+  position: absolute;
+  width: clamp(4.5rem, 7vw, 7.5rem);
+  z-index: 1;
+}
+.bn-accent-ball--home {
+  right: 7%;
+  top: 8%;
+  transform: rotate(24deg);
+}
+.bn-accent-ball--play {
+  right: 3%;
+  top: 6%;
+  transform: rotate(-31deg);
+}
+.bn-accent-ball--beginner {
+  right: -1.5rem;
+  top: 2rem;
+  transform: rotate(42deg);
+}
+.bn-accent-ball--schedule {
+  bottom: -2.5rem;
+  right: 5%;
+  transform: rotate(-17deg);
+}
+.bn-accent-ball--membership {
+  right: 2%;
+  top: 5%;
+  transform: rotate(36deg);
+}
+.bn-accent-ball--story {
+  right: 4%;
+  top: 7%;
+  transform: rotate(-27deg);
+}
+.bn-accent-ball--values {
+  right: -2rem;
+  top: 2rem;
+  transform: rotate(51deg);
+}
 .bn-sun-mark {
   display: block;
   height: auto;
@@ -351,6 +395,21 @@ body {
 }
 .bn-racket-q--cream {
   color: var(--bn-cream);
+}
+.bn-racket-q--tilt-left {
+  transform: rotate(-22deg);
+}
+.bn-racket-q--tilt-left-soft {
+  transform: rotate(-7deg);
+}
+.bn-racket-q--tilt-upright {
+  transform: rotate(18deg);
+}
+.bn-racket-q--tilt-right-soft {
+  transform: rotate(43deg);
+}
+.bn-racket-q--tilt-right {
+  transform: rotate(58deg);
 }
 .bn-brand-wave {
   height: clamp(3.25rem, 4.5vw, 4.75rem);
@@ -393,12 +452,12 @@ body {
   width: clamp(58rem, 92vw, 112rem);
   z-index: 0;
 }
-.bn-journeys > :not(.bn-court-mark),
-.bn-offerings > :not(.bn-court-mark),
-.bn-reassurance > :not(.bn-court-mark),
-.bn-schedule-list > :not(.bn-court-mark),
-.bn-membership > :not(.bn-court-mark),
-.bn-story-copy > :not(.bn-court-mark) {
+.bn-journeys > :not(.bn-court-mark):not(.bn-accent-ball),
+.bn-offerings > :not(.bn-court-mark):not(.bn-accent-ball),
+.bn-reassurance > :not(.bn-court-mark):not(.bn-accent-ball),
+.bn-schedule-list > :not(.bn-court-mark):not(.bn-accent-ball),
+.bn-membership > :not(.bn-court-mark):not(.bn-accent-ball),
+.bn-story-copy > :not(.bn-court-mark):not(.bn-accent-ball) {
   position: relative;
   z-index: 1;
 }
@@ -600,9 +659,6 @@ body {
 .bn-mural-break .bn-heading-with-mark {
   justify-content: flex-start;
 }
-.bn-mural-break .bn-heading-with-mark > .bn-racket-q {
-  transform: rotate(-22deg);
-}
 
 .bn-page-hero {
   align-items: end;
@@ -678,9 +734,6 @@ body {
   gap: 2rem;
   grid-template-columns: 1fr;
 }
-.bn-offerings .bn-heading-with-mark > .bn-racket-q {
-  transform: rotate(24deg);
-}
 .bn-offering-list {
   border-top: 1px solid var(--bn-navy);
   margin-top: 5rem;
@@ -718,6 +771,15 @@ body {
 .bn-feature-split {
   background: var(--bn-teal);
   color: white;
+  overflow: hidden;
+}
+.bn-feature-split > :not(.bn-accent-ball),
+.bn-steps > :not(.bn-accent-ball),
+.bn-schedule-note > :not(.bn-accent-ball),
+.bn-packages > :not(.bn-accent-ball),
+.bn-values > :not(.bn-accent-ball) {
+  position: relative;
+  z-index: 2;
 }
 .bn-feature-split h2 em {
   color: var(--bn-cyan);
@@ -801,9 +863,6 @@ body {
   right: -28%;
   top: -38%;
 }
-.bn-first-rally .bn-heading-with-mark > .bn-racket-q {
-  transform: rotate(-28deg);
-}
 .bn-check-grid {
   display: grid;
   gap: 0 2rem;
@@ -860,7 +919,9 @@ body {
 .bn-steps {
   background: var(--bn-green);
   color: var(--bn-navy);
+  overflow: hidden;
   padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 7vw, 8rem);
+  position: relative;
 }
 .bn-steps ol {
   display: grid;
@@ -942,9 +1003,6 @@ body {
   padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 7vw, 8rem);
   position: relative;
 }
-.bn-schedule-note .bn-heading-with-mark > .bn-racket-q {
-  transform: rotate(18deg);
-}
 .bn-schedule-note p {
   line-height: 1.7;
   max-width: 34rem;
@@ -1018,9 +1076,6 @@ body {
 .bn-price-compare {
   background: var(--bn-mustard);
 }
-.bn-price-compare .bn-heading-with-mark > .bn-racket-q {
-  transform: rotate(-24deg);
-}
 .bn-price-table {
   margin-top: 4rem;
 }
@@ -1049,7 +1104,9 @@ body {
   display: grid;
   gap: 5rem;
   grid-template-columns: 0.8fr 1.2fr;
+  overflow: hidden;
   padding: clamp(6rem, 10vw, 10rem) clamp(1.25rem, 7vw, 8rem);
+  position: relative;
 }
 .bn-packages > div:first-child > p:last-child {
   line-height: 1.6;
@@ -1081,6 +1138,15 @@ body {
 }
 .bn-juniors {
   background: var(--bn-orange);
+}
+.bn-juniors h2 {
+  line-height: 0.94;
+  margin-bottom: clamp(1.75rem, 3vw, 2.75rem);
+}
+.bn-juniors h2 em {
+  display: inline-block;
+  line-height: 1.05;
+  padding-bottom: 0.12em;
 }
 .bn-juniors > img {
   height: min(56rem, 72vh);
@@ -1137,14 +1203,46 @@ body {
 .bn-story-copy > div {
   max-width: 52rem;
 }
+.bn-story-copy h2 em {
+  color: var(--bn-teal);
+}
 .bn-story-copy p {
   max-width: 48rem;
 }
+.bn-founder-record {
+  display: grid;
+  gap: 1rem;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: clamp(2rem, 5vw, 5rem);
+  max-width: none !important;
+}
+.bn-founder-record article {
+  background: rgba(244, 240, 231, 0.84);
+  min-height: 24rem;
+  padding: clamp(1.75rem, 3vw, 3rem);
+}
+.bn-founder-record article > span {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 2.25rem;
+  text-transform: uppercase;
+}
+.bn-founder-record h3 {
+  font-size: clamp(2.25rem, 3.5vw, 4rem);
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+}
+.bn-founder-record p {
+  font-size: clamp(1rem, 1.25vw, 1.16rem);
+  line-height: 1.65;
+  margin: 0;
+}
 .bn-team {
   background: var(--bn-cream);
-}
-.bn-team .bn-heading-with-mark > .bn-racket-q {
-  transform: rotate(27deg);
 }
 .bn-team-grid {
   display: grid;
@@ -1207,7 +1305,9 @@ body {
   display: grid;
   gap: clamp(3.5rem, 7vw, 7rem);
   grid-template-columns: 1fr;
+  overflow: hidden;
   padding: clamp(6rem, 10vw, 10rem) clamp(1.25rem, 7vw, 8rem);
+  position: relative;
 }
 .bn-values > div:first-child {
   max-width: 76rem;
@@ -1239,13 +1339,36 @@ body {
   background: var(--bn-orange);
 }
 .bn-values article > span {
+  align-items: center;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  font-size: 1.15rem;
   font-weight: 800;
   font-family: var(--font-display);
-  font-size: 1rem;
+  height: clamp(4.5rem, 5vw, 5.5rem);
+  justify-content: center;
   left: clamp(2rem, 4vw, 4rem);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   position: absolute;
   top: clamp(2rem, 4vw, 4rem);
+  width: clamp(4.5rem, 5vw, 5.5rem);
+}
+.bn-values article:nth-child(1) > span {
+  background: var(--bn-mustard);
+  color: var(--bn-navy);
+}
+.bn-values article:nth-child(2) > span {
+  background: var(--bn-navy);
+  color: var(--bn-white);
+}
+.bn-values article:nth-child(3) > span {
+  background: var(--bn-orange);
+  color: var(--bn-navy);
+}
+.bn-values article:nth-child(4) > span {
+  background: var(--bn-cream);
+  color: var(--bn-navy);
 }
 .bn-values h3 {
   font-size: clamp(3.4rem, 5.25vw, 6.25rem);
@@ -1258,6 +1381,32 @@ body {
   line-height: 1.5;
   margin: 0;
   max-width: 34rem;
+}
+
+.bn-profile-drawer__facts {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem 0;
+}
+.bn-profile-drawer__facts > div {
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-top: 1rem;
+}
+.bn-profile-drawer__facts span {
+  color: var(--bn-cyan);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.bn-profile-drawer__facts strong {
+  font-size: 1rem;
+  line-height: 1.35;
 }
 
 .bn-drawer {
@@ -1332,9 +1481,6 @@ body {
 }
 .bn-footer__lead .bn-sun-mark {
   transform: rotate(-4deg);
-}
-.bn-footer__grid > .bn-racket-q {
-  transform: rotate(-16deg);
 }
 .bn-footer__lead p {
   font-family: var(--font-display);
@@ -1625,6 +1771,34 @@ body {
   }
   .bn-story-copy {
     gap: 1rem;
+  }
+  .bn-founder-record {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+  .bn-founder-record article {
+    min-height: 0;
+  }
+  .bn-profile-drawer__facts {
+    grid-template-columns: 1fr;
+  }
+  .bn-accent-ball {
+    height: 4.25rem;
+    opacity: 0.78;
+    width: 4.25rem;
+  }
+  .bn-accent-ball--home,
+  .bn-accent-ball--story {
+    right: -1.25rem;
+  }
+  .bn-accent-ball--play,
+  .bn-accent-ball--membership {
+    right: -1rem;
+    top: 1rem;
+  }
+  .bn-juniors h2 {
+    line-height: 0.98;
+    margin-bottom: 2rem;
   }
   .bn-team-grid {
     grid-template-columns: 1fr;

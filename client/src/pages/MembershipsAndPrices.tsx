@@ -1,5 +1,6 @@
 import { Check, Plus } from "lucide-react";
 import {
+  BallMark,
   BrandWave,
   CourtMark,
   HalftoneDivider,
@@ -147,7 +148,7 @@ export default function MembershipsAndPrices() {
               <em>Or without one.</em>
             </h2>
           </div>
-          <RacketQMark tone="navy" />
+          <RacketQMark tone="navy" tilt="right" />
         </div>
         <div className="bn-price-table" role="table">
           <div className="bn-price-table__head" role="row">
@@ -174,6 +175,10 @@ export default function MembershipsAndPrices() {
       </section>
       <HalftoneDivider destination="teal" />
       <section className="bn-packages">
+        <BallMark
+          tone="orange"
+          className="bn-accent-ball bn-accent-ball--membership"
+        />
         <div>
           <p className="bn-kicker">Playing regularly?</p>
           <h2>
@@ -218,7 +223,7 @@ export default function MembershipsAndPrices() {
         </div>
       </section>
       <HalftoneDivider destination="orange" />
-      <section className="bn-juniors">
+      <section className="bn-juniors" id="juniors">
         <div>
           <p className="bn-kicker">Ages 4–16</p>
           <h2>

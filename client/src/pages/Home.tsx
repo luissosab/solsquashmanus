@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import {
+  BallMark,
   BrandWave,
   CourtMark,
   HalftoneDivider,
@@ -76,6 +77,10 @@ export default function Home() {
 
       <section className="bn-journeys">
         <CourtMark className="bn-court-mark--journeys" />
+        <BallMark
+          tone="orange"
+          className="bn-accent-ball bn-accent-ball--home"
+        />
         <div className="bn-section-heading">
           <p className="bn-kicker">Start with what you need</p>
           <h2>
@@ -146,7 +151,7 @@ export default function Home() {
         />
         <div>
           <div className="bn-heading-with-mark">
-            <RacketQMark tone="mustard" />
+            <RacketQMark tone="mustard" tilt="right" />
             <p>
               The game is fast.
               <br />

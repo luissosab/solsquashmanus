@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowRight, Plus } from "lucide-react";
 import { Link } from "wouter";
 import {
+  BallMark,
   BrandWave,
   CourtMark,
   HalftoneDivider,
@@ -93,7 +94,7 @@ export default function Play() {
               handles the final booking and payment.
             </p>
           </div>
-          <RacketQMark tone="orange" />
+          <RacketQMark tone="orange" tilt="left" />
         </div>
         <div className="bn-offering-list">
           {ways.map((way, index) => (
@@ -116,6 +117,7 @@ export default function Play() {
       </section>
       <HalftoneDivider destination="teal" />
       <section className="bn-feature-split">
+        <BallMark tone="cyan" className="bn-accent-ball bn-accent-ball--play" />
         <div className="bn-photo">
           <img
             src="/media/sol-founders-lounge_1745d40e.webp"

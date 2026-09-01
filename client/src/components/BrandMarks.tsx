@@ -15,11 +15,16 @@ export function SunMark({
 
 export function BallMark({
   tone = "green",
+  className = "",
 }: {
   tone?: "green" | "orange" | "cyan";
+  className?: string;
 }) {
   return (
-    <span className={`bn-ball-mark bn-ball-mark--${tone}`} aria-hidden="true">
+    <span
+      className={`bn-ball-mark bn-ball-mark--${tone} ${className}`.trim()}
+      aria-hidden="true"
+    >
       <i />
       <i />
     </span>
@@ -29,11 +34,16 @@ export function BallMark({
 /** The complete connected Q artwork is extracted from the official logo and recolored only through its alpha mask. */
 export function RacketQMark({
   tone = "green",
+  tilt = "upright",
 }: {
   tone?: "green" | "navy" | "mustard" | "orange" | "cyan" | "cream";
+  tilt?: "left" | "left-soft" | "upright" | "right-soft" | "right";
 }) {
   return (
-    <span className={`bn-racket-q bn-racket-q--${tone}`} aria-hidden="true" />
+    <span
+      className={`bn-racket-q bn-racket-q--${tone} bn-racket-q--tilt-${tilt}`}
+      aria-hidden="true"
+    />
   );
 }
 
